@@ -1,4 +1,52 @@
 \section{Theorie}
 \label{sec:Theorie}
+Das Trägheitsmoment ist eine Tensorgröße, die starren Körpern zugeordnet werden kann und beschreibt, wie ein Körper sich bei
+Rotationsbewegungen verhält.
+Dabei setzt er die Winkelgeschwindigkeit eines Objektes mit dem resultierenden Drehimpuls in Beziehung mit
+\begin{equation}
+    \vec(L)=I\times\vec(\omega)\text{.}
+    \label{eqn:Dreh1}
+\end{equation}
+Die Komponenten des Trägheitsmoments I sind dabei über die Gleichung
+\begin{equation}
+    I=\int r^2 \symup{d}m
+    \label{eqn:Trägheit}
+\end{equation}
+bestimmt, für den Fall, dass die Drehachse durch den Schwerpunkt des Objekts verläuft. 
+Falls dies nicht der Fall sein sollte, wird der steinersche Satz verwendet.
+\begin{equation}
+    I=I_{\symup{\omega}}+\symup{m} \symup{d}^2
+    \label{eqn:Steiner}
+\end{equation}   
+m ist die Masse des Objekts und d der Abstand zur Drehachse. 
 
+Für einen Schwingenden Körper kann mit ihm auch die Schwingungsdauer bestimmt werden über
+\begin{equation}
+    T=2 \symup{\pi} \sqrt(\frac{I}{\symup{D}})\text{.}
+    \label{eqn:Schwingungsdauer}
+\end{equation}
+Dabei beschreibt D die sogenannte Winkelrichtgröße. Sie ist eine Konstante, die die Probortionalität zwischen dem 
+Auslenkungswinkel des Objekts und dem rückstellenden Drehmoment wiedergibt.
+\begin{equation}
+    M=\symup{D} \varphi %aus der theoretischen Vorbereitung für den Versuch
+    \label{eqn:Drehmom1}
+\end{equation} 
+Hierbei beschreibt M jetzt den Betrag des Drehmoments und $\varphi$ den Auslenkungswinkel.
+Alternativ ist das Drehmoment außerdem mit
+\begin{equation}
+    \begin{gather}
+        \vec(M)=\vec(r) \times \vec(F) \\ \vec(M)=\dot(\vec(L))
+    \end{gather}
+    \label{eqn:Drehmom2}
+\end{equation}
+beschreibbar.
+
+Die Trägheitsmomente von Zylindern sehen dann entsprechend Gleichung \ref{eqn:Trägheit} für unterschiedliche
+Drehachsen so aus.
+\begin{equation}
+    \begin{gather}
+        I=frac{\symup{m}\symup{R}^2}{2} \text{Wenn die Rotationsachse senkrecht auf den Kreisoberflächen steht.}\\
+        I=\symup{m} (frac{symup{R}^2}{4}+frac{\symup{h}^2}{12}) \text{Wenn die Rotationsachse senkrecht auf der Mantelfläche steht.}
+    \end{gather}
+\end{equation}
 \cite{sample}
