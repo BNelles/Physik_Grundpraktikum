@@ -1,0 +1,12 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
+\contentsline {section}{\numberline {2}Versuchsaufbau}{3}{section.2}%
+\contentsline {section}{\numberline {3}Durchführung}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Bestimmung von D}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Bestimmung von $I_D$}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Bestimmung von $I$ verschiedener Körper}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Bestmmung von $I$ einer Holzpuppe}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Auswertung}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Winkelrichtgröße und Eigenträgheitsmoment}{5}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Diskussion}{6}{section.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

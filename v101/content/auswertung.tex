@@ -1,7 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
   \subsection{Winkelrichtgröße und Eigenträgheitsmoment}
-
+  Die gemessene Kraft in Abhängigkeit vom dem Auslenkungswinkel wird in der Tabelle \ref{tab:tabelle1} dargestellt.
+  Mit der Formel $\frac{r\cdot F}{\varphi}$ wird D berechnet.
+  Mithilfe der gemessen Werte für $F$ und $\varphi$ kann mit $r = 20 \, \unit{\centi\meter}$ nun D bestimmt werden.
+  Die einzelnen Werte von D sind ebenfalls in \ref{tab:tabelle1} eingetragen. 
+  Mit $\overline{A} = \frac{1}{n} \sum_{i = 1}^{n} a_i$ wird nun das arithmetische Mittel gebildet. %% Brauch noch ne Quelle fürs Mittel
+Einsetzen der Werte für D und $n = 11$ ergibt $\overline{D} = 0.02 \, \unit{\newton\meter}$.
 
 
 
@@ -18,29 +23,30 @@
 \begin{table}
   \centering
   \caption{Tabelle 1}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \label{tab:tabelle1}
+ %% \sisetup{table-format=1.3, per-mode=reciprocal}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
+     %% colspec = {S[table-format=3.0] S[table-format=2.1] S},
+     colspec={S[table-format=2.0] S[table-format=2.0] S[table-format=2.0]},
       row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
+    %%  vline{4} = {2}{-}{text=\clap{$\pm$}},
     }
     \toprule
-    F \mathbin{/} \unit{\newton} & $\varphi$ \mathbin{/} \unit{\degree} & \SetCell[c=2]{c} $\symbf{D}$ \mathbin{/} \unit{\newton\meter} & \\
+    F \mathbin{/} \unit{\newton} & \varphi \mathbin{/} \unit{\degree} & \SetCell[c=2]{c} \symbf{D} \mathbin{/} \unit{\newton\meter} & \\
     \midrule
-    0.016&   20   & 0.009\\
-    0.046&   30   & 0.018\\
-    0.066&   40   & 0.019\\
-    0.089&   50   & 0.020\\ 
-    0.11 &   60   & 0.021\\
-    0.134&   70   & 0.022\\
-    0.162&   80   & 0.023\\
-    0.176&   90   & 0.022\\
-    0.18 &  100   & 0.021\\
-    0.2  &  110   & 0.021\\
-    0.23 &  120   & 0.022\\
+    0.016 &  20 & 0.009\\
+    0.046 &  30 & 0.018\\
+    0.066 &  40 & 0.019\\
+    0.089 &  50 & 0.020\\ 
+    0.11  &  60 & 0.021\\
+    0.134 &  70 & 0.022\\
+    0.162 &  80 & 0.023\\
+    0.176 &  90 & 0.022\\
+    0.18  & 100 & 0.021\\
+    0.2   & 110 & 0.021\\
+    0.23  & 120 & 0.022\\
     \bottomrule
   \end{tblr}
 \end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+%% Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
