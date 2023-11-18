@@ -21,5 +21,6 @@ ax.plot(
     linewidth=1.5,
 )
 print(params[0])
+print(params[1])
 ax.legend();
 fig.savefig("plot.pdf")
