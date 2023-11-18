@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.9.24)  16 NOV 2023 21:10
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.9.24)  18 NOV 2023 12:58
  restricted system commands enabled.
 **v101.tex
 (./v101.tex
@@ -1672,28 +1672,12 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 15
  [2
 
 ] (./content/theorie.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
-! Package amsmath Error: \begin{gather} allowed only in paragraph mode.
+ []
 
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37     \begin{gather}
-                     
-? 
 
-! Package amsmath Error: \begin{gather} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.47     \begin{gather}
-                     
-? 
-
-LaTeX Warning: Citation 'sample' on page 3 undefined on input line 52.
+LaTeX Warning: Citation 'sample' on page 3 undefined on input line 64.
 
 ) (./content/Aufbau.tex) (./content/durchfuehrung.tex [3]
 
@@ -1725,14 +1709,72 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 25.
 
 ) (./content/auswertung.tex [4]
-<plot.pdf, id=64, 462.528pt x 346.896pt>
-File: plot.pdf Graphic file (type pdf)
-<use plot.pdf>
-Package luatex.def Info: plot.pdf  used on input line 18.
-(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
 
-Overfull \hbox (44.2713pt too wide) in paragraph at lines 18--19
- [][] 
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 100$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 100$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 110$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 110$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 120$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 120$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 100$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 110$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 120$
+ []
+
+> Step: build the whole table.
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 100$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 110$
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 37
+$\TU/LatinModernMath(1)/m/n/10.95 120$
  []
 
 > Step: init table outer spec.
@@ -1742,84 +1784,45 @@ Overfull \hbox (44.2713pt too wide) in paragraph at lines 18--19
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 100$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 100$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 110$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 110$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 120$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 120$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 100$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 110$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 120$
- []
-
 > Step: build the whole table.
+<plot.pdf, id=71, 462.528pt x 346.896pt>
+File: plot.pdf Graphic file (type pdf)
+<use plot.pdf>
+Package luatex.def Info: plot.pdf  used on input line 79.
+(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
 
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 100$
+Overfull \hbox (44.2713pt too wide) in paragraph at lines 79--80
+ [][] 
  []
 
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 110$
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 49
-$\TU/LatinModernMath(1)/m/n/10.95 120$
- []
-
-) (./content/diskussion.tex [5<./plot.pdf>])
+[5]) (./content/diskussion.tex [6] [7<./plot.pdf>])
 
 LaTeX Warning: Empty bibliography on input line 24.
 
-[6] (./v101.aux)
+[8] (./v101.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `v101.aux' has not changed.
-(rerunfilecheck)             Checksum: 57DA9583FE3C689E7D958CE966D1E00D;6851.
 
+
+Package rerunfilecheck Warning: File `v101.aux' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `v101.aux':
+(rerunfilecheck)             Before: EA3B5D944256E19F838EDD9F89DCF98C;7417
+(rerunfilecheck)             After:  F8011A68A70165579C63E2A4A6142A9F;7417.
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `v101.toc' has not changed.
-(rerunfilecheck)             Checksum: CDA2C96A98231D20CF99650E053D0F55;912.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `v101.toc' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `v101.toc':
+(rerunfilecheck)             Before: E50220700CE20EA0D45DA7D1A8B22737;973
+(rerunfilecheck)             After:  17E533A837BA647251AED241EF01197A;973.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                v101
@@ -1831,15 +1834,15 @@ Package logreq Info: Writing requests to 'v101.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40159 strings out of 477259
+ 40186 strings out of 477259
  100000,2373549 words of node,token memory allocated
- 779 words of node memory still in use:
+ 791 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 7 glue, 4 kern, 1 penalty, 1 margin_ke
-rn, 3 glyph, 40 attribute, 75 glue_spec, 22 attribute_list, 1 write nodes
-   avail lists: 1:4,2:3840,3:168,4:75,5:469,6:102,7:6117,8:24,9:1744,10:7,11:622
+rn, 3 glyph, 44 attribute, 75 glue_spec, 24 attribute_list, 1 write nodes
+   avail lists: 1:4,2:5865,3:271,4:77,5:503,6:144,7:6423,8:25,9:2374,10:8,11:665
 ,12:1
- 60784 multiletter control sequences out of 65536+600000
- 109 fonts using 44721227 bytes
+ 60804 multiletter control sequences out of 65536+600000
+ 109 fonts using 44721635 bytes
  113i,11n,115p,10917b,2936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/benedikt/.local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman1
 0-bold.otf></home/benedikt/.local/texlive/2023/texmf-dist/fonts/opentype/public/
@@ -1850,10 +1853,10 @@ cal/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></hom
 e/benedikt/.local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmsans10-bold
 .otf></home/benedikt/.local/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmr
 oman12-bold.otf>
-Output written on v101.pdf (6 pages, 55289 bytes).
+Output written on v101.pdf (8 pages, 60008 bytes).
 
-PDF statistics: 188 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 131072)
- 81 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 209 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 131072)
+ 89 words of extra memory for PDF output out of 10000 (max. 100000000)
 

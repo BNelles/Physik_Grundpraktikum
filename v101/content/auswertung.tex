@@ -15,7 +15,7 @@
    %% \sisetup{table-format=1.3, per-mode=reciprocal}
     \begin{tblr}{
        %% colspec = {S[table-format=3.0] S[table-format=2.1] S},
-       colspec={S[table-format=2.0] S[table-format=2.0] S[table-format=2.0]},
+       colspec={S[table-format=1.3] S[table-format=2.0] S[table-format=1.3]},
         row{1} = {guard, mode=math},
       %%  vline{4} = {2}{-}{text=\clap{$\pm$}},
       }
@@ -48,11 +48,11 @@
     \label{tab:tabelle2}
     \sisetup{table-format=1.2}
     \begin{tblr}{
-        colspec={S S[table-format=1.0]},
+        colspec={S[table-format=2.1] S[table-format=2.2]},
         row{1}={guard, mode=math},
         }
         \toprule
-        a^2/\unit{\centi\meter} & T^2/\unit{\seconds} \\ %in centimeter geändert
+        a^2\unit{\centi\meter} & T^2\unit{\second} \\ %in centimeter geändert
         \midrule     
         2.5  & 12.75\\
         5    & 13.84\\
@@ -69,10 +69,10 @@
   \end{table}
 
   Durch das Verhältnis kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
-  In \ref{fig:plot} wird T^2 zu a^2 aufgetragen.
-  Mithilfe von linearer Regression wird das Verhältnis hier aufgezeigt.
-  Die Steigung der Geraden enstspricht dem Eigenträgheitsmoment.
-  Der Wert beträgt $I_D=717.69\unit{\kilo\gram\square\meter}$.
+  In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen.
+  Mithilfe von linearer Regression wird das Verhältnis hier aufgezeigt.\\
+  Die Steigung der Geraden enstspricht dem Eigenträgheitsmoment.\\
+  Der Wert beträgt $I_D=717.69$\unit{\kilo\gram\square\meter}.
 
   \begin{figure}
     \centering
