@@ -68,11 +68,20 @@
     \end{tblr}
   \end{table}
 
-  Durch das Verhältnis kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
-  In \ref{fig:plot} wird T^2 zu a^2 aufgetragen.
-  Mithilfe von linearer Regression wird das Verhältnis hier aufgezeigt.
-  Die Steigung der Geraden enstspricht dem Eigenträgheitsmoment.
-  Der Wert beträgt $I_D=717.69\unit{\kilo\gram\square\meter}$.
+  Mit dem Verhältnis
+  \begin{equation}
+    T^2=frac{4\symup{\pi}^2}{\symup{D}}I_D+frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
+  \end{equation}
+  ,welches aus den Formeln \ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} bestimmt werden kann
+  kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
+  In \ref{fig:plot} wird T^2 zu a^2 aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
+  717,69$\unit{\frac{\seconds^2}{\meter^2}}$ und der $\symup{T}^2$-Achsenabschnitt beträgt 6,04$\unit{\seconds^2}$.
+  Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
+  \begin{equation}
+    I_D=\frac{\symup{D}*6.04}{4\symup{\pi}^2}-frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2\text{.}
+  \end{equation}
+  Da der Radius der beiden Zylinder nicht bekannt ist, er sich aber zwischen 0$\unit{\centi\meter}$ und 10$\unit{\centi\meter}$
+  befinden muss,
 
   \begin{figure}
     \centering
