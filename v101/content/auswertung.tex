@@ -12,7 +12,7 @@
     \centering
     \caption{Tabelle 1}
     \label{tab:tabelle1}
-   %% \sisetup{table-format=1.3, per-mode=reciprocal}
+    \sisetup{table-format=1.2}
     \begin{tblr}{
        %% colspec = {S[table-format=3.0] S[table-format=2.1] S},
        colspec={S[table-format=1.3] S[table-format=2.0] S[table-format=1.3]},
@@ -75,7 +75,7 @@
   ,welches aus den Formeln %\ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
   bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
   In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
-  $\qty{717,69}{\frac{\seconds\squared}{\meter\squared}}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04}{\seconds\squared}$.
+  $\qty{717,69}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04}{\second\squared}$.
   Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
   \begin{equation}
     I_D=\frac{\symup{D}*6.04}{4\symup{\pi}^2}-frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
@@ -99,11 +99,12 @@
   \begin{table}
     \centering
     \caption{Schwingungsdauern der Figuren mit einer Auslenkung von 90°}
-    \begin{tblr}
-      \colspec{S S},
-      \row{1}={guard, mode=math},
+    \begin{tblr}{
+      colspec{S[table-format=1] S[table-format=1.2]},
+      row{1}={guard, mode=math},
+      }
       \toprule
-        n & T[\unit{\seconds}] \\
+        n & T \unit{\second} \\
       \midrule
       1 & 9.12  \\  
       2 & 9.37  \\
@@ -111,13 +112,14 @@
       4 & 9.35  \\
       5 & 9.41  \\
       \bottomrule
-      Für die Kugel \\
     \end{tblr}
-    \begin{tblr}
-      \colspec{S S},
-      \row{1}={guard, mode=math},
+    Für die Kugel \\
+    \begin{tblr}{
+      colspec{S[table-format=1] S[table-format=1.2]},
+      row{1}={guard, mode=math},
+      }
       \toprule
-      n & T[\unit{\seconds}] \\ 
+      n & T[\unit{\second}] \\ 
       \midrule
       1 & 9.22  \\
       2 & 9.32  \\
@@ -125,8 +127,8 @@
       4 & 9.15  \\
       5 & 9.22  \\
       \bottomrule
-      Für den Zylinder \\
     \end{tblr}
+    Für den Zylinder \\
   \end{table}
  
   
@@ -141,3 +143,29 @@
   Um das Trägheitsmoment der Puppe zu berechnen wurden der Kopf, der Oberkörper und die einzelnen Arme und Beine als Zylinder genähert.
   Dabie wurde die Höhe der Zylinder einmal abgemessen. 
   Der Durchmesser wurde beim Kopf über 5 und bei den anderen Körperteilen über 10, an verschiedenen Stellen gemessenen, Werte gemittelt.
+
+  \begin{table}
+    \centering
+    \caption{Durchmesser der Zylinder der Puppe}
+    \label{tab:tabelle3}
+    \sisetup{table-format=1.2}
+    \begin{tblr}{
+        colspec={S S S S[table-format=2.2]},
+        row{1}={guard, mode=math},
+        }
+        \toprule
+        d_K\unit{\milli\meter} & d_O\unit{\milli\meter} & d_A\unit{\milli\meter} & d_B\unit{\milli\meter}\\
+        \midrule     
+        26.9 & 40.9 & 15   & 15.8 \\
+        27.95& 37.7 & 12.8 & 18.9 \\
+        24.8 & 25.8 & 15.7 & 16.5 \\
+        21.7 & 31.2 & 13.3 & 15.7 \\
+        11.6 & 38.6 & 11.8 & 12 \\
+             & 33.1 & 14.4 & 16.9 \\
+             & 42   & 15.1 & 15.2 \\
+             & 26   & 12.6 & 13.2 \\
+             & 33.3 & 10.1 & 9.3 \\
+             & 31.9 & 13.9 & 14.8 \\
+        \bottomrule
+    \end{tblr}
+  \end{table}
