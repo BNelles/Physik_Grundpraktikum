@@ -68,12 +68,27 @@
     \end{tblr}
   \end{table}
 
-  Durch das Verhältnis kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
-  In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen.
-  Mithilfe von linearer Regression wird das Verhältnis hier aufgezeigt.\\
-  Die Steigung der Geraden enstspricht dem Eigenträgheitsmoment.\\
-  Der Wert beträgt $I_D=717.69$\unit{\kilo\gram\square\meter}.
-
+  Mit dem Verhältnis
+  \begin{equation}
+    T^2=frac{4\symup{\pi}^2}{\symup{D}}I_D+frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
+  \end{equation}
+  ,welches aus den Formeln %\ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
+  bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
+  In \ref{fig:plot} wird T^2 zu a^2 aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
+  717,69$\unit{\frac{\seconds^2}{\meter^2}}$ und der $\symup{T}^2$-Achsenabschnitt beträgt 6,04$\unit{\seconds^2}$.
+  Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
+  \begin{equation}
+    I_D=\frac{\symup{D}*6.04}{4\symup{\pi}^2}-frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2\text{.}
+  \end{equation}
+  Die Höhe der Zylinder beträgt dabei 2$\unit{\centi\meter}$ und die Masse 261$\unit{\gram}$.
+  Allerdings ist der genaue Wert des Radius des Zylinders nicht gekannt, jedoch ist das Eigenträgheitsmoment
+  für plausible Werte von R zwischen 0$\unit{\centi\meter}$ und 10$\unit{\centi\meter}$ vernachlässigbar klein,
+  wie auf diesem Plot hier zu erkennen ist.
+  \begin{figure}
+    \centering
+    \includegraphics{Eigenträgheit_Plot.pdf}
+    \label{fig:Eigenträgheit}
+  \end{figure}
   \begin{figure}
     \centering
     \includegraphics{plot.pdf}
@@ -86,3 +101,37 @@
   Dabie wurde die Höhe der Zylinder einmal abgemessen. 
   Der Durchmesser wurde beim Kopf über 5 und bei den anderen Körperteilen über 10, an verschiedenen Stellen gemessenen, Werte gemittelt.
 
+  \subsection{Figuren}
+
+  \begin{table}
+    \centering
+    \caption{Schwingungsdauern der Figuren mit einer Auslenkung von 90°}
+    \begin{tblr}
+      \colspec{S S},
+      \row{1}={guard, mode=math},
+      \toprule
+        n & T[\unit{\seconds}] \\
+      \midrule
+      1 & 9.12  \\  
+      2 & 9.37  \\
+      3 & 9.37  \\
+      4 & 9.35  \\
+      5 & 9.41  \\
+      \bottomrule
+      Für die Kugel \\
+    \end{tblr}
+    \begin{tblr}
+      \colspec{S S},
+      \row{1}={guard, mode=math},
+      \toprule
+      n & T[\unit{\seconds}] \\ 
+      \midrule
+      1 & 9.22  \\
+      2 & 9.32  \\
+      3 & 9.50  \\
+      4 & 9.15  \\
+      5 & 9.22  \\
+      \bottomrule
+      Für den Zylinder \\
+    \end{tblr}
+  \end{table}
