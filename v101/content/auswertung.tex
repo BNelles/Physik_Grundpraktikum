@@ -70,7 +70,7 @@
 
   Mit dem Verhältnis
   \begin{equation}
-    T^2=frac{4\symup{\pi}^2}{\symup{D}}I_D+frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
+    T^2=\frac{4\symup{\pi}^2}{\symup{D}}I_D+\frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
   \end{equation}
   ,welches aus den Formeln %\ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
   bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
@@ -78,7 +78,7 @@
   $\qty{717,69}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04}{\second\squared}$.
   Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
   \begin{equation}
-    I_D=\frac{\symup{D}*6.04}{4\symup{\pi}^2}-frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
+    I_D=\frac{\symup{D}\cdot 6.04}{4\symup{\pi}^2}-\frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
     \label{eqn:Eigenträgheitsmoment}
   \end{equation}
   
@@ -101,7 +101,7 @@
     \caption{Schwingungsdauern der Figuren mit einer Auslenkung von 90°}
     
     \begin{tblr}{
-      colspec{S[table-format=1] S[table-format=1.2]},
+      colspec={S[table-format=1.0] S[table-format=1.2]},
       row{1}={guard, mode=math},
       }
       \toprule
@@ -116,7 +116,7 @@
     \end{tblr}
     Für die Kugel \\
     \begin{tblr}{
-      colspec{S[table-format=1] S[table-format=1.2]},
+      colspec={S[table-format=1.0] S[table-format=1.2]},
       row{1}={guard, mode=math},
       }
       \toprule
@@ -143,9 +143,14 @@
   
   \subsection{Trägheitsmoment der Puppe}
   Um das Trägheitsmoment der Puppe zu berechnen wurden der Kopf, der Oberkörper und die einzelnen Arme und Beine als Zylinder genähert.
-  Dabie wurde die Höhe der Zylinder einmal abgemessen. 
+  Dabei wurde die Höhe der Zylinder einmal abgemessen. 
   Der Durchmesser wurde beim Kopf über 5 und bei den anderen Körperteilen über 10, an verschiedenen Stellen gemessenen, Werte gemittelt.
-
+  Für die Höhen wurden folgende Werte gemessen: \\
+  $h_K=\qty{49.9}{\milli\meter}$\quad \
+  $h_O=\qty{100.9}{\milli\meter}$\\
+  $h_A=\qty{130.3}{\milli\meter}$\quad
+  $h_B=\qty{148.6}{\milli\meter}$\\^
+  Die Werte der Durchmesser sind in der Tabelle \ref{tab:tabelle3} aufgeführt.
   \begin{table}
     \centering
     \caption{Durchmesser der Zylinder der Puppe}
@@ -171,3 +176,5 @@
         \bottomrule
     \end{tblr}
   \end{table}
+  Mit der Formel \ref{eqn:MW} wurden dann Werte für die Höhen bestimmt:
+   
