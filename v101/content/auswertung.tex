@@ -80,9 +80,15 @@
   \begin{equation}
     I_D=\frac{\symup{D}*6.04}{4\symup{\pi}^2}-frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2\text{.}
   \end{equation}
-  Da der Radius der beiden Zylinder nicht bekannt ist, er sich aber zwischen 0$\unit{\centi\meter}$ und 10$\unit{\centi\meter}$
-  befinden muss,
-
+  Die Höhe der Zylinder beträgt dabei 2$\unit{\centi\meter}$ und die Masse 261$\unit{\gram}$.
+  Allerdings ist der genaue Wert des Radius des Zylinders nicht gekannt, jedoch ist das Eigenträgheitsmoment
+  für plausible Werte von R zwischen 0$\unit{\centi\meter}$ und 10$\unit{\centi\meter}$ vernachlässigbar klein,
+  wie auf diesem Plot hier zu erkennen ist.
+  \begin{figure}
+    \centering
+    \includegraphics{Eigenträgheit_Plot.pdf}
+    \label{fig:Eigenträgheit}
+  \end{figure}
   \begin{figure}
     \centering
     \includegraphics{plot.pdf}
@@ -90,5 +96,37 @@
     \label{fig:plot}
   \end{figure}
 
+  \subsection{Figuren}
 
-
+  \begin{table}
+    \centering
+    \caption{Schwingungsdauern der Figuren mit einer Auslenkung von 90°}
+    \begin{tblr}
+      \colspec{S S},
+      \row{1}={guard, mode=math},
+      \toprule
+        n & T[\unit{\seconds}] \\
+      \midrule
+      1 & 9.12  \\  
+      2 & 9.37  \\
+      3 & 9.37  \\
+      4 & 9.35  \\
+      5 & 9.41  \\
+      \bottomrule
+      Für die Kugel \\
+    \end{tblr}
+    \begin{tblr}
+      \colspec{S S},
+      \row{1}={guard, mode=math},
+      \toprule
+      n & T[\unit{\seconds}] \\ 
+      \midrule
+      1 & 9.22  \\
+      2 & 9.32  \\
+      3 & 9.50  \\
+      4 & 9.15  \\
+      5 & 9.22  \\
+      \bottomrule
+      Für den Zylinder \\
+    \end{tblr}
+  \end{table}
