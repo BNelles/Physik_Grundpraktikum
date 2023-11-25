@@ -9,7 +9,7 @@
     Die kirchhoffschen Gesetze beschreiben das Verhalten von Strom in einem geschlossenen Stromkreis.
     Die Knotenregel besagt, dass alle einem Knoten hinzugefügten Ladungen gleich der abgegebenen Ladungen sein müssen.
     \begin{equation}
-        \sum_{i=1}^{\symup{n}}{I_i}
+        \sum_{i=1}^{\symup{n}}{I_i}=0
         \label{eqn:knoten}
     \end{equation}\\
     Die Maschenregel besagt, dass die Summe aller einzelnen Spannungen in einer Masche gleich 0 ist. 
@@ -43,6 +43,7 @@
 
     \subsection{Induktivitätsmessbrücke}
     Der Aufbau der Induktivitätsmessbrücke ist analog zu dem der Kapazitätsmessbrücke, außer dass die Kondensatoren durch Spulen ausgetauscht werden.
+    Anschaulich kann man dies in Abbildung \ref{fig:Induktiv} erkennen.
     Damit gilt für die Berechnung des ohmschen Widerstandes wieder Gleichung \ref{eqn:widerstand} und die Induktivität der Spule, die bestimmt werden soll, wird mit 
     \begin{equation}
         L_x=L_2 \frac{R_4}{R_3}
@@ -54,9 +55,11 @@
     Die Maxwell-Brücke wird ebenfalls zur Bestimmung der Induktivität einer Spule benutzt.
     Sie besitzt aber keine Spule $L_2$ in Reihe zu $R_2$, sondern stattdessen einen Kondensator, der parallel zu $R_4$ geschaltet ist.
     $R_4$ ist nun ein verstellbarer Widerstand. Das ist damit zu begründen, dass ein Kondensator mit geringen Verlusten einfacher zu realisieren ist, als eine Spule mit wenig Verlusten.
+    Die Schaltskizze davon ist Abbildung \ref{fig:Maxwell}.
     Die Berechnung von $L_x$ erfolgt nun über
     \begin{equation}
         L_x=R_2 R_3 C_4
     \end{equation}
+    und die von $R_x$ über Gleichung \ref{eqn:widerstand}.
 %\cite{sample}
 
