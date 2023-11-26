@@ -47,7 +47,7 @@
     Damit gilt für die Berechnung des ohmschen Widerstandes wieder Gleichung \ref{eqn:widerstand} und die Induktivität der Spule, die bestimmt werden soll, wird mit 
     \begin{equation}
         L_x=L_2 \frac{R_4}{R_3}
-        \label{eqn:Induktivität}
+        \label{eqn:induktivität}
     \end{equation}
     berechnet.\\
 
@@ -59,6 +59,7 @@
     Die Berechnung von $L_x$ erfolgt nun über
     \begin{equation}
         L_x=R_2 R_3 C_4
+        \label{eqn:maxwell}
     \end{equation}
     und die von $R_x$ über Gleichung \ref{eqn:widerstand}.
 
@@ -67,11 +68,11 @@
     Aufgebaut wird diese wie in Abbildung \ref{Wien} und besitzt vier bekannte Widerstände, wobei zwei den Widerstand $R$, einer den Widerstand $R'$ und einer den doppelten Widerstand von $R'$ besitzt.
     Für den Betrag des Spannungverhätnis von der Brückenspannung und der Eingangsspannung gilt 
     \begin{equation}
-       \biggl|\frac{U_{Br}}{U_S}\biggr|=\sqrt{\frac{(\Omega^2-1)^2}{(1-\Omega^2)^2+16\Omega^2}}
+       \biggl|\frac{U_{Br}}{U_S}\biggr|=\sqrt{\frac{1}{9}\frac{(\Omega^2-1)^2}{(1-\Omega^2)^2+9\Omega^2}}
     \end{equation}
     mit 
     \begin{gather}
-        \Omega=\frac{\omega}{\omega_0}\\
+        \Omega=\frac{\omega}{\omega_0}=\frac{f}{f_0}\\
         \omega_0=\frac{1}{RC}
     \end{gather}
 
@@ -86,7 +87,7 @@
     \end{equation}\\
     mit
     \begin{equation}
-        U_j=\frac{U_{Br}}{\sqrt{\frac{(j^2-1)^2}{(1-j^2)^2+16j^2}}} 
+        U_j=\frac{U_{Br}}{\sqrt{\frac{1}{9} \frac{(j^2-1)^2}{(1-j^2)^2+9j^2}}} 
     \end{equation}
 
 \subsection{Fehlerrechnung}
@@ -95,14 +96,16 @@ Der Mittelwert einer Werteverteilung wird mit
     \bar{x}=\frac{1}{\symup{n}}\sum_{i=1}^{\symup{n}} x_i
     \label{eqn:MW}
 \end{equation} 
-bestimmt.
+bestimmt.\\
 
 Den Fehler einer Größe berechnet man mit
 \begin{equation}
     \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x}))}
-\end{equation}.
+    \label{eqn:fehler}
+\end{equation}
 Für Größen, die von mehreren Variablen, die jeweils einen Fehler besitzen, abhängen, berechnet man mit
 \begin{equation}
     \increment f=\sqrt{\sum_{i=1}^{\symup{n}} (\frac{\partial f}{\partial x_i})^2 (\increment x_i)^2}
+    \label{fehlerfortpflanzung}
 \end{equation}
     %\cite{sample}

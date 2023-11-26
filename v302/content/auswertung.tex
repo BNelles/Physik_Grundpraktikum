@@ -1,14 +1,35 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+\subsection{Wheatstonsche Brückenschaltung}
+Für $R_2$ wurde ein Widerstand mit $R_2=\qty{332(9,96)}{\ohm}$ verwendet.
+Der Fehler der Bauteile wird im Folgenden immer als $\pm\qty{3}{\percent}$ angenommen.
+Der zu bestimmende Widerstand war Wert 13.
+Durch das varieren der Widerstände $R_3$ und $R_4$, bis die Brückenspannung den Wert 0 annimmmt, wurden für diese bei der ersten Messung die Werte
+$R_3=\qty{490}{\ohm}$ und $R_4=\qty{510}{\ohm}$ bestimmt, mit dem Verhältnis $\frac{R_3}{R_4}=0,961\pm0,005$.
+Für den Fehler des Verhältnisses wurde $\pm\qty{0,5}{\percent}$ angenommen.
+Mit Gleichung \ref{eqn:widerstand} ergibt sich $R_{13}=\qty{318,98}{\ohm}$.
+Der Fehler dieser Größe wird mit Formel \ref{eqn:fehlerfortpflanzung} berechnet.
+Damit ergibt sich hier $\increment R_{13}=\sqrt{ \Bigl(\frac{R_3}{R_4}\Bigr)^2 (\increment R_2)^2+(R_2)^2 \Bigl(\increment \frac{R_3}{R_4}\Bigr)^2}$.
+Demnach gilt $R_{13}=\qty{318,98(9,71)}{\ohm}$.
+Dies wurde für einen Weiteren unbekannten Widerstand, Wert 11, durchgeführt.
+Hier ergibt sich $R_3=\qty{596}{\ohm}$, $R_4r=\qty{404}{\ohm}$ und $\frac{R_3}{R_4}=1,475\pm0,007$.
+Daraus folgt mit Formel \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} $R_{11}=\qty{490(15)}{\ohm}$.
 
-\begin{table}
+\subsection{Kapazitive Brückenschaltung}
+Für $R_2$ wird hier der selbe Wert wie bei der Wheatstonschen Brücke genutzt und die Kapizität des Kondensators $C_2$ ist $C_2=\qty{750(22,5)}{\nano\farad}$.
+Die unbekannte Kapazität war hier Wert 8.
+Durch das varieren von $R_3$ und $R_4$ bis ein Minumum gefunden wurde, wurden die Werte $R_3=\qty{675}{\ohm}$ und $R_4=\qty{325}{\ohm}$ aufgenommen.
+Das Verhältnis der Werte beträgt $\frac{R_3}{R_4}=2,08\pm0,01$. 
+Mit Gleichung \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} ergibt sich $R_8=\qty{690(21)}{\ohm}$.
+Die Kapazität $C_8$ kann mit Gleichung \ref{eqn:kapazität} und der Fehler mit Gleichung \ref{fehlerfortpflanzung} berechnet werden.
+Der Fehler ist also $\increment C_{8}=\sqrt{ \Bigl(\frac{R_4}{R_3}\Bigr)^2 (\increment C_2)^2+(-C_2 \frac{R_4^2}{R_3^2})^2 \Bigl(\increment \frac{R_3}{R_4}\Bigr)^2}$
+Damit gilt $C_8=\qty{361(11)}{\farad}$.
+Dies wird analog mit Wert 9 durchgeführt.
+Damit ist 
+
+
+\begin{table} 
   \centering
   \caption{Eine Beispieltabelle mit Messdaten.}
   \label{tab:tabelle}
