@@ -12,10 +12,10 @@
     f[Hz] & U_\text{Br}[mV] \\
     \midrule
     50    &  230    \\
-    100   &  100    \\  
+    100   &  100    \\
     150   &  15     \\
     200   &  50     \\
-    250   &  100    \\   
+    250   &  100    \\
     300   &  130    \\
     350   &  160    \\
     400   &  200    \\
@@ -38,15 +38,36 @@ Für die Eingangsspannung gilt hier $U_s=\qty{1}{V}$, die Kapazität der Kondens
 \text{und} \qty{992}{\nano\farad}$ und wird hier auf $\qty{993}{\nano\farad}$ gemittelt, da eigentlich gelten müsse, dass 
 diese gleich sind, dies aber nicht realisierbar war. Desweiteren betrtägt $R'=\qty{332}{\ohm} \text{und} R=\qty{1}{\kilo\ohm}$.
 Die Bezeichnungen dieser Größen finden sich in \ref{fig:Wien} wieder.\\
-Zur bestimmung des Klirrfaktors wird hier nur die zweite Oberwelle betrachtet. In Gleichung \ref{} 
-
-Die Frequenz, für die die Brückenspannung minimiert wird, $f_0$ ist hier bei $\qty{150}{Hz}$ erreicht.
-
+Zur bestimmung des Klirrfaktors wird hier nur die zweite Oberwelle betrachtet. In Gleichung \ref{} zu dessen Berechnung vereinfacht
+sich die Summe dann zu zu einem $U_2^2$. Also vereinfacht sich die Berechnung des Faktors zu 
+\begin{equation}
+    k=\frac{U_2}{U_1}
+\end{equation}
+, wobei $U_1$ hier die Eingangsspannung $U_s$ ist. $U_2$ wird dann mithilfe von Gleichung \ref{} berechnet, wobei $j=\Omega=2$ ist.
+Damit lässt sich der Klirrfaktor berechnen als
+\begin{equation}
+    k=3\frac{U_\text{Br}}{U_1}\sqrt{\frac{(1-\Omega^2)^2+9\Omega^2}}{(\Omega^2-1)^2}
+    \label{eqn:klirr2}
+\end{equation}
+mit $\Omega=2$. Die einzusetzende Brückenspannung wird dann über den Vergleich zwischen $f$ und $f_0$ bestimmt, wobei f_0
+die Frequenz ist, die die Brückenspannung insgesamt minimiert. Durch die Anwendung von \ref{} zeigt sich, dass 
+\begin{equation}
+    f=2f_0
+\end{equation}
+für die zweite Oberwelle gelten muss. 
 
 \begin{figure}
     \centering
     \includegraphics{../frequenz.pdf}
-    \caption{Brückenspannung}
+    \caption{Brückenspannung gegen Frequenzen}
     \label{fig:frequenzverhältnis}
 \end{figure}
+
+Aus \ref{frequenzen} ist abzulesen, dass $f_0=\qty{150}{\hertz}$ ist, woraus folgt,
+dass die Brückenspannung, wenn $\Omega=2$ gilt, bei $f=\qty{300}{\hertz}$ abgelesen werden muss. Somit wird für k mit
+$U_\text{Br}=\qty{130}{\milli\volt}$ gerechnet. Eingesetzt in \ref{eqn:klirr2} ergibt sich dann ein Wert für $k=0.87$.
+
+
+
+
 
