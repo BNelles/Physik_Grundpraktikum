@@ -7,7 +7,7 @@ y=U*10**-3
 fig, ax=plt.subplots()
 
 ax.set(
-    xlabel=r"$f/f_0$",
+    xlabel=r"$\Omega$",
     ylabel=r"$U/U_s$",
 )
 ax.plot(x,y,"o")
