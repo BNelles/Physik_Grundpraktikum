@@ -47,7 +47,7 @@
     Damit gilt für die Berechnung des ohmschen Widerstandes wieder Gleichung \ref{eqn:widerstand} und die Induktivität der Spule, die bestimmt werden soll, wird mit 
     \begin{equation}
         L_x=L_2 \frac{R_4}{R_3}
-        \label{eqn:Induktivität}
+        \label{eqn:induktivität}
     \end{equation}
     berechnet.\\
 
@@ -59,6 +59,7 @@
     Die Berechnung von $L_x$ erfolgt nun über
     \begin{equation}
         L_x=R_2 R_3 C_4
+        \label{eqn:maxwell}
     \end{equation}
     und die von $R_x$ über Gleichung \ref{eqn:widerstand}.
 
@@ -95,14 +96,16 @@ Der Mittelwert einer Werteverteilung wird mit
     \bar{x}=\frac{1}{\symup{n}}\sum_{i=1}^{\symup{n}} x_i
     \label{eqn:MW}
 \end{equation} 
-bestimmt.
+bestimmt.\\
 
 Den Fehler einer Größe berechnet man mit
 \begin{equation}
     \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x}))}
-\end{equation}.
+    \label{eqn:fehler}
+\end{equation}
 Für Größen, die von mehreren Variablen, die jeweils einen Fehler besitzen, abhängen, berechnet man mit
 \begin{equation}
     \increment f=\sqrt{\sum_{i=1}^{\symup{n}} (\frac{\partial f}{\partial x_i})^2 (\increment x_i)^2}
+    \label{fehlerfortpflanzung}
 \end{equation}
     %\cite{sample}
