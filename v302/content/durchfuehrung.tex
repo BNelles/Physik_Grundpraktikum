@@ -43,15 +43,32 @@ für die ersten drei Schaltungen gilt, dass $R_3+R_4=\qty{1000}{\ohm}$ ist.
 
 \subsection{Durchführung}
 
+\subsection{Wheatstonesche Brückenschaltung}
 In der Wheatstoneschen Brückenschaltung (\ref{fig:Wheatstone}) müssen $R_3$ und $R_4$ variiert werden, 
-bis im Oszilloskop die Brückenspannung auf $\qty{0}{\volt}$ fällt.
+bis im Oszilloskop die Brückenspannung auf $\qty{0}{\volt}$ fällt. Daraufhin werden die entsprechenden Widerstände
+notiert und der unbekannte Widerstand mithilfe von Formel \ref{eqn:widerstand} berechnet werden.
 
-Bei der Kapazitiven, der Induktiven und der Maxwellschen Brückenschaltung hingegen wird durch Überlagerungen
-der Grundschwingung der Wechselspannung mit Oberschwingungen gestört. Also wird nur ein Spannungsminimum 
-durch das Variieren der ohmschen Widerstände erreicht.
+\subsection{Kapazitive Brückenschaltung}
+In der Kapazitiven Schaltung wird die Brückenspannung nur auf ein Minimum gebracht, da störende Frequenzen in der 
+Wechselspannung verhindern, dass diese auf $\qty{0}{\volt}$ fällt. Hierzu werden wieder $R_3$ und $R_4$ variiert.
+Der hier zu bestimmende Widerstand wird wieder mithilfe von \ref{eqn:widerstand} berechnet und die fehlende Kapazität
+mit Formel \ref{eqn:kapazität}.
 
+\subsection{Induktive Brückenschaltung}
+Für die Induktive Brückenschaltung wird wie bei der kapazitiven die Brückenspannung wieder minimiert durch variieren
+der bekannten Widerstände. Hierbei ist der unbekannte Widerstand wieder über Gleichung \ref{eqn:widerstand} bestimmt
+und die Induktivität über Gleichung \ref{eqn:induktivität}.
+
+\subsection{Maxwellsche Brückenschaltung}
+In der maxwellschen Brückenschaltung wird wieder die Brückenspannung minimiert mit $R_3$ und $R_4$, allerdings gilt hier
+nichtmehr, dass deren Summe $\qty{1000}{\ohm}$ ergibt. So wird auch hier der fehlende Widerstand $R_x$ mit \ref{eqn:widerstand}
+bestimmt, die Induktivität aber mithilfe von Gleichung \ref{eqn:maxwell}.
+
+\subsection{Wien-Robinson Brückenschaltung}
 Mit der Wien-Robinson Schaltung werden nun nur Bauteile mit bekannten Größen gewählt und die Frequenz $f$ 
-der Eingangsspannung geändert. Zu jeder betrachteten Frequenz wird dann die Brückenspannung aufgetragen.
+der Eingangsspannung geändert. Zu jeder betrachteten Frequenz wird dann die Brückenspannung aufgetragen. Bis 
+$\qty{500}{\hertz}$ wird die Frequenz in $\qty{50}{\hertz}$ Schritten aufgenommen und danach in $\qty{500}{\hertz}$
+Schritten bis $\qty{5000}{\hertz}$.
 
 
 
