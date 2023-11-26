@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is 'v302.blg'
+[66] biber:340> INFO - === Mon Nov 27, 2023, 10:12:04
+[95] Biber.pm:419> INFO - Reading 'v302.bcf'
+[169] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[185] Biber.pm:4419> INFO - Processing section 0
+[200] Biber.pm:4610> INFO - Looking for bibtex file 'lit.bib' for section 0
+[397] Utils.pm:410> ERROR - Cannot find 'lit.bib'!
+[398] Biber.pm:136> INFO - ERRORS: 1
