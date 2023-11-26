@@ -61,5 +61,31 @@
         L_x=R_2 R_3 C_4
     \end{equation}
     und die von $R_x$ über Gleichung \ref{eqn:widerstand}.
-%\cite{sample}
 
+    \subsection{Wien-Robinson-Brücke}
+    Die Wien-Robinson-Brücke wird verwendet, um eine konstante Frequenz $\omega$ aus einem Frequenzspektrum rauszufiltern.
+    Aufgebaut wird diese wie in Abbildung \ref{Wien} und besitzt vier bekannte Widerstände, wobei zwei den Widerstand $R$, einer den Widerstand $R'$ und einer den doppelten Widerstand von $R'$ besitzt.
+    Für den Betrag des Spannungverhätnis von der Brückenspannung und der Eingangsspannung gilt 
+    \begin{equation}
+       \biggl|\frac{U_{Br}}{U_S}\biggr|=\sqrt{\frac{(\Omega^2-1)^2}{(1-\Omega^2)^2+16\Omega^2}}
+    \end{equation}
+    mit 
+    \begin{gather}
+        \Omega=\frac{\omega}{\omega_0}\\
+        \omega_0=\frac{1}{RC}
+    \end{gather}
+
+    \subsection{Klirrfaktor}
+    Der Klirrfaktor stellt dar, wie fehlerfrei eine Sinusspannung ist. 
+    Damit das das Überlagern der Spannung mit anderen Wellen gemeint.
+    Der Klirrfaktor selbst wird durch das Verhältnis von der Sinus-Schwingung mit Überlagerungsschwingungen aufgestellt.
+    Dieser kann mit der Wien-Robinson-Brücke gemessen werden.       
+    Die Berechnung erfolgt mit 
+    \begin{equation}
+        k=\frac{1}{U_1}\sqrt{\sum_{i}^{n}{U_i^2}}
+    \end{equation}\\
+    mit
+    \begin{equation}
+        U_i=\frac{U_{Br}}{f(i)}
+    \end{equation}
+    %\cite{sample}
