@@ -23,30 +23,31 @@
     Die Wheatstonsche Brücke ist eine Schaltung, die genutzt wird, um ohmsche Widerstände zu messen.
     Dabei ist eine Spannung an zwei parallel geschalteten Paaren aus Widerständen angeschlossen, wobei nach dem ersten Widerstand jeweils ein Kabel an einem Oszilloskop angeschlossen ist.
     \ref{fig:Wheatstone}
-    Drei der Widerstände sind bekannt, der andere ist zu bestimmen.
-    Dies erfolgt mit der Formel
+    Drei der Widerstände sind bekannt, der andere ist mit der Formel
     \begin{equation}
         R_x=R_2 \frac{R_3}{R_4}
         \label{eqn:widerstand}
     \end{equation}
+    zu bestimmen.
 
     \subsection{Kapazitätsmessbrücke}
     Hier werden, im Gegensatz zu der Wheatstonsche Brückenschaltung, vor die beiden Widerstände auf der linken Seite jeweils ein Kondensator in Reihe geschaltet.
     Dabei hat der nach der Verbindung zum Oszilloskop eine bekannte Kapazität, wohingegen der der bei dem unbekannten Widerstand installierte eine zu bestimmende Kapazität besitzt.
     Der Aufbau ist in Abbildung \ref{fig:Kapazitiv} dargestellt.
     Den unbekannten Widerstand berechnet man mit Gleichung \ref{eqn:widerstand}.
-    Die unbekannte Kapazität mit 
+    Die unbekannte Kapazität wird mit
     \begin{equation}
         C_x=C_2 \frac{R_4}{R_3}
         \label{eqn:kapazität}
-    \end{equation}.
+    \end{equation}
+    ausgerechnet.
 
     \subsection{Induktivitätsmessbrücke}
     Der Aufbau der Induktivitätsmessbrücke ist analog zu dem der Kapazitätsmessbrücke, außer dass die Kondensatoren durch Spulen ausgetauscht werden.
     Anschaulich kann man dies in Abbildung \ref{fig:Induktiv} erkennen.
     Damit gilt für die Berechnung des ohmschen Widerstandes wieder Gleichung \ref{eqn:widerstand} und die Induktivität der Spule, die bestimmt werden soll, wird mit 
     \begin{equation}
-        L_x=L_2 \frac{R_4}{R_3}
+        L_x=L_2 \frac{R_3}{R_4}
         \label{eqn:induktivität}
     \end{equation}
     berechnet.

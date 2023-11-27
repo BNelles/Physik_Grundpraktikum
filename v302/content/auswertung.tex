@@ -17,7 +17,7 @@ Hier ergibt sich $R_3=\qty{596}{\ohm}$, $R_4r=\qty{404}{\ohm}$ und $\frac{R_3}{R
 Daraus folgt mit Formel \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} $R_{11}=\qty{490(15)}{\ohm}$.
 
 \subsection{Kapazitive Brückenschaltung}
-Für $R_2$ wird hier der selbe Wert wie bei der Wheatstonschen Brücke genutzt und die Kapizität des Kondensators $C_2$ ist $C_2=\qty{750(22,5)}{\nano\farad}$.
+Für $R_2$ wird hier der selbe Wert, wie bei der Wheatstonschen Brücke, genutzt und die Kapizität des Kondensators $C_2$ ist $C_2=\qty{750(22,5)}{\nano\farad}$.
 Die unbekannte Kapazität war hier Wert 8.
 Durch das varieren von $R_3$ und $R_4$ bis ein Minumum gefunden wurde, wurden die Werte $R_3=\qty{675}{\ohm}$ und $R_4=\qty{325}{\ohm}$ aufgenommen.
 Das Verhältnis der Werte beträgt $\frac{R_3}{R_4}=2,08\pm0,01$. 
@@ -31,27 +31,82 @@ Damit ist $R_3=\qty{595}{\ohm}$ und $R_4=\qty{405}{\ohm}$.
 Einsetzen in Formel \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} ergibt $R_9=\qty{488(15)}{\ohm}$.
 Die Kapazität hat nach Einsetzen in Formel \ref{eqn:kapazität} und \ref{eqn:fehlerfortpflanzung} den Wert $C_9=\qty{511(7)}{\ohm}$.
 
+\subsection{Induktivitätsmessbrücke}
+Auch hier wird für $R_2$ der selbe Wert, wie bei der Wheatstonschen Brücke, benutzt.
+Für $L_2$ gilt hier $L_2=\qty{27,5(0,825)}{\milli\henry}$.
+Die zu bestimmende Induktivität hat den Wert 18.
+Das Minimum der Brückenspannung wurde hier für die Widerstände $R_3=\qty{554}{\ohm}$ und $\qty{446}{\ohm}$ gefunden.
+Der Quotient der Werte beträgt $\frac{R_3}{R_4}=1,242\pm0,006$.
+$R_x$ hat mit den Gleichungen \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} den Wert $R_x=\qty{412(13)}{\ohm}$.
+Für $L_x$ ergibt sich mit \ref{eqn:widerstand} $L_2=\qty{34}{\milli\henry}$ mit dem Fehler $\sqrt{\Bigl(\frac{R_3}{R_4}\Bigr)^2 (\increment L_2)^2+L_2^2 \Bigl(\increment \frac{R_3}{R_4}\Bigr)^2}$.
+Mit Einsetzen der Werte erhält man $L_x=\qty{34,16(1,04)}$.
 
 
+\subsection{Klirrfaktor}
 
-\begin{table} 
-  \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
-  \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
+\begin{table}
+    \centering
+    \caption{Brückenspannung in Abhängigkeit von der Frequenz}
+    \label{frequenzen}
+    \begin{tblr}{
+        colspec={S S},
+        row{1}={guard, mode=math},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+    f[Hz] & U_\text{Br}[mV] \\
     \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
+    50    &  230    \\
+    100   &  100    \\
+    150   &  15     \\
+    200   &  50     \\
+    250   &  100    \\
+    300   &  130    \\
+    350   &  160    \\
+    400   &  200    \\
+    450   &  200    \\
+    500   &  220    \\
+    1000  &  280    \\
+    1500  &  300    \\
+    2000  &  300    \\
+    2500  &  300    \\
+    3000  &  310    \\
+    3500  &  310    \\
+    4000  &  310    \\
+    4500  &  310    \\
+    5000  &  310    \\
     \bottomrule
-  \end{tblr}
+    \end{tblr}
 \end{table}
 
-%Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+Für die Eingangsspannung gilt hier $U_s=\qty{1}{V}$, die Kapazität der Kondensatoren beträgt jeweils $\qty{994}{\nano\farad}
+\text{ und } \qty{992}{\nano\farad}$ und wird hier auf $\qty{993}{\nano\farad}$ gemittelt, da eigentlich gelten müsse, dass 
+diese gleich sind, dies aber nicht realisierbar war. Desweiteren betrtägt $R'=\qty{332}{\ohm} \text{ und } R=\qty{1}{\kilo\ohm}$.
+Die Bezeichnungen dieser Größen finden sich in \ref{fig:Wien} wieder.\\
+Zur bestimmung des Klirrfaktors wird hier nur die zweite Oberwelle betrachtet. In Gleichung \ref{}, zu dessen Berechnung, vereinfacht
+sich die Summe dann zu zu einem $U_2^2$. Also vereinfacht sich die Berechnung des Faktors zu 
+\begin{equation}
+    k=\frac{U_2}{U_1}
+\end{equation}
+, wobei $U_1$ hier die Eingangsspannung $U_s$ ist. $U_2$ wird dann mithilfe von Gleichung \ref{} berechnet, wobei $j=\Omega=2$ ist.
+Damit lässt sich der Klirrfaktor berechnen als
+\begin{equation}
+    k=3 \frac{U_\text{Br}}{U_1} \sqrt{\frac{(1-\Omega^2)^2+9\Omega^2}{(\Omega^2-1)^2}}
+    \label{eqn:klirr2}
+\end{equation}
+mit $\Omega=2$. Die einzusetzende Brückenspannung wird dann über den Vergleich zwischen $ f $ und $f_0$ bestimmt, wobei $f_0$
+die Frequenz ist, die die Brückenspannung insgesamt minimiert. Durch die Anwendung von \ref{} zeigt sich, dass 
+\begin{equation}
+    f=2f_0
+\end{equation}
+für die zweite Oberwelle gelten muss. 
+
+\begin{figure}
+    \centering
+    \includegraphics{ ./frequenzplot.pdf}
+    \caption{Brückenspannung gegen Frequenzen}
+    \label{fig:frequenzverhältnis}
+\end{figure}
+
+Aus \ref{frequenzen} ist abzulesen, dass $f_0=\qty{150}{\hertz}$ ist, woraus folgt,
+dass die Brückenspannung, wenn $\Omega=2$ gilt, bei $f=\qty{300}{\hertz}$ abgelesen werden muss. Somit wird für k mit
+$U_\text{Br}=\qty{130}{\milli\volt}$ gerechnet. Eingesetzt in \ref{eqn:klirr2} ist dann $k=0.87$.
