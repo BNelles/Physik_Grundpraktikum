@@ -18,5 +18,3 @@ ax.plot(x,y2, label=r"$k=0$")
 ax.plot(x,y3, label=r"$k=0.1$")
 
 ax.legend()
-
-fig.savefig("Klirr_Model.pdf")

@@ -70,11 +70,15 @@
     Für den Betrag des Spannungverhätnis von der Brückenspannung und der Eingangsspannung gilt 
     \begin{equation}
        \biggl|\frac{U_{Br}}{U_S}\biggr|=\sqrt{\frac{1}{9}\frac{(\Omega^2-1)^2}{(1-\Omega^2)^2+9\Omega^2}}
+       \label{eqn:filter}
     \end{equation}
     mit 
     \begin{gather}
-        \Omega=\frac{\omega}{\omega_0}=\frac{f}{f_0}\\
+        \Omega=\frac{\omega}{\omega_0}=\frac{f}{f_0}
+        \label{eqn:Omega}
+        \\
         \omega_0=\frac{1}{RC}
+        \label{eqn:omega}
     \end{gather}
 
     \subsection{Klirrfaktor}
@@ -85,10 +89,12 @@
     Die Berechnung erfolgt mit 
     \begin{equation}
         k=\frac{1}{U_1}\sqrt{\sum_{i}^{n}{U_j^2}}
+        \label{eqn:klirr1}
     \end{equation}\\
     mit
     \begin{equation}
-        U_j=\frac{U_{Br}}{\sqrt{\frac{1}{9} \frac{(j^2-1)^2}{(1-j^2)^2+9j^2}}} 
+        U_2=\frac{U_{Br}}{\sqrt{\frac{1}{9} \frac{(2^2-1)^2}{(1-2^2)^2+9*2^2}}}
+        \label{eqn:oberwelle} 
     \end{equation}
 
 \subsection{Fehlerrechnung}
