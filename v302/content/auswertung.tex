@@ -17,7 +17,7 @@ Hier ergibt sich $R_3=\qty{596}{\ohm}$, $R_4r=\qty{404}{\ohm}$ und $\frac{R_3}{R
 Daraus folgt mit Formel \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} $R_{11}=\qty{490(15)}{\ohm}$.
 
 \subsection{Kapazitive Brückenschaltung}
-Für $R_2$ wird hier der selbe Wert wie bei der Wheatstonschen Brücke genutzt und die Kapizität des Kondensators $C_2$ ist $C_2=\qty{750(22,5)}{\nano\farad}$.
+Für $R_2$ wird hier der selbe Wert, wie bei der Wheatstonschen Brücke, genutzt und die Kapizität des Kondensators $C_2$ ist $C_2=\qty{750(22,5)}{\nano\farad}$.
 Die unbekannte Kapazität war hier Wert 8.
 Durch das varieren von $R_3$ und $R_4$ bis ein Minumum gefunden wurde, wurden die Werte $R_3=\qty{675}{\ohm}$ und $R_4=\qty{325}{\ohm}$ aufgenommen.
 Das Verhältnis der Werte beträgt $\frac{R_3}{R_4}=2,08\pm0,01$. 
@@ -31,8 +31,17 @@ Damit ist $R_3=\qty{595}{\ohm}$ und $R_4=\qty{405}{\ohm}$.
 Einsetzen in Formel \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} ergibt $R_9=\qty{488(15)}{\ohm}$.
 Die Kapazität hat nach Einsetzen in Formel \ref{eqn:kapazität} und \ref{eqn:fehlerfortpflanzung} den Wert $C_9=\qty{511(7)}{\ohm}$.
 
+\subsection{Induktivitätsmessbrücke}
+Auch hier wird für $R_2$ der selbe Wert, wie bei der Wheatstonschen Brücke, benutzt.
+Für $L_2$ gilt hier $L_2=\qty{27,5(0,825)}{\milli\henry}$.
+Die zu bestimmende Induktivität hat den Wert 18.
+Das Minimum der Brückenspannung wurde hier für die Widerstände $R_3=\qty{554}{\ohm}$ und $\qty{446}{\ohm}$ gefunden.
+Der Quotient der Werte beträgt $\frac{R_3}{R_4}=1,242\pm0,006$.
+$R_x$ hat mit den Gleichungen \ref{eqn:widerstand} und \ref{eqn:fehlerfortpflanzung} den Wert $R_x=\qty{412(13)}{\ohm}$.
+Für $L_x$ ergibt sich mit \ref{eqn:widerstand} $L_2=\qty{34}{\milli\henry}$ mit dem Fehler $\sqrt{\Bigl(\frac{R_3}{R_4}\Bigr)^2 (\increment L_2)^2+L_2^2 \Bigl(\increment \frac{R_3}{R_4}\Bigr)^2}$.
+Mit Einsetzen der Werte erhält man $L_x=\qty{34,16(1,04)}$.
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+
 \subsection{Klirrfaktor}
 
 \begin{table}

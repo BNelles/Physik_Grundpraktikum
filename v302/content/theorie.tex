@@ -17,39 +17,40 @@
     \begin{equation}
         \sum_{i=1}^{\symup{n}}{U_{0,i}} - \sum_{j=1}^{\symup{m}}{U_{ab,j}} =0
         \label{eqn:masche}
-    \end{equation}\\
+    \end{equation}
 
     \subsection{Wheatstonsche Brückenschaltung}
     Die Wheatstonsche Brücke ist eine Schaltung, die genutzt wird, um ohmsche Widerstände zu messen.
     Dabei ist eine Spannung an zwei parallel geschalteten Paaren aus Widerständen angeschlossen, wobei nach dem ersten Widerstand jeweils ein Kabel an einem Oszilloskop angeschlossen ist.
     \ref{fig:Wheatstone}
-    Drei der Widerstände sind bekannt, der andere ist zu bestimmen.
-    Dies erfolgt mit der Formel
+    Drei der Widerstände sind bekannt, der andere ist mit der Formel
     \begin{equation}
         R_x=R_2 \frac{R_3}{R_4}
         \label{eqn:widerstand}
     \end{equation}
+    zu bestimmen.
 
     \subsection{Kapazitätsmessbrücke}
     Hier werden, im Gegensatz zu der Wheatstonsche Brückenschaltung, vor die beiden Widerstände auf der linken Seite jeweils ein Kondensator in Reihe geschaltet.
     Dabei hat der nach der Verbindung zum Oszilloskop eine bekannte Kapazität, wohingegen der der bei dem unbekannten Widerstand installierte eine zu bestimmende Kapazität besitzt.
     Der Aufbau ist in Abbildung \ref{fig:Kapazitiv} dargestellt.
     Den unbekannten Widerstand berechnet man mit Gleichung \ref{eqn:widerstand}.
-    Die unbekannte Kapazität mit 
+    Die unbekannte Kapazität wird mit
     \begin{equation}
         C_x=C_2 \frac{R_4}{R_3}
         \label{eqn:kapazität}
-    \end{equation}.
+    \end{equation}
+    ausgerechnet.
 
     \subsection{Induktivitätsmessbrücke}
     Der Aufbau der Induktivitätsmessbrücke ist analog zu dem der Kapazitätsmessbrücke, außer dass die Kondensatoren durch Spulen ausgetauscht werden.
     Anschaulich kann man dies in Abbildung \ref{fig:Induktiv} erkennen.
     Damit gilt für die Berechnung des ohmschen Widerstandes wieder Gleichung \ref{eqn:widerstand} und die Induktivität der Spule, die bestimmt werden soll, wird mit 
     \begin{equation}
-        L_x=L_2 \frac{R_4}{R_3}
+        L_x=L_2 \frac{R_3}{R_4}
         \label{eqn:induktivität}
     \end{equation}
-    berechnet.\\
+    berechnet.
 
     \subsection{Maxwell-Brücke}
     Die Maxwell-Brücke wird ebenfalls zur Bestimmung der Induktivität einer Spule benutzt.
@@ -65,7 +66,7 @@
 
     \subsection{Wien-Robinson-Brücke}
     Die Wien-Robinson-Brücke wird verwendet, um eine konstante Frequenz $\omega$ aus einem Frequenzspektrum rauszufiltern.
-    Aufgebaut wird diese wie in Abbildung \ref{Wien} und besitzt vier bekannte Widerstände, wobei zwei den Widerstand $R$, einer den Widerstand $R'$ und einer den doppelten Widerstand von $R'$ besitzt.
+    Aufgebaut wird diese wie in Abbildung \ref{fig:Wien} und besitzt vier bekannte Widerstände, wobei zwei den Widerstand $R$, einer den Widerstand $R'$ und einer den doppelten Widerstand von $R'$ besitzt.
     Für den Betrag des Spannungverhätnis von der Brückenspannung und der Eingangsspannung gilt 
     \begin{equation}
        \biggl|\frac{U_{Br}}{U_S}\biggr|=\sqrt{\frac{1}{9}\frac{(\Omega^2-1)^2}{(1-\Omega^2)^2+9\Omega^2}}
@@ -96,7 +97,7 @@ Der Mittelwert einer Werteverteilung wird mit
     \bar{x}=\frac{1}{\symup{n}}\sum_{i=1}^{\symup{n}} x_i
     \label{eqn:MW}
 \end{equation} 
-bestimmt.\\
+bestimmt.
 
 Den Fehler einer Größe berechnet man mit
 \begin{equation}
