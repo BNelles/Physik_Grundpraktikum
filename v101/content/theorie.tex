@@ -1,8 +1,11 @@
+\section{Zielsetzung}
+In diesem Versuch soll mithilfe der Schwingungsdauer von einer Kugel, eines Zylinders und einer Puppe 
+an einer Drillachse ihr Trägheitsmoment bestimmt werden.
+Außerdem sollen die theoretischen Werte berechnet werden, um die experimentell bestimmten Werte mit diesen zu vergleichen.\\
+
 \section{Theorie}
 \label{sec:Theorie}
-In diesem Versuch soll mithilfe der Schwingungsdauer von einer Kugel, eines Zylinders und einer Puppe 
-an einer Drillachse ihr Trägheitsmoment bestimmt und mit ihren theoretischen Werten verglichen
-werden.\\
+
 Das Trägheitsmoment $\symbf{\underline{\underline{I}}}$ ist eine Tensorgröße, die starren Körpern zugeordnet werden kann und 
 beschreibt, wie ein Körper sich bei Rotationsbewegungen verhält.
 Dabei setzt er die Winkelgeschwindigkeit eines Objektes mit dem resultierenden Drehimpuls in Beziehung mit
@@ -23,12 +26,12 @@ Falls dies nicht der Fall sein sollte, wird der steinersche Satz verwendet.
 \end{equation}   
 $\symbf{m}$ ist die Masse des Objekts und $\symbf{d}$ der Abstand zur Drehachse. \\
 \\
-Für einen Schwingenden Körper kann mit ihm auch die Schwingungsdauer bestimmt werden über
+Für einen Schwingenden Körper kann mit diesem auch die Schwingungsdauer bestimmt werden über
 \begin{equation}
     T=2 \symup{\pi} \sqrt{\frac{I}{\symup{D}}}\text{.}
     \label{eqn:Schwingungsdauer}
 \end{equation}
-Dabei beschreibt $\symbf{D}$ die sogenannte Winkelrichtgröße. Sie ist eine Konstante, die die Probortionalität zwischen dem 
+Dabei beschreibt $\symbf{D}$ die sogenannte Winkelrichtgröße. Diesew ist eine Konstante, die die Probortionalität zwischen dem 
 Auslenkungswinkel des Objekts und dem rückstellenden Drehmoment wiedergibt.
 \begin{equation}
     M=\symup{D} \varphi %aus der theoretischen Vorbereitung für den Versuch
@@ -41,6 +44,19 @@ Alternativ ist das Drehmoment außerdem mit
     \label{eqn:Drehmom2}
 \end{gather}
 beschreibbar.
+
+$\symbf{D}$ wird mit
+\begin{equation}
+\frac{\symbf{r}\times \symbf{F}}{\varphi}
+\label{eqn:D}
+\end{equation}
+berechnet.
+
+Wenn $\symbf{r}$ und $\symbf{F}$ orthogonal zueinerder stehen, wird die Formel zu
+\begin{equation}
+    \frac{r \cdot F}{\varphi}
+    \ref{eqn:D2}
+\end{equation}
 
 Die Trägheitsmomente von Zylindern sehen dann entsprechend Gleichung \ref{eqn:Trägheit} für unterschiedliche
 Drehachsen so aus.
@@ -64,17 +80,17 @@ Und für Kugeln so.
     I=\frac{2}{5}\symup{m}\symup{R}^2
     \label{eqn:Trägheit_Kugel}
 \end{equation}
-Insofern Mittelwerte einer Größe benötigt werden, bestimmt man diese mithilfe von
-\begin{equation}
-    \bar{x}=\frac{\sum_{i=1}^{\symup{n}} x_i}{\symup{n}}
-    \label{eqn:MW}
-\end{equation}
-und den entsprechenden Fehler mit
-\begin{equation}
-    \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x}))}
-\end{equation}
-Den Fehler in Variablen, die dann von mehreren fehlerbehafteten Größen abhängt wird dann so bestimmt
-\begin{equation}
-    \increment f=\sqrt{\sum_{i=1}^{\symup{n}} (\frac{\partial f}{\partial x_i})^2 (\increment x_i)^2}
-\end{equation}
+% Insofern Mittelwerte einer Größe benötigt werden, bestimmt man diese mithilfe von
+% \begin{equation}
+%     \bar{x}=\frac{\sum_{i=1}^{\symup{n}} x_i}{\symup{n}}
+%     \label{eqn:MW}
+% \end{equation}
+% und den entsprechenden Fehler mit
+% \begin{equation}
+%     \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x})^2)}
+% \end{equation}
+% Den Fehler in Variablen, die dann von mehreren fehlerbehafteten Größen abhängt wird dann so bestimmt
+% \begin{equation}
+%     \increment f=\sqrt{\sum_{i=1}^{\symup{n}} (\frac{\partial f}{\partial x_i})^2 (\increment x_i)^2}
+% \end{equation}
 %%\cite{sample}
