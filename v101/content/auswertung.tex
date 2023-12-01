@@ -73,16 +73,19 @@
   \begin{equation}
     I=2*I_m+I_D
   \end{equation}
-  $I_m$ wird bestimmt mithilfe von \ref{eqn:Trägheit_Zyl_2}, wobei noch beachtet werden muss, dass die Massen den Abstand a 
+  $I_m$ wird bestimmt mithilfe von \ref{eqn:Trägheit_Zyl_2}, wobei noch beachtet werden muss, dass die Massen den Abstand $a$ 
   von der Drehachse besitzen. Also gilt mit dem Satz von Steiner \ref{eqn:Steiner}, dass
   \begin{equation}
-    I_m=
+    I_m=\symup{m} (\frac{\symup{R}^2}{4}+\frac{\symup{h}^2}{12}+a^2)
   \end{equation}
+  In \ref{eqn:Schwingungsdauer} eingesetzt ergibt sich dann die Beziehung
   \begin{equation}
     T^2=\frac{4\symup{\pi}^2}{\symup{D}}I_D+\frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
-  \end{equation}
-  ,welches aus den Formeln \ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
-  bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
+  \end{equation} 
+  oder
+  \begin{equation}
+    T^2=\frac{8m\pi^2}{D}a^2+\frac{\pi^2}{D}(4I_D+2mR^2+\frac{2}{3}mh^2)
+  \end{equation} 
   In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
   $\qty{717,69(4.45)}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04(0.21)}{\second\squared}$.
   Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
@@ -235,7 +238,7 @@
       \bottomrule
     \end{tblr}
 
-    Die Mittlere Periodendauer ist $5T=\qty{2.961}{\seconds}$ %% Fehler fehlen noch
+    Die Mittlere Periodendauer ist $5T=\qty{2.961}{\second}$ % Fehler fehlen noch
     Durch die Gleichungen \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} lässt sich, wie bei Kugel und Zylinder, das Trägheitsmoment berechnen.
     Dieses beträgt also mit $I_1-I_D=\qty{1.78e-4}{\kilo\gram\meter\squared}$ \;
     $I_1=\qty{-29.82e-3}{\kilo\gram\meter\squared}$.
@@ -364,8 +367,8 @@
     Hier entspricht mit $a_A=R_O+\frac{h_A}{2}$ \; $a_A=\qty{73.75}{\milli\meter}$.
     Daraus folgt $I_A=\qty{1.09e-4}{\kilo\gram\meter\squared}$.\\
     
-    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges1}-I_D=\qty{2.43e-4}{\kilo\gram\meter\squared} \\
-     I_{ges1}=\qty{-2.76e-3}{\kilo\gram\meter\squared}$.
+    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges1}-I_D=\qty{2.43e-4}{\kilo\gram\meter\squared}$ \\
+     $I_{ges1}=\qty{-2.76e-3}{\kilo\gram\meter\squared}$.
 
     \subsubsection{Berechnung des Trägheismomentes für Stellung 2}
     Jetzt wird die Puppe wie in (...) aufgestellt.%% Hier bitte Bild 2 einfügen
@@ -380,8 +383,8 @@
     $a_A$ wird mit $a_A=\sqrt{(R_0+R_A)^2+(\frac{h_A}{2})^2}=\qty{69.17}{\milli\meter}$.
     Damit entspricht $I_A=\qty{1.04e-4}{\kilo\gram\meter\squared}$.\\
     
-    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges2}-I_D=\qty{6.22e-4}{\kilo\gram\meter\squared} \\
-     I_{ges2}=\qty{-2.34e-3}{\kilo\gram\meter\squared}$.
+    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges2}-I_D=\qty{6.22e-4}{\kilo\gram\meter\squared}$ \\
+     $I_{ges2}=\qty{-2.34e-3}{\kilo\gram\meter\squared}$.
 
 
 
