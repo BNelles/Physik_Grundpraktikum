@@ -68,17 +68,26 @@
     \end{tblr}
   \end{table}
 
-  Mit dem Verhältnis
+  \noindent Um das Trägheitsmoment zu bestimmen wird mit der Formel \ref{eqn:Schwingungsdauer},
+  wobei das Trägheitsmoment sich hier aus dem Trägheitsmoment der Massen $I_m$ und der Feder $I_D$ zusammensetzt. Es gilt
+  \begin{equation}
+    I=2*I_m+I_D
+  \end{equation}
+  $I_m$ wird bestimmt mithilfe von \ref{eqn:Trägheit_Zyl_2}, wobei noch beachtet werden muss, dass die Massen den Abstand a 
+  von der Drehachse besitzen. Also gilt mit dem Satz von Steiner \ref{eqn:Steiner}, dass
+  \begin{equation}
+    I_m=
+  \end{equation}
   \begin{equation}
     T^2=\frac{4\symup{\pi}^2}{\symup{D}}I_D+\frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
   \end{equation}
   ,welches aus den Formeln \ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
   bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
   In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
-  $\qty{717,69}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04}{\second\squared}$.
+  $\qty{717,69(4.45)}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04(0.21)}{\second\squared}$.
   Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
   \begin{equation}
-    I_D=\frac{\symup{D}\cdot 6.04}{4\symup{\pi}^2}-\frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
+    I_D=\frac{\symup{D}\cdot b}{4\symup{\pi}^2}-\frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
     \label{eqn:Eigenträgheitsmoment}
   \end{equation}
   
