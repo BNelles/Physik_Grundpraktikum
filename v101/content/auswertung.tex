@@ -5,8 +5,19 @@
   Mit der Formel $\frac{r\cdot F}{\varphi}$ wird D berechnet.
   Mithilfe der gemessen Werte für $F$ und $\varphi$ kann mit $r = 20 \, \unit{\centi\meter}$ nun D bestimmt werden.
   Die einzelnen Werte von D sind ebenfalls in \ref{tab:tabelle1} eingetragen. 
-  Mit $\overline{A} = \frac{1}{n} \sum_{i = 1}^{n} a_i$ wird nun das arithmetische Mittel gebildet. %% Brauch noch ne Quelle fürs Mittel
-  Einsetzen der Werte für D und $n = 11$ ergibt $\overline{D} = 0.02 \, \unit{\newton\meter}$.
+  Mit 
+  \begin{equation}
+    \bar{A} = \frac{1}{n} \sum_{i = 1}^{n} a_i
+    \label{eqn:MW}
+  \end{equation} 
+  wird nun das arithmetische Mittel gebildet. 
+  Einsetzen der Werte für D und $n = 11$ ergibt $\bar{D} = 0.02 \, \unit{\newton\meter}$.
+  Der Fehler von D ist
+  \begin{equation}
+     \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x})^2)}
+     \label{eqn:MWfehler}
+  \end{equation}.
+  Also ergibt sich $\bar{D}=\qty{0,02(0,00168)}{\newton\meter}$.
 
   \begin{table}[H]
     \centering
@@ -83,7 +94,7 @@
   \end{equation}
   
   Die Höhe der Zylinder beträgt dabei $\qty{2}{\centi\meter}$, der Radius $\qty{4,32}{\centi\meter}$ und die Masse $\qty{261}{\gram}$.
-  Entsprechend ergibt sich für das Eigenträgheitsmoment ein Wert von $\qty{0.003}{\kilo\gram\meter\squared}$.
+  Entsprechend ergibt sich für das Eigenträgheitsmoment ein Wert von $\qty{0,003}{\kilo\gram\meter\squared}$.
 
   \begin{figure}
     \centering
@@ -229,7 +240,7 @@
 
     Die Mittlere Periodendauer ist $5T=\qty{2.961}{\second}$ %% Fehler fehlen noch
     Durch die Gleichungen \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} lässt sich, wie bei Kugel und Zylinder, das Trägheitsmoment berechnen.
-    Dieses beträgt also mit $I_{e,1}=\qty{1.78e-4}{\kilo\gram\meter\squared}$ ergibt sich nach Abzug von $I_D$
+    Dieses beträgt also mit $I_{e,1}=\qty{1.78e-4}{\kilo\gram\meter\squared}$ ergibt sich nach Abzug vom Eigenträgheitsmoment
     $I_{e,1,ges}=\qty{-29.82e-3}{\kilo\gram\meter\squared}$.
 
     \subsubsection{experimentelle Bestimmung von Stellung 2}
