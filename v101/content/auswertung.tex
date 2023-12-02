@@ -79,31 +79,46 @@
     \end{tblr}
   \end{table}
 
-  Mit dem Verhältnis
-  \begin{equation}
+  \noindent Um das Trägheitsmoment zu bestimmen wird mit der Formel \ref{eqn:Schwingungsdauer},
+  wobei das Trägheitsmoment sich hier aus dem Trägheitsmoment der Massen $I_m$ und der Feder $I_D$ zusammensetzt. Es gilt
+  \begin{equation*}
+    I=2I_m+I_D
+  \end{equation*}
+  $I_m$ wird bestimmt mithilfe von \ref{eqn:Trägheit_Zyl_2}, wobei noch beachtet werden muss, dass die Massen den Abstand $a$ 
+  von der Drehachse besitzen. Also gilt mit dem Satz von Steiner \ref{eqn:Steiner}, dass
+  \begin{equation*}
+    I_m=\symup{m} (\frac{\symup{R}^2}{4}+\frac{\symup{h}^2}{12}+a^2)
+  \end{equation*}
+  In \ref{eqn:Schwingungsdauer} eingesetzt ergibt sich dann die Beziehung
+  \begin{equation*}
     T^2=\frac{4\symup{\pi}^2}{\symup{D}}I_D+\frac{m\pi^2}{\symup{D}} (2\symup{R}^2+\frac{2}{3}h^2+8a^2)
-  \end{equation}
-  ,welches aus den Formeln \ref{eqn:Schwingungsdauer}, \ref{eqn:Trägheit_Zyl_2} und \ref{eqn:Steiner} 
-  bestimmt werden kann, kann das Eigenträgheitsmoment der Drillachse bestimmt werden. 
-  In \ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
-  $\qty{717,69}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt beträgt $\qty{6,04}{\second\squared}$.
-  Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
+  \end{equation*} 
+  oder
   \begin{equation}
-    I_D=\frac{\symup{D}\cdot 6.04}{4\symup{\pi}^2}-\frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
-    \label{eqn:Eigenträgheitsmoment}
-  \end{equation}
-  
-  Die Höhe der Zylinder beträgt dabei $\qty{2}{\centi\meter}$, der Radius $\qty{4,32}{\centi\meter}$ und die Masse $\qty{261}{\gram}$.
-  Entsprechend ergibt sich für das Eigenträgheitsmoment ein Wert von $\qty{0,003}{\kilo\gram\meter\squared}$.
-
-  \begin{figure}
+    T^2=\frac{8\symup{m}\symup{\pi}^2}{\symup{D}}a^2+\frac{\symup{\pi}^2}{\symup{D}}(4I_D+2\symup{m}\symup{R}^2+\frac{2}{3}\symup{m}\symup{h}^2)
+    \label{eqn:Eigenschwing}
+  \end{equation} 
+    \begin{figure}[H]
     \centering
-    \includegraphics{plot.pdf}
+    \includegraphics[width=\textwidth]{plot.pdf}
     \caption{lineare Regression von $T^2$ abhängig von $a^2$ }
     \label{fig:plot}
   \end{figure}
-
+  \noindent In Abb\ref{fig:plot} wird $T^2$ zu $a^2$ aufgetragen. Die Steigung der Regressionsgerade beträgt dabei 
+  $\qty{717,69(4.45)}{\second\squared \per \meter\squared}$ und der $\symup{T}^2$-Achsenabschnitt $b$ beträgt $\qty{6,04(0.21)}{\second\squared}$.
+  %Entsprechend lässt sich ablesen, dass sich das Eigenträgheitsmoment ausdrücken lässt als
+  Aus Formel \ref{eqn:Eigenschwing} lässt sich ablesen, dass
+  \begin{equation}
+    b=\frac{\symup{\pi}^2}{\symup{D}}(4I_D+2\symup{m}\symup{R}^2+\frac{2}{3}\symup{m}\symup{h}^2)
+  \end{equation}
+  Nach $I_D$ umgeformt ergibt sich dann
+  \begin{equation}
+    I_D=\frac{\symup{D}\cdot b}{4\symup{\pi}^2}-\frac{1}{2}\symup{m}\symup{R}^2-\frac{1}{6}\symup{m}\symup{h}^2 \text{.}
+    \label{eqn:Eigenträgheitsmoment}
+  \end{equation}
   
+  \noindent Die Höhe der Zylinder beträgt dabei $\qty{2}{\centi\meter}$, der Radius $\qty{4,32}{\centi\meter}$ und die Masse $\qty{261}{\gram}$.
+  Entsprechend ergibt sich für das Eigenträgheitsmoment ein Wert von $\qty{0.003(0.0002)}{\kilo\gram\meter\squared}$.
 
   \subsection{Trägheitsmomente von Kugel und Zylinder}
 
@@ -167,10 +182,16 @@
    \end{tblr}
   \end{table}
   
-  Die Mittlere Periodendauer der Kugel, mit den Werten aus \ref{tab:tabelle4} beträgt hier $\qty{9.324(0.052)}{\second}$ und die des Zylinders $\qty{9.282(0.265)}{seconds}$.
-  Mithilfe von den Gleichungn \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} 
-  beträgt das Trägheitsmoment der Kugel $\qty{0.041(0.008)}{\kilo\gram\meter\squared}$ und das des
-  Zylinders $\qty{0.041(0.002)}{\kilo\gram\meter\squared}$ unter beachtung des Eigenträgheitsmoments.
+  Die Mittlere Periodendauer der Kugel, mit den Werten aus \ref{tab:tabelle4} beträgt hier $\qty{9.324(0.052)}{seconds}$ und die des Zylinders $\qty{9.282(0.265)}{seconds}$.
+ % Mithilfe von den Gleichungn \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} 
+ % beträgt das Trägheitsmoment der Kugel $\qty{0.041(0.008)}{\kilo\gram\meter\squared}$ und das des
+ % Zylinders $\qty{0.041(0.002)}{\kilo\gram\meter\squared}$.
+  Daraus wird mithilfe von Gleichung \ref{eqn:Schwingungsdauer} das Trägheitsmoment der jeweiligen Objekte berechnet.
+  Für die Kugel ergibt damit sich ein Trägheismoment von $I_{e,K}=\qty{-1.24(0.21)e-3}{\kilo\gram\meter\squared}$ und für den
+  Zylinder ist $I_{e,Z}=\qty{-1.24(0.25)e-3}{\kilo\gram\meter\squared}$. Hier wurde zu dessen Berechnung das Eigenträgheitsmoment
+  bereits abgezogen von den aus Formel \ref{eqn:Schwingungsdauer} resultierenden Trägheismomenten.\\
+  Der theoretische Wert für das Trägheitsmoment der Kugel beträgt nach Gleichung \ref{eqn:Trägheit_Kugel} $I_{t,K}=\qty{3e-3}{\kilo\gram\meter\squared}$
+  und der des Zylinders nach Gleichung \ref{eqn:Trägheit_Zyl_1} $I_{t,Z}=\qty{3e-3}{\kilo\gram\meter\squared}$.
   
   \subsection{Trägheitsmoment der Puppe}
     \subsubsection{experimentelle Bestimmung von Stellung 1}
@@ -238,10 +259,12 @@
     \end{tblr}
   \end{table}
 
-    Die Mittlere Periodendauer ist $5T=\qty{2.961}{\second}$ %% Fehler fehlen noch
+    Die Mittlere Periodendauer ist $5T=\qty{2.961(0.03)}{\second}$ 
     Durch die Gleichungen \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} lässt sich, wie bei Kugel und Zylinder, das Trägheitsmoment berechnen.
-    Dieses beträgt also mit $I_{e,1}=\qty{1.78e-4}{\kilo\gram\meter\squared}$ ergibt sich nach Abzug vom Eigenträgheitsmoment
-    $I_{e,1,ges}=\qty{-29.82e-3}{\kilo\gram\meter\squared}$.
+    Dieses beträgt also mit $I_{e,1}=\qty{1.78(0.01)e-4}{\kilo\gram\meter\squared}$ ergibt sich nach Abzug vom Eigenträgheitsmoment
+    $I_{e,1,ges}=\qty{-29.82(0.20)e-3}{\kilo\gram\meter\squared}$.
+
+
 
     \subsubsection{experimentelle Bestimmung von Stellung 2}
     Die in der zweiten Stelling bestimmten Werte sind in Tabelle \ref{tab:tabelle6} aufgelistet.
@@ -305,7 +328,7 @@
     \end{tblr}
   \end{table}
 
-    Die Mittlere Periodendauer ist $5T=\qty{4.023}{seconds}$ %% Fehler fehlen noch
+    Die Mittlere Periodendauer ist $5T=\qty{4.023(0.027)}{seconds}$ 
     Analog zu Stellung 1 kann $I_2$ berechnet werden.
     Demnach gilt $I_{e,2}=\qty{3.28e-4}{\kilo\gram\meter\squared}$
     und, nach Abzug des Eigenträgheitsmomentes, $I_{e,2,ges}=\qty{-29.67e-3}{\kilo\gram\meter\squared}$.
@@ -338,8 +361,8 @@
           21.7 & 31.2 & 13.3 & 15.7 \\
           11.6 & 38.6 & 11.8 & 12 \\
                & 33.1 & 14.4 & 16.9 \\
-               & 42   & 15.1 & 15.2 \\
-               & 26   & 12.6 & 13.2 \\
+               & 42.0   & 15.1 & 15.2 \\
+               & 26.0   & 12.6 & 13.2 \\
                & 33.3 & 10.1 & 9.3 \\
                & 31.9 & 13.9 & 14.8 \\
           \bottomrule
@@ -347,10 +370,10 @@
     \end{table}
 
     Mit Formel \ref{eqn:MW} wurden dann Werte für die Durchmesser bestimmt und durch 2 geteilt, um den Radius zu erhalten:\\
-    $R_K=\qty{11.3}{\milli\meter}$ \quad
-    $R_O=\qty{17.01}{\milli\meter}$\\
-    $R_A=\qty{6.23}{\milli\meter}$ \quad
-    $R_B=\qty{7.12}{\milli\meter}$\\
+    $R_K=\qty{11.3(2.01)}{\milli\meter}$ \quad
+    $R_O=\qty{17.01(0.90)}{\milli\meter}$\\
+    $R_A=\qty{6.23(0.27)}{\milli\meter}$ \quad
+    $R_B=\qty{7.12(0.43)}{\milli\meter}$\\
 
     Für die Berechnung der Trägheismomente sind die Massen der einzelnen Körperteile notwendig.
     Dafür wurde mit einer Waage zuerst die Gesamtmasse der Puppe gemessen: $m_ges=\qty{169.3}{\gram}$
