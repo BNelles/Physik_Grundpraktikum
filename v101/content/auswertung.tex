@@ -2,7 +2,7 @@
 \label{sec:Auswertung}
   \subsection{Winkelrichtgröße}
   Die gemessene Kraft in Abhängigkeit vom dem Auslenkungswinkel wird in der Tabelle \ref{tab:tabelle1} dargestellt.
-  Mit der Formel $\frac{r\cdot F}{\varphi}$ wird D berechnet.
+  Mit der Formel \ref{eqn:D2} wird D berechnet.
   Mithilfe der gemessen Werte für $F$ und $\varphi$ kann mit $r = 20 \, \unit{\centi\meter}$ nun D bestimmt werden.
   Die einzelnen Werte von D sind ebenfalls in \ref{tab:tabelle1} eingetragen. 
   Mit 
@@ -118,7 +118,13 @@
   \end{equation}
   
   \noindent Die Höhe der Zylinder beträgt dabei $\qty{2}{\centi\meter}$, der Radius $\qty{4,32}{\centi\meter}$ und die Masse $\qty{261}{\gram}$.
-  Entsprechend ergibt sich für das Eigenträgheitsmoment ein Wert von $\qty{0.003(0.0002)}{\kilo\gram\meter\squared}$.
+  Entsprechend ergibt sich für das Eigenträgheitsmoment mit 
+  \begin{equation}
+     \increment f=\sqrt{\sum_{i=1}^{\symup{n}} (\frac{\partial f}{\partial x_i})^2 (\increment x_i)^2}
+     \label{eqn:gauß}
+  \end{equation}
+  
+  ein Wert von $\qty{0.003(0.0002)}{\kilo\gram\meter\squared}$.
 
   \subsection{Trägheitsmomente von Kugel und Zylinder}
 
@@ -182,11 +188,11 @@
    \end{tblr}
   \end{table}
   
-  Die Mittlere Periodendauer der Kugel, mit den Werten aus \ref{tab:tabelle4} beträgt hier $\qty{9.324(0.052)}{seconds}$ und die des Zylinders $\qty{9.282(0.265)}{seconds}$.
+  Die Mittlere Periodendauer der Kugel, mit den Werten aus \ref{tab:tabelle4} beträgt hier $\qty{9.324(0.052)}{\second}$ und die des Zylinders $\qty{9.282(0.265)}{\second}$.
  % Mithilfe von den Gleichungn \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} 
  % beträgt das Trägheitsmoment der Kugel $\qty{0.041(0.008)}{\kilo\gram\meter\squared}$ und das des
  % Zylinders $\qty{0.041(0.002)}{\kilo\gram\meter\squared}$.
-  Daraus wird mithilfe von Gleichung \ref{eqn:Schwingungsdauer} das Trägheitsmoment der jeweiligen Objekte berechnet.
+  Daraus wird mithilfe von Gleichung \ref{eqn:Schwingungsdauer} das Trägheitsmoment der jeweiligen Objekte berechnet und mit Gleichung \ref{eqn:gauß} der jeweilige Fehler.
   Für die Kugel ergibt damit sich ein Trägheismoment von $I_{e,K}=\qty{-1.24(0.21)e-3}{\kilo\gram\meter\squared}$ und für den
   Zylinder ist $I_{e,Z}=\qty{-1.24(0.25)e-3}{\kilo\gram\meter\squared}$. Hier wurde zu dessen Berechnung das Eigenträgheitsmoment
   bereits abgezogen von den aus Formel \ref{eqn:Schwingungsdauer} resultierenden Trägheismomenten.\\
@@ -384,7 +390,7 @@
       V=\pi r^2 \cdot h
       \label{eqn:volumen}
     \end{equation}
-    $V_{ges}=\qty{151.29}{\centi\meter\squared}$\\
+    $V_{ges}=\qty{151.29(2.34)}{\centi\meter\squared}$\\
     $V_K=\qty{20(0.63)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{13.23}{\percent}$\\
     $V_O=\qty{91.72(0.26)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{60.62}{\percent}$\\
     $V_A=\qty{15.89(0.03)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{10.5}{\percent}$\\
