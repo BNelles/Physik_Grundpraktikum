@@ -5,8 +5,19 @@
   Mit der Formel $\frac{r\cdot F}{\varphi}$ wird D berechnet.
   Mithilfe der gemessen Werte für $F$ und $\varphi$ kann mit $r = 20 \, \unit{\centi\meter}$ nun D bestimmt werden.
   Die einzelnen Werte von D sind ebenfalls in \ref{tab:tabelle1} eingetragen. 
-  Mit $\overline{A} = \frac{1}{n} \sum_{i = 1}^{n} a_i$ wird nun das arithmetische Mittel gebildet. %% Brauch noch ne Quelle fürs Mittel
-  Einsetzen der Werte für D und $n = 11$ ergibt $\overline{D} = 0.02 \, \unit{\newton\meter}$.
+  Mit 
+  \begin{equation}
+    \bar{A} = \frac{1}{n} \sum_{i = 1}^{n} a_i
+    \label{eqn:MW}
+  \end{equation} 
+  wird nun das arithmetische Mittel gebildet. 
+  Einsetzen der Werte für D und $n = 11$ ergibt $\bar{D} = 0.02 \, \unit{\newton\meter}$.
+  Der Fehler von D ist
+  \begin{equation}
+     \increment\bar{x}=\sqrt{\frac{1}{\symup{n}\cdot(\symup{n}-1)}(\sum_{i=1}^{\symup{n}} (x_i - \bar{x})^2)}
+     \label{eqn:MWfehler}
+  \end{equation}.
+  Also ergibt sich $\bar{D}=\qty{0,02(0,00168)}{\newton\meter}$.
 
   \begin{table}[H]
     \centering
@@ -42,7 +53,7 @@
   \subsection{Eigenträgheitsmoment}
   In Tabelle \ref{tab:tabelle2} wird das quadrat des Abstandes der Gewichte von der Drehachse zu dem Quadrat der Schwingungsdauer aufgetragen.
 
-  \begin{table}
+  \begin{table}[H]
     \centering
     \caption{Die Werte des Quadrates der Schwingungsdauer sind in Abhängigkeit zum Quadrat des Abstandes aufgezählt.}
     \label{tab:tabelle2}
@@ -151,7 +162,7 @@
   %\end{minipage}
   %\end{table}
  
-  \begin{table}
+  \begin{table}[H]
    \centering
    \caption{Schwingungsdauern der Körper mit einer Auslenkung von 90°}
    \label{tab:tabelle4}
@@ -237,7 +248,7 @@
       row{1}={guard, mode=math},
       }
       \toprule
-        n & 5T_{90} \mathbin{/} \unit{\second} & 5T_{120} \mathbin{/} \unit{\second} \\
+        n & 5T_{90} \mathbin{/} [\unit{\second}] & 5T_{120} \mathbin{/} [\unit{\second}] \\
       \midrule
       1 & 3.00    & 2.78\\  
       2 & 2.90  & 3.00\\
@@ -250,37 +261,79 @@
 
     Die Mittlere Periodendauer ist $5T=\qty{2.961(0.03)}{\second}$ 
     Durch die Gleichungen \ref{eqn:Schwingungsdauer} und \ref{eqn:Eigenträgheitsmoment} lässt sich, wie bei Kugel und Zylinder, das Trägheitsmoment berechnen.
-    Dieses beträgt also mit $I_1+I_D=\qty{1.78(0.01)e-4}{\kilo\gram\meter\squared}$ \;
-    $I_1=\qty{-29.82(0.20)e-3}{\kilo\gram\meter\squared}$.
+    Dieses beträgt also mit $I_{e,1}=\qty{1.78(0.01)e-4}{\kilo\gram\meter\squared}$ ergibt sich nach Abzug vom Eigenträgheitsmoment
+    $I_{e,1,ges}=\qty{-29.82(0.20)e-3}{\kilo\gram\meter\squared}$.
+
+
 
     \subsubsection{experimentelle Bestimmung von Stellung 2}
     Die in der zweiten Stelling bestimmten Werte sind in Tabelle \ref{tab:tabelle6} aufgelistet.
-    \begin{table}[H]
-      \centering
-      \caption{Schwingungsdauern der Puppe in Stellung 2 mit einer Auslenkung von 90° / 120°}
-      \label{tab:tabelle6}
-      \begin{tblr}{
-        colspec={S[table-format=1.0] S[table-format=1.2] S[table-format=1.2]},
-        row{1}={guard, mode=math},
-        }
-        \toprule
-          n & 5T_{90} \mathbin{/} \unit{\second} & 5T_{120} \mathbin{/} \unit{\second}\\
-        \midrule
-        1 & 4.00    & 3.97 \\  
-        2 & 4.10  & 3.94  \\
-        3 & 4.00    & 3.93  \\
-        4 & 4.16 & 4.06  \\
-        5 & 3.94 & 4.13  \\
-        \bottomrule
-      \end{tblr}
-    \end{table}
+   % \begin{table}
+   %   \centering
+   %   \caption{Schwingungsdauern der Puppe in Stellung 2 mit einer Auslenkung von 90° / 120°}
+   %   \label{tab:tabelle6}
+   %   \begin{minipage}{0.2\linewidth}
+   %   \begin{tblr}{
+   %     colspec={S[table-format=1.0] S[table-format=1.2]},
+   %     row{1}={guard, mode=math},
+   %     }
+   %     \toprule
+   %       n & 5T [\unit{\second}] \\
+   %     \midrule
+   %     1 & 4  \\  
+   %     2 & 4.1  \\
+   %     3 & 4  \\
+   %     4 & 4.16  \\
+   %     5 & 3.94  \\
+   %     \bottomrule
+   %   \end{tblr}
+   %   
+   % \end{minipage}
+   % \begin{minipage}{0.2\linewidth}
+   %   \begin{tblr}{
+   %     colspec={S[table-format=1.0] S[table-format=1.2]},
+   %     row{1}={guard, mode=math},
+   %     }
+   %     \toprule
+   %     n & 5T[\unit{\second}] \\ 
+   %     \midrule
+   %     1 & 3.97 \\
+   %     2 & 3.94 \\
+   %     3 & 3.93 \\
+   %     4 & 4.06  \\
+   %     5 & 4.13  \\
+   %     \bottomrule
+   %   \end{tblr}
+   %
+   % \end{minipage}
+   % \end{table}
+
+   \begin{table}[H]
+    \centering
+    \caption{Schwingungsdauern der Puppe in Stellung 2 mit einer Auslenkung von 90° / 120°}
+    \label{tab:tabelle6}
+    \begin{tblr}{
+      colspec={S[table-format=1.0] S[table-format=1.2] S[table-format=1.2]},
+      row{1}={guard, mode=math},
+      }
+      \toprule
+        n & {5T_90} \mathbin{/} [\unit{\second}] & 5T_{120} \mathbin{/} [\unit{\second}] \\
+      \midrule
+      1 & 4.00    & 3.97\\  
+      2 & 4.10  & 3.94\\
+      3 & 4.00 &  3.93\\
+      4 & 4.16  & 4.06\\
+      5 & 3.94 & 4.13 \\
+      \bottomrule
+    \end{tblr}
+  \end{table}
 
     Die Mittlere Periodendauer ist $5T=\qty{4.023(0.027)}{seconds}$ 
     Analog zu Stellung 1 kann $I_2$ berechnet werden.
-    Demnach gilt $I_2+I_D=\qty{3.28(0.17)e-4}{\kilo\gram\meter\squared}$
-    und $I_2=\qty{-29.67(0.20)e-3}{\kilo\gram\meter\squared}$.
+    Demnach gilt $I_{e,2}=\qty{3.28e-4}{\kilo\gram\meter\squared}$
+    und, nach Abzug des Eigenträgheitsmomentes, $I_{e,2,ges}=\qty{-29.67e-3}{\kilo\gram\meter\squared}$.
 
-    \subsubsection{Berechnung des Trägheismomentes}
+    \subsubsection{Theoretische Berechnung des Trägheismomentes}
     Um das Trägheitsmoment der Puppe zu berechnen wurden der Kopf, der Oberkörper und die einzelnen Arme und Beine als Zylinder genähert.
     Dabei wurde die Höhe der Zylinder einmal abgemessen. 
     Der Durchmesser wurde beim Kopf über 5 und bei den anderen Körperteilen über 10, an verschiedenen Stellen gemessenen, Werte gemittelt.
@@ -290,7 +343,7 @@
     $h_A=\qty{130.3}{\milli\meter}$\quad
     $h_B=\qty{148.6}{\milli\meter}$\\
     Die Werte der Durchmesser sind in der Tabelle \ref{tab:tabelle3} aufgeführt.
-    \begin{table}
+    \begin{table}[H]
       \centering
       \caption{Durchmesser der Zylinder der Puppe}
       \label{tab:tabelle3}
@@ -300,7 +353,7 @@
           row{1}={guard, mode=math},
           }
           \toprule
-          d_K\unit{\milli\meter} & d_O\unit{\milli\meter} & d_A\unit{\milli\meter} & d_B\unit{\milli\meter}\\
+          d_K \mathbin{/} \unit{\milli\meter} & d_O \mathbin{/} \unit{\milli\meter} & d_A \mathbin{/} \unit{\milli\meter} & d_B \mathbin{/} \unit{\milli\meter}\\
           \midrule     
           26.9 & 40.9 & 15   & 15.8 \\
           27.95& 37.7 & 12.8 & 18.9 \\
@@ -326,22 +379,29 @@
     Dafür wurde mit einer Waage zuerst die Gesamtmasse der Puppe gemessen: $m_ges=\qty{169.3}{\gram}$
     Für die Massen der einzelnen Körperteile wurden dann die Annahme getroffen, dass die Massenverteilung in der Puppe vollständig homogen ist.
     Mithilfe dieser Annahme können die Teilmassen, mit dem Anteil des jeweiligen Volumens an dem des gesamten Körpers, berechnet werden.
-    Für die Volumina gilt:\\
-    $V_ges=\qty{151.29}{\centi\meter\squared}$\\
+    Für die Volumina gilt mit 
+    \begin{equation}
+      V=\pi d\cdot h
+      \label{eqn:volumen}
+    \end{equation}
+    $V_{ges}=\qty{151.29}{\centi\meter\squared}$\\
     $V_K=\qty{20}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{13.23}{\percent}$\\
     $V_O=\qty{91.72}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{60.62}{\percent}$\\
     $V_A=\qty{15.89}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{10.5}{\percent}$\\
     $V_B=\qty{23.67}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{15.64}{\percent}$\\
 
-    Für die einzelnen Massen gilt damit:\\
+    Für die einzelnen Massen gilt damit durch 
+    \begin{equation}
+      m_i=m_ges \frac{V_i}{V_ges}
+    \end{equation}
     $m_K=\qty{22.4}{\gram}$\\
     $m_O=\qty{102.63}{\gram}$\\
     $m_A=\qty{17.78}{\gram}$\\
     $m_B=\qty{26.48}{\gram}$\\
 
     \subsubsection{Berechnung des Trägheismomentes für Stellung 1}
-    Hier wird die Puppe so aufgestellt, wie in (...) gezeigt.%% Hier bitte Bild 1 einfügen
-    Das Gesamtträgheitsmoment setzt sich aus $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ zusammen.
+    Hier wird die Puppe so aufgestellt, wie in \ref{fig:Stellung1} gezeigt.%% Hier bitte Bild 1 einfügen
+    Das Gesamtträgheitsmoment setzt sich aus $I_{t}=I_K+I_O+2I_A+2I_B$ zusammen.
     Nun kann das Trägheitsmoment des Kopfes und des Oberkörpers mit Formel \ref{eqn:Trägheit_Zyl_1} berechnet werden.
     Dadurch ergibt sich:\\
     $I_K=\qty{1.43e-6}{\kilo\gram\meter\squared}$\\
@@ -350,31 +410,31 @@
     Für das Trägheismoment des Beins muss Formel \ref{eqn:Trägheit_Zyl_1} und der Satz von Steiner angewendet werden, da der  Schwerpunkt des Beines nicht in der Drehachse liegt.
     Daraus folgt $I_B=m_B(\frac{R_B^2}{2}+a_B^2)$.
     Hier entspricht $a_B$ der Entfernung vom Schwerpunkt des Beins zur Drehachse, was in dieser Stellung $a_B=\qty{11.35}{\milli\meter}$ entsrpicht.
-    Mir dem Einsetzen aller Werte in die Formel ergibt sich $I_B=\qty{4.11e-6}{\kilo\gram\meter\squared}$.\\
+    Mit dem Einsetzen aller Werte in die Formel ergibt sich $I_B=\qty{4.11e-6}{\kilo\gram\meter\squared}$.\\
 
     Bei dem Arm muss Formel \ref{eqn:Trägheit_Zyl_2} und ebenfalls der Satz von Steiner verwendet werden.
     Dabei ergibt sich die Formel $I_A=m_A(\frac{R_A^2}{4}+\frac{h_A^2}{12}+a_A^2)$.
     Hier entspricht mit $a_A=R_O+\frac{h_A}{2}$ \; $a_A=\qty{73.75}{\milli\meter}$.
     Daraus folgt $I_A=\qty{1.09e-4}{\kilo\gram\meter\squared}$.\\
     
-    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges1}-I_D=\qty{2.43e-4}{\kilo\gram\meter\squared}$ \\
-     $I_{ges1}=\qty{-2.76e-3}{\kilo\gram\meter\squared}$.
+    Mit $I_{t}=I_K+I_O+2I_A+2I_B$ folgt $I_{t,1}=\qty{2.43e-4}{\kilo\gram\meter\squared}$ und unter Abzug des Eigenträgheitsmoments
+     $I_{t,1,ges}=\qty{-2.76e-3}{\kilo\gram\meter\squared}$.
 
     \subsubsection{Berechnung des Trägheismomentes für Stellung 2}
-    Jetzt wird die Puppe wie in (...) aufgestellt.%% Hier bitte Bild 2 einfügen
+    Jetzt wird die Puppe wie in \ref{eqn:Stellung2} aufgestellt.%% Hier bitte Bild 2 einfügen
     Hier kann das Trägheitsmoment des Kopfes und des Oberkörpers völlig analog zu Stellung 1 berechnet werden.
     
-    Für das Trägheismoment des Beins muss Formel \ref{eqn:Trägheit_Zyl_2} und der Satz von Steiner angewendet werden, da der  Schwerpunkt des Beines nicht in der Drehachse liegt.
+    Um das Trägheismoment des Beins zu erhalten, muss Formel \ref{eqn:Trägheit_Zyl_2} benutzt werden und da die Drehachse nicht durch den Schwerpunkt verläuft, muss auch hier der Satz von Steiner angewendet werden.
     Daher gilt $I_B=m_B(\frac{R_B^2}{4}+\frac{h_B^2}{12}+a_B^2)$.
     In dieser Stellung ist $a_B=\sqrt{11.35^2+(\frac{h_B}{2})^2}=\qty{75.16}{\milli\meter}$.
-    Mir dem Einsetzen aller Werte in die Formel ergibt sich $I_B=\qty{1.99e-4}{\kilo\gram\meter\squared}$.\\
+    Nach Einsetzen der Werte ergibt sich $I_B=\qty{1.99e-4}{\kilo\gram\meter\squared}$.\\
 
     Bei dem Arm kann die Berechnung wieder mit $I_A=m_A(\frac{R_A^2}{4}+\frac{h_A^2}{12}+a_A^2)$ durchgeführt werden.
     $a_A$ wird mit $a_A=\sqrt{(R_0+R_A)^2+(\frac{h_A}{2})^2}=\qty{69.17}{\milli\meter}$.
     Damit entspricht $I_A=\qty{1.04e-4}{\kilo\gram\meter\squared}$.\\
     
-    Mit $I_{ges}=I_K+I_O+2I_A+2I_B-I_D$ folgt $I_{ges2}-I_D=\qty{6.22e-4}{\kilo\gram\meter\squared}$ \\
-     $I_{ges2}=\qty{-2.34e-3}{\kilo\gram\meter\squared}$.
+    Mit $I_{t}=I_K+I_O+2I_A+2I_B$ folgt $I_{t,2}=\qty{6.22e-4}{\kilo\gram\meter\squared}$.
+    Wenn davon $I_D$ abgezogen wird, ergibt sich $I_{t,2,ges}=\qty{-2.34e-3}{\kilo\gram\meter\squared}$.
 
 
 

@@ -1,5 +1,8 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+    Die berechneten Werte für die Winkelrichtgröße und das Eigenträgheitsmoment sind $\bar{D}=\qty{0,02(0,00168)}{\newton\meter}$ und  $\qty{0,003}{\kilo\gram\meter\squared}$. 
+
     \subsection{negative Trägheitsmomente}
     Dass die die Trägheismomente für die Figuren und Puppe negativ sind ist physkalisch nicht möglich.
     Dies war bei den gemessenen und berechneten Werten jedoch der Fall.
@@ -7,12 +10,26 @@
     $I_D$ war nämlich der einzig negative Term in der Berechnung.
     Außerdem war dieser der einzige Wert, der in beiden Methoden zur Bestimmung des Trägheitsmomentes verwentet wurde.
     Das Eigenträgheitsmoment wurde unter der Annahme, dass das Trägheitsmoment, des zur Drehachse senkrechten Eisenstabes, vernachlässigbar sei, berechnet.
-    Dies ist eine mögliche Quelle des Fehlers, neben möglichen Fehlern bei der Messung und Fehlern bei der Regression.\\ 
-
-    \subsection{Vergleich mit berechneten Werten}
+    Dies ist eine mögliche Quelle des Fehlers, neben möglichen Fehlern bei der Messung und Fehlern bei der Regression.
     Im folgenden werden daher die Werte ohne Einbeziehen des Eigenträgheitsmomentes betrachtet.
-    In Stellung 1 entspricht der experimentell bestimmte Wert im Vergleich zum berechneten $\frac{I_1}{I_{ges1}}=\qty{73.25}{\percent}$.\;
-    In Stellung 2 ist das Verhältnis $\frac{I_2}{I_{ges2}}=\qty{52.73}{\percent}$.\\
-    Verglichen mit dem theoretisch bestimmten Wert weicht der experimentell bestimte also in Stellung 1 um $\qty{26.75}{\percent}$ und in Stellung 2 um $\qty{47.27}{\percent}$ ab.
+
+    \subsection{Trägheitsmomente von Kugel und Zylinder}
+    Um die Abweichung vom Theoriewert zu bestimmen, werden die experimentellen Werte in
+    \begin{equation}
+        \frac{I_e-I_t}{I_t}
+        \label{eqn:abweichung}
+    \end{equation}
+    eingesetzt.
+    Für die Kugel ist $I_K=\qty{0.041(0.008)}{\kilo\gram\meter\squared}$ und für den Zylinder gilt $\qty{0.041(0.002)}{\kilo\gram\meter\squared}$.
+    
+    \subsection{Trägheitsmomente de Puppe}
+    Bei der Puppe muss zwischen den verschiedenen Stellungen unterschieden werden.
+    Die experimentell bestimmten Werte für die beiden Trägheitsmomente sind $I_{e,1}=\qty{1.78e-4}{\kilo\gram\meter\squared}$ und $I_{e,2}=\qty{3.28e-4}{\kilo\gram\meter\squared}$.
+    Für die theoretischen Werte wurde $I_{t,1}=\qty{2.43e-4}{\kilo\gram\meter\squared}$ und $I_{t,2}=\qty{6.22e-4}{\kilo\gram\meter\squared}$
+    Verglichen mit dem theoretisch bestimmten Wert weicht der experimentell bestimte nach Berechnung mit Formel \ref{eqn:abweichung} in Stellung 1 um $\frac{I_{e,1}-I_{t,1}}{I_{t,1}}=\qty{-26.75}{\percent}$ und in Stellung 2 um $\frac{I_{e,2}-I_{t,2}}{I_{t,2}}=\qty{-47.27}{\percent}$ ab.
     Dies kann zwar auf Messfehler hinweisen, jedoch sollte die grobe Näherung der Puppe, mit den Körperteilen als Zylinder, eine relativ große Fehlerquelle bei dem theoretisch bestimmten Wert darstellen.
-    Zudem kann hier auch das Vernachlässigen des Trägheismomentes der Drillachse zu einem Fehler führen.
+    Das Verhältnis der Trägheitsmomente der beiden Stellungen beträgt $\frac{I_{e,1}}{I_{e,2}}=\qty{54.26}{\percent}$ mit den experimentellen Werten und $\frac{I_{t,1}}{I_{t,2}}=\qty{39.07}{\percent}$ mit den theoretischen.
+    Hier ist das Trägheitsmoment der Puppe in Stellung 2 größer, als das von Stellung 1. 
+    Dies ist darauf zurückzuführen, dass in Stellung 1 die Beine der Puppe an dem Körper anliegen, während sie in Stellung 2 ausgestreckt sind.
+    Die Abweichung der Verhältnisse, die durch Formel \ref{eqn:abweichung} berechnet wird, beträgt $\qty{38.88}{\percent}$.
+    Auch hier ist die Näherung der Puppe mit Zylindern ein naheliegender Grund für die Abweichung.
