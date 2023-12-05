@@ -33,8 +33,8 @@ def L(xx,a,b,c,d):
 fig2, ax2=plt.subplots()
 ax2.cla()
 ax2.set(
-    x_label=r"$T/°K$",
-    y_label=r"$L/\frac{\joule}{\mole}",
+    xlabel=r"$T/°K$",
+    ylabel=r"$L/ \frac{J}{mol}$",
 )
 ax2.plot(z,L(z,e,f,g,h))
 fig2.savefig("plot3.pdf")
@@ -45,8 +45,8 @@ def l(xx,a,b,c,d):
 fig3, ax3=plt.subplots()
 ax3.cla()
 ax3.set(
-    x_label=r"$T/°K$",
-    y_label=r"$L/\frac{\joule}{\mole}",
+    xlabel=r"$T/°K$",
+    ylabel=r"$L/ \dfrac{J}{mol}$",
 )
 ax3.plot(z,l(z,e,f,g,h))
 fig3.savefig("plot4.pdf")
