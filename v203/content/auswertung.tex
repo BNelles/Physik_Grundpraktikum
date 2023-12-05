@@ -195,4 +195,62 @@ Daraus folgt $L_i=\qty{24.1(0.3)e-3}{\joule\per\mole}$.
 Um die Arbeit für ein einzelnes Molekül zu erhalten, wird $L_I$ durch die Avogradokonstante $N_A=\qty{6.022e23}{\per\mole}$ dividiert.
 Umgerechnet in Elektronenvolt ergibt sich $L_i=\qty{0.2501(0.0031)}{eV}$.   
 
+\subsection{Bestimmung der Verdampfungswärme wenn der Druck größer als $\qty{1}{\bar}$ ist.}
 
+Hier wird zunächst nicht mehr davon ausgegangen, dass in der Clausius-Clapeyron Gleichung \ref{eqn:clausius} $L$ konstant ist
+und von $V_D$ der allgemeinen Gasgleichung beschrieben wird. Stattdessen gilt hier, dass
+\begin{equation}
+    \left(p+\frac{\symup{a}}{V^2}\right)=\symup{R}T
+    \label{eqn:vd}
+\end{equation}
+ist. Allerdings ist $V_F$ immernoch vernachlässigbar gegenüber $V_D$.\\
+Um nun $L$ zu bestimmen wird zunächst die Clausius-Clapexronische Gleichung umgestellt zu
+\begin{equation}
+    -TV_D\frac{\symup{d}p}{\symup{d}T}=L \text{ .}
+    \label{eqn:claus}
+\end{equation}
+
+Zur Bestimmung von $p(T)$ werden die Werte aus \ref{tab:tabelle1} für $p>\qty{1}{bar}$ betrachtet und mit einer 
+Regressionspolynom dritten Grades beschrieben\ref{fig:druck2} $p(T)=AT^3+BT^2+CT+D$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{plot2.pdf}
+    \label{fig:druck2}
+\end{figure}
+
+Hieraus ergeben sich die Werte für die Koeffizienten als
+\begin{itemize}
+    \item $A=\qty{4.70(6.12)e-6}{\newton\per\meter\squared\kelvin\cubed}$
+    \item $B=\qty{-4.54(7.93)e-3}{\newton\per\meter\squared\kelvin\squared}$
+    \item $C=\qty{1.46(3.42)}{\newton\per\meter\squared\kelvin}$
+    \item $D=\qty{-1.57(4.91)e2}{\newton\per\meter\squared}$
+\end{itemize}
+
+Zur bestimmung von $V_D$ in Abhängigkeit von der Temperatur wird als erstes Gleichung \ref{eqn:vd} danach umgeformt
+woraus man durch umformen die Gleichung 
+\begin{equation}
+    V_{D}^2-\frac{\symup{R}T}{p}V_D+\frac{a}{p}=0 \implies 
+    V_D=\frac{1}{p}\left(\frac{1}{2}\symup{R}T\pm\sqrt{\left(\frac{1}{2}\symup{R}T\right)^2-ap}\right)
+    \label{eqn:vol}
+\end{equation}
+bekommt.\\
+Wenn nun die Gleichungen \ref{eqn:vol} und \ref{eqn:druck2} in die Clausius-Clapexronische Gleichung \ref{eqn:claus} eingesetzt
+werden, ist ein ausdruck von $L(T)$ nur in Abhängigkeitvon $T$ gefunden.
+\begin{align}
+    &L=-\frac{T}{AT^3+BT^2+CT+D}\left(\frac{\symup{R}T}{2}\pm\sqrt{\left(\frac{1}{2}RT\right)^2-a(AT^3+BT^2+CT+D)}\right)(3AT^2+2BT+C)\\
+    \iff &L=-\frac{3AT^3+2BT^2+CT}{AT^3+BT^2+CT+D}\left(\frac{\symup{R}T}{2}\pm\sqrt{\left(\frac{1}{2}RT\right)^2-a(AT^3+BT^2+CT+D)}\right)
+    \label{eqn:L}
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{plot3.pdf}
+    \label{fig:LT_pos}
+    \caption{L gegen T, wenn die Wurzel positivi ist.}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{plot4.pdf}
+    \caption{L gegen T, wenn die Wurzel negativ ist.}
+\end{figure}
