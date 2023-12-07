@@ -1,0 +1,25 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+Ziel dieses Versuches war, eine Fourier Synthese von verschiedenen Funktionen erfolgreich durchzuführen.
+Zusätzlich soll mithilfe des Fourierschen Theorems verschiedene Funktionen analysiert werden.
+
+\section{Theorie}
+\label{sec:Theorie}
+Nach dem Theorem von Fourer kann jede periodische Funktion $f(t)$ durch Sinus- und Cosinusfunktionen darstellen kann.
+Dies geschieht in der Form 
+\begin{equation}
+    f(t)=\frac{1}{2}a_0+\sum_{n=1}^{\infinity}\Bigl(a_n \symbf{cos}(n \frac{2 \pi}{T} t) + b_n \symbf{sin}(n \frac{2\pi}{T}t)\Bigr) \qquad n\in\mathbb{N}
+    \label{eqn:f_reihe}
+\end{equation}, unter der Vorraussetzung das die Reihe gleichmäßig konvergiert.
+Dabei entspricht T der Periodendauer der Funktion und die Koeffizienten werden durch
+\begin{equation}
+    a_n=\frac{2}{T}\int_0^T f(t) \symbf{cos}(n \frac{2\pi}{T}t) \symup{d}t \qquad n\in\mathbb{N}
+    \label{eqn:a_n}
+\end{equation}
+und 
+\begin{equation}
+    b_n=\frac{2}{T}\int_0^T f(t) \symbf{sin}(n \frac{2\pi}{T}t) \symup{d}t \qquad n\in\mathbb{N}
+    \label{eqn:b_n}
+\end{equation}
+
+\cite{sample}

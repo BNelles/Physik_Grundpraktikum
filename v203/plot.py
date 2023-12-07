@@ -23,7 +23,7 @@ ax.plot(
     linewidth=1.5,
 )
 ax.set(
-    xlabel=r"$T/K$",
+    xlabel=r"$\dfrac{1}{T}/\dfrac{1}{K}$",
     ylabel=r"$\dfrac{log(p)}{p_0}$",
 )
 print(params[0])

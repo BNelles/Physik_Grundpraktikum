@@ -1,5 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is '../v302.blg'
-[72] biber:340> INFO - === Mon Nov 27, 2023, 10:12:44
-[239] Utils.pm:410> ERROR - Cannot find '../v302.bcf'!
-[239] Biber.pm:136> INFO - ERRORS: 1
