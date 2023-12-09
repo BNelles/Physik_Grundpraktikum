@@ -5,13 +5,14 @@ Zusätzlich soll mithilfe des Fourierschen Theorems verschiedene Funktionen anal
 
 \section{Theorie}
 \label{sec:Theorie}
+\subsection{Fourier-Analyse}
 Nach dem Theorem von Fourer kann jede periodische Funktion $f(t)$ durch Sinus- und Cosinusfunktionen darstellen kann.
 Dies geschieht in der Form 
 \begin{equation}
-    f(t)=\frac{1}{2}a_0+\sum_{n=1}^{\infinity}\Bigl(a_n \symbf{cos}(n \frac{2 \pi}{T} t) + b_n \symbf{sin}(n \frac{2\pi}{T}t)\Bigr) \qquad n\in\mathbb{N}
+    f(t)=\frac{1}{2}a_0+\sum_{n=1}^{\infty}\Bigl(a_n \symbf{cos}(n \frac{2 \pi}{T} t) + b_n \symbf{sin}(n \frac{2\pi}{T}t)\Bigr) \qquad n\in\mathbb{N}
     \label{eqn:f_reihe}
 \end{equation}, unter der Vorraussetzung das die Reihe gleichmäßig konvergiert.
-Dabei entspricht T der Periodendauer der Funktion und die Koeffizienten werden durch
+Dabei entspricht T der Periodendauer der Funktion und die Amplituden werden durch
 \begin{equation}
     a_n=\frac{2}{T}\int_0^T f(t) \symbf{cos}(n \frac{2\pi}{T}t) \symup{d}t \qquad n\in\mathbb{N}
     \label{eqn:a_n}
@@ -21,5 +22,20 @@ und
     b_n=\frac{2}{T}\int_0^T f(t) \symbf{sin}(n \frac{2\pi}{T}t) \symup{d}t \qquad n\in\mathbb{N}
     \label{eqn:b_n}
 \end{equation}
+bestimmt.
+Dabei gibt es eine Grundschwingung mit der Grundfrequenz $v_1=\frac{1}{T}$.
+Die Schwingungen,die mit der Grundschwingung die Funktion $f(t)$ ergeben, nennt man Oberschwingungen, von welchen die Frequenzen ganzzahlige Vielfache von $v_1$ sind.
+Es treten hier nur Phasenverschiebungen von 0, $\frac{1}{2}\pi$, $\pi$ und $\frac{3}{2}\pi$ auf.
+Wenn eine Funktion, von der eine Fourier Analyse durchgeführt werden soll, gerade ist, sind alle $b_n=0$.
+Bei einer ungeraden Funktion fallen hingegen alle $a_n$ weg.
+Wenn die Funktion $f(t)$ nicht stetig ist, wird auch mit steigendem n die Funktion an der Stelle, an der sie nicht stetig ist, nicht genauer approximiert.
+Dies nennt man Gibbsches Phänomen.
 
+\subsection{Fourier-Transformation}
+Mit
+\begin{equation}
+    g(v)=\int_{-\infty}^{\infty}f(t)e^{ivt} \symub{d}t
+    \label{eqn:trafo}
+\end{equation}
+kann das Frequenzspektrum $g(v)$ von $f(t)$ berechnet werden.%%Wenden wir die überhaupt an?
 \cite{sample}
