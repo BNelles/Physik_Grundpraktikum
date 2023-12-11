@@ -16,6 +16,14 @@ b3=10**(A3/20)
 ax1.set_title(r"$Quadratschwingung$")
 ax2.set_title(r"$Sägezahnschwingung$")
 ax3.set_title(r"$Dreiecksspannung$")
+
+ax1.set_xlabel(r"$f/kHz$")
+ax2.set_xlabel(r"$f/kHz$")
+ax3.set_xlabel(r"$f/kHz$")
+ax1.set_ylabel(r"$U/V$")
+ax2.set_ylabel(r"$U/V$")
+ax3.set_ylabel(r"$U/V$")
+
 ax1.plot(
     f1,b1,"o",color='c',
     label=r"$experimentelle Daten$"
