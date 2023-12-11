@@ -45,4 +45,4 @@ ax3.plot(
 ax1.legend()
 ax2.legend()
 ax3.legend()
-plt.show()
+fig.savefig("plot1.pdf")
