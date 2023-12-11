@@ -193,10 +193,10 @@
  % beträgt das Trägheitsmoment der Kugel $\qty{0.041(0.008)}{\kilo\gram\meter\squared}$ und das des
  % Zylinders $\qty{0.041(0.002)}{\kilo\gram\meter\squared}$.
   Daraus wird mithilfe von Gleichung \ref{eqn:Schwingungsdauer} das Trägheitsmoment der jeweiligen Objekte berechnet und mit Gleichung \ref{eqn:gauß} der jeweilige Fehler.
-  Inklusive Eigenträgheitsmoment ergibt sich ein Trägheismoment von $I_1=\qty{1.76(0.09)e-3}{\kilo\gram\meter\squared}$ für die Kugel und
-  $I_2=\qty{1.76(0.16)e-3}{\kilo\gram\meter\squared}$ für den Zylinder
-  Für die Kugel hat damit sich ein Trägheismoment von $I_{e,K}=\qty{-1.24(0.21)e-3}{\kilo\gram\meter\squared}$ und für den
-  Zylinder ist $I_{e,Z}=\qty{-1.24(0.25)e-3}{\kilo\gram\meter\squared}$. Hier wurde zu dessen Berechnung das Eigenträgheitsmoment
+  Inklusive Eigenträgheitsmoment ergibt sich ein Trägheismoment von $I_{e,K}=\qty{1.76(0.09)e-3}{\kilo\gram\meter\squared}$ für die Kugel und
+  $I_{e,Z}=\qty{1.76(0.16)e-3}{\kilo\gram\meter\squared}$ für den Zylinder
+  Für die Kugel hat damit sich ein Trägheismoment von $I_{e,K,ges}=\qty{-1.24(0.21)e-3}{\kilo\gram\meter\squared}$ und für den
+  Zylinder ist $I_{e,Z,ges}=\qty{-1.24(0.25)e-3}{\kilo\gram\meter\squared}$. Hier wurde zu dessen Berechnung das Eigenträgheitsmoment
   von den vorher berechneten Werten abgezogen.\\
   Der theoretische Wert für das Trägheitsmoment der Kugel mit Radius $R_K=\qty{148}{\milli\meter}$ beträgt nach Gleichung \ref{eqn:Trägheit_Kugel} $I_{t,K}=\qty{3e-3}{\kilo\gram\meter\squared}$
   und der des Zylinders mit Radius $R_Z=\qty{219.5}{\milli\meter}$ nach Gleichung \ref{eqn:Trägheit_Zyl_1} $I_{t,Z}=\qty{3e-3}{\kilo\gram\meter\squared}$.
@@ -256,7 +256,7 @@
       row{1}={guard, mode=math},
       }
       \toprule
-        n & 5T_{90} \mathbin{/} [\unit{\second}] & 5T_{120} \mathbin{/} [\unit{\second}] \\
+        n & 5T_{90} \mathbin{/} \unit{\second} & 5T_{120} \mathbin{/} \unit{\second} \\
       \midrule
       1 & 3.00    & 2.78\\  
       2 & 2.90  & 3.00\\
@@ -326,7 +326,7 @@
       row{1}={guard, mode=math},
       }
       \toprule
-        n & {5T_90} \mathbin{/} [\unit{\second}] & 5T_{120} \mathbin{/} [\unit{\second}] \\
+        n & {5T_90} \mathbin{/} \unit{\second} & 5T_{120} \mathbin{/} \unit{\second} \\
       \midrule
       1 & 4.00    & 3.97\\  
       2 & 4.10  & 3.94\\
@@ -395,10 +395,10 @@
       \label{eqn:volumen}
     \end{equation}
     $V_{ges}=\qty{151.29(2.34)}{\centi\meter\squared}$\\
-    $V_K=\qty{20(0.63)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{13.23}{\percent}$\\
-    $V_O=\qty{91.72(0.26)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{60.62}{\percent}$\\
-    $V_A=\qty{15.89(0.03)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{10.5}{\percent}$\\
-    $V_B=\qty{23.67(0.1)}{\centi\meter\squared}$ Anteil am Gesamtvolumen: $\qty{15.64}{\percent}$\\
+    $V_K=\qty{20(0.63)}{\centi\meter\squared}$    \\
+    $V_O=\qty{91.72(0.26)}{\centi\meter\squared}$ \\
+    $V_A=\qty{15.89(0.03)}{\centi\meter\squared}$ \\
+    $V_B=\qty{23.67(0.1)}{\centi\meter\squared}$  \\
 
     Für die einzelnen Massen gilt damit durch 
     \begin{equation}
@@ -414,9 +414,7 @@
     Das Gesamtträgheitsmoment setzt sich aus $I_{t}=I_K+I_O+2I_A+2I_B$ zusammen.
     Nun kann das Trägheitsmoment des Kopfes und des Oberkörpers mit Formel \ref{eqn:Trägheit_Zyl_1} berechnet werden.
     Der Fehler wird mit \ref{eqn:gauß} berechnet.
-    Dadurch ergibt sich:\\
-    $I_K=\qty{1.43(0.46)e-6}{\kilo\gram\meter\squared}$\\
-    $I_O=\qty{1.5(0.16)e-5}{\kilo\gram\meter\squared}$\\
+    Dadurch ergibt sich $I_K=\qty{1.43(0.46)e-6}{\kilo\gram\meter\squared}$ und $I_O=\qty{1.5(0.16)e-5}{\kilo\gram\meter\squared}$\\
     
     Für das Trägheismoment des Beins muss Formel \ref{eqn:Trägheit_Zyl_1} und der Satz von Steiner angewendet werden, da der  Schwerpunkt des Beines nicht in der Drehachse liegt.
     Daraus folgt $I_B=m_B(\frac{R_B^2}{2}+a_B^2)$.

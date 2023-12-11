@@ -1,13 +1,24 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
-\contentsline {section}{\numberline {2}Versuchsaufbau}{4}{section.2}%
-\contentsline {section}{\numberline {3}Durchführung}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Bestimmung von D}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Bestimmung von $I_D$}{4}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Bestimmung von $I$ verschiedener Körper}{4}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Bestmmung von $I$ einer Holzpuppe}{4}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Auswertung}{5}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Winkelrichtgröße}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Eigenträgheitsmoment}{5}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Diskussion}{8}{section.5}%
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {section}{\numberline {3}Versuchsaufbau}{4}{section.3}%
+\contentsline {section}{\numberline {4}Durchführung}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bestimmung von D}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bestimmung von $I_D$}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Bestimmung von $I$ verschiedener Körper}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Bestmmung von $I$ einer Holzpuppe}{5}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Auswertung}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Winkelrichtgröße}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Eigenträgheitsmoment}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Trägheitsmomente von Kugel und Zylinder}{9}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Trägheitsmoment der Puppe}{9}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}experimentelle Bestimmung von Stellung 1}{9}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}experimentelle Bestimmung von Stellung 2}{10}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Theoretische Berechnung des Trägheismomentes}{10}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Berechnung des Trägheismomentes für Stellung 1}{12}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}Berechnung des Trägheismomentes für Stellung 2}{12}{subsubsection.5.4.5}%
+\contentsline {section}{\numberline {6}Diskussion}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}negative Trägheitsmomente}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Trägheitsmomente von Kugel und Zylinder}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Trägheitsmomente de Puppe}{13}{subsection.6.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

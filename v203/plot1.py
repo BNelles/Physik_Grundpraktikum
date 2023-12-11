@@ -7,7 +7,7 @@ y=np.log(b/0.993)
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.set(
-    xlabel=r"$T/K$",
+    xlabel=r"$\dfrac{1}{T}/\dfrac{1}{K}$",
     ylabel=r"$\dfrac{log(p)}{p_0}$",
 )
 ax.plot(x,y,".k",label="Messwerte gesamt")
