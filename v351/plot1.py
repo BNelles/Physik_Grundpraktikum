@@ -67,6 +67,9 @@ ax3.plot(
     f_D,U_D,"x",color='k',
     label=r"$theoretische Daten$"
 )
+
+plt.figure().set_figheight(3)
+
 ax1.legend()
 ax2.legend()
 ax3.legend()
