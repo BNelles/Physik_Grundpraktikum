@@ -8,13 +8,15 @@ f_Q,U_Q=np.genfromtxt("data1t.txt",unpack=True)
 f_S,U_S=np.genfromtxt("data2t.txt",unpack=True)
 f_D,U_D=np.genfromtxt("data3t.txt",unpack=True)
 
+plt.rcParams['figure.figsize']=[5,10]
+
 fig, (ax1, ax2, ax3)=plt.subplots(3,1,layout="constrained")
 
 b1=10**(A1/20)
 b2=10**(A2/20)
 b3=10**(A3/20)
-ax1.set_title(r"$Quadratschwingung$")
-ax2.set_title(r"$Sägezahnschwingung$")
+ax1.set_title(r"$Rechteckspannung$")
+ax2.set_title(r"$Saegezahnspannung$")
 ax3.set_title(r"$Dreiecksspannung$")
 
 ax1.set_xlabel(r"$f/kHz$")
@@ -23,6 +25,21 @@ ax3.set_xlabel(r"$f/kHz$")
 ax1.set_ylabel(r"$U/V$")
 ax2.set_ylabel(r"$U/V$")
 ax3.set_ylabel(r"$U/V$")
+
+
+
+
+
+#plt.figure(figsize(10,10))
+#plt.figure(figsize(10,10))
+#plt.figure(figsize(10,10))
+#
+
+
+
+
+
+
 
 ax1.plot(
     f1,b1,"o",color='c',
@@ -53,4 +70,9 @@ ax3.plot(
 ax1.legend()
 ax2.legend()
 ax3.legend()
+
+# x1=(b1-U_Q)/U_Q
+# x2=(b2-U_S)/U_S
+# x3=(b3-U_D)/U_D
+# print(x3*100)
 fig.savefig("plot1.pdf")
