@@ -20,8 +20,7 @@ build/v105.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	v105
-.tex
+	v105.tex
 
 build:
 	mkdir -p build
