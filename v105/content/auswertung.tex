@@ -1,31 +1,32 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+In Tabelle \ref{tab:Präzession} sind die Werte der Umlaufdauer in Abhängigkeit von der Stromstärke $I_H$ aufgelistet.
+Für die drei Messwerte pro Stromstärke wird hier mit 
+\begin{euqation}
+  \overline{T}=\frac{1}{n} \sum_{k=1}{n}
+\end{euqation}
+Die magnetische Flussdichte wird
 
 \begin{table}
   \centering
   \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \label{tab:Präzession}
+  %\sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
+      colspec = {S[table-format=1.1] S[table-format=2.2] S[table-format=2.2] S[table-format=2.2] S[table-format=2.2]},
       row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
+    %  vline{4} = {2}{-}{text=\clap{$\pm$}},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+    I_H \mathbin{/} \unit{\ampere} & \SetCell[c=3]{c} T \mathbin{/} \unit{\second} & \overline{T} \mathbin{/} \unit{\second}\\%& T_2 \mathbin{/} \unit{\second} &T_3 \mathbin{/} \unit{\second} \\
     \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
+    1 & 13.53 & 21.18 & 23.58 & 19.43\\
+    1.5&17.15 & 15.40 & 17.52 & 16.69 \\
+    2 & 12.20 & 12.92 & 13.03 & 12.72\\
+    3 &  8.55 &  9.00 &  8.73 &  8.76\\
+    4 &  6.76 &  6.61 &  6.50 &  6.62\\
     \bottomrule
   \end{tblr}
 \end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+
