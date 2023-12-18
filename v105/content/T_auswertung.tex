@@ -4,11 +4,11 @@
     \centering
     \caption{Benötigte Stromstärke, damit das Drehmoment des Magnetfeldes das der Gravitation ausgleicht.}
     \label{tab:grav}
-    \begin{tblr}
-        colspec={S[table-format=1.0] S[table-format=1.2]},
+    \begin{tblr}{
+        colspec={S S},
         row{1}={guard, mode=math},
         \toprule
-        d/\unit{\centi\meter}   &   I/\unit{\ampere},
+        d/\unit{\centi\meter}   &   I/\unit{\ampere}\\
         \midrule
         3.6  &   1.85   \\
         4.1  &   1.95   \\
@@ -20,6 +20,7 @@
         7.1  &   2.50   \\
         7.6  &   2.60   \\
         \bottomrule
+        }
     \end{tblr}
 \end{table}
 \begin{figure}
