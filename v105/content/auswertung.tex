@@ -1,11 +1,25 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Bestimmung des magnetischen Momentes mit Präzession}
+
 In Tabelle \ref{tab:Präzession} sind die Werte der Umlaufdauer in Abhängigkeit von der Stromstärke $I_H$ aufgelistet.
 Für die drei Messwerte pro Stromstärke wird hier mit 
 \begin{equation}
-  \overline{T}=\frac{1}{n} \sum_{k=1}{n}
+  \overline{T}=\frac{1}{n} \sum_{k=1}{n} T_K
 \end{equation}
-Die magnetische Flussdichte wird
+berechnet.
+Die magnetische Flussdichte wird mit Formel \ref{eqn:magfeld} bestimmt.
+Die Mittelwerte der Periodendauern werden in \ref{fig:Präzession} gegen die magnetische Flussdichte geplottet
+Dazu wird lineare Regression durchgeführt, wobei die Ausgleichsgerade die Steigung $a=\qty[per-mode=fraction]{50.41912(2.42168)}{\per\second\per\tesla}$ beträgt.
+Wenn Formel \ref{eqn:schwingdauer1} zu 
+\begin{equation*}
+  |\vec{m}|=\frac{2 \pi L_K}{T B}
+\end{equation*}
+umgeformt wird, kann $a=\frac{1}{TB}$ eingesetzt werden.
+Das Trägheitsmoment der Kugel wird mit Formel \ref{eqn:trägheit_kugel} $L_K=\qty{3.75e-5}{\kilo\gram\meter\squared}$. 
+Damit ergibt sich dann $m=\qty{0.0119(0.0006)}{\coulomb\meter}$
+
+
 
 \begin{table}
   \centering
@@ -29,4 +43,9 @@ Die magnetische Flussdichte wird
   \end{tblr}
 \end{table}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{plot.pdf}
+  \caption{Aufgetragen ist die gemittelte, reziproke Periodendauer in Abhängigkeit zur magnetischen Flussdichte.}
+  \label{fig:Präzession}
+\end{figure}
 
