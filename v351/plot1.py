@@ -8,7 +8,7 @@ f_Q,U_Q=np.genfromtxt("data1t.txt",unpack=True)
 f_S,U_S=np.genfromtxt("data2t.txt",unpack=True)
 f_D,U_D=np.genfromtxt("data3t.txt",unpack=True)
 
-plt.rcParams['figure.figsize']=[5,10]
+plt.rcParams['figure.figsize']=[5,9]
 
 fig, (ax1, ax2, ax3)=plt.subplots(3,1,layout="constrained")
 
@@ -17,7 +17,7 @@ b2=10**(A2/20)
 b3=10**(A3/20)
 ax1.set_title(r"$Rechteckspannung$")
 ax2.set_title(r"$Saegezahnspannung$")
-ax3.set_title(r"$Dreiecksspannung$")
+ax3.set_title(r"$Dreieckspannung$")
 
 ax1.set_xlabel(r"$f/kHz$")
 ax2.set_xlabel(r"$f/kHz$")
