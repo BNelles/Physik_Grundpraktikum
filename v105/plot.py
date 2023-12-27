@@ -3,7 +3,7 @@ import numpy as np
 import scipy.constants as const
 from uncertainties import ufloat
 
-a,b=np.genfromtxt("data1.txt" , unpack=True)
+a,b=np.genfromtxt("data3.txt" , unpack=True)
 l,p,ö=const.physical_constants["magn. constant"]
 x=a*l*(195/2)*(0.109**2)/((0.109**2+0.069**2)**(3/2)) 
 y=1/b
@@ -23,8 +23,13 @@ print(params[0])
 print(errors[0])
 
 g=ufloat(params[0],errors[0])
-p=2*np.pi*0.0000375*g 
-print(p)
+P=4*np.pi**2*5*0.0000375*g 
+
+G=ufloat(1.07,0.03)
+S=ufloat(19.7,1.6)
+print((P-G)/P)
+print((P-S)/P)
+print((G-S)/G)
 
 
 fig.savefig("build/plot.pdf")
