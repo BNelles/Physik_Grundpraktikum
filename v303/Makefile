@@ -20,8 +20,7 @@ build/v303.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	v303
-.tex
+	v303.tex
 
 build:
 	mkdir -p build
