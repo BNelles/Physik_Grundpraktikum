@@ -2,16 +2,20 @@ all: build/v303.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
-	# so that matplotlib can find the tex header when running
-	# LaTeX in the tmp directory
-	# and set the matplotlibrc
+build/plot1.pdf: plot1.py ../matplotlibrc ../header-matplotlib.tex | build
+build/plot2.pdf: plot2.py ../matplotlibrc ../header-matplotlib.tex | build
+# so that matplotlib can find the tex header when running
+# LaTeX in the tmp directory
+# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot2.py
 
 # hier weitere Abhängigkeiten für build/v303.pdf deklarieren:
-build/v303.pdf: build/plot.pdf
+build/v303.pdf: build/plot.pdf build/plot1.pdf build/plot2.pdf
 
 build/v303.pdf: FORCE | build
-	# to find header and bib files in the main directory
+# to find header and bib files in the main directory
 	TEXINPUTS=..: \
 	BIBINPUTS=..: \
 	max_print_line=1048576 \
@@ -20,8 +24,7 @@ build/v303.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	v303
-.tex
+	v303.tex
 
 build:
 	mkdir -p build
