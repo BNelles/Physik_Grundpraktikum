@@ -5,12 +5,12 @@ from uncertainties import ufloat
 
 a,b=np.genfromtxt("data3.txt" , unpack=True)
 l,p,ö=const.physical_constants["magn. constant"]
-x=a*l*(195/2)*(0.109**2)/((0.109**2+0.069**2)**(3/2)) 
+x=a*l*(195)*(0.109**2)/((0.109**2+0.069**2)**(3/2)) 
 y=1/b
 
 params, covariance_matrix=np.polyfit(x,y, deg=1, cov=True)
 errors=np.sqrt(np.diag(covariance_matrix))
-x_plot=np.linspace(0.00075,0.00275)
+x_plot=np.linspace(0.00075,0.0055)
 
 
 fig, ax = plt.subplots(1, 1, layout="constrained")
@@ -24,12 +24,12 @@ print(errors[0])
 
 g=ufloat(params[0],errors[0])
 P=4*np.pi**2*5*0.0000375*g 
-
-G=ufloat(1.07,0.03)
-S=ufloat(19.7,1.6)
-print((P-G)/P)
-print((P-S)/P)
-print((G-S)/G)
+print(P)
+G=ufloat(0.533,0.017)
+S=ufloat(0.101,0.008)
+print(100*(G-P)/G)
+print(100*(S-P)/S)
+print(100*(S-G)/S)
 
 
 fig.savefig("build/plot.pdf")
