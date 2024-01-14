@@ -11,7 +11,7 @@ errors = np.sqrt(np.diag(covariance_matrix))
 
 ax.plot(d,I,"o")
 ax.set(
-        xlabel=r"$d \mathbin{/} \unit{\meter}$",
+        xlabel=r"$d \mathbin{/} \unit{\centi\meter}$",
         ylabel=r"$I \mathbin{/} \unit{\ampere}$",
         )
 ax.plot(
@@ -29,7 +29,7 @@ a=unp.ufloat(0.19*10**(2),0.006*10**(2))
 n=const.mu_0
 g=const.g
 m=(0.0014*g*(0.109**2+(0.138/2)**2)**(3/2))/(n*195*0.109**2*a)
-#print(m)
+#print(m,a)
 
 I2,t=np.genfromtxt("data2.txt", unpack=True)
 fig2, ax2=plt.subplots()
