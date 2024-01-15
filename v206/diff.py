@@ -16,6 +16,7 @@ from uncertainties import ufloat
 #print(diffquotient(T1[12],T1[0],12))
 #print(diffquotient(T1[16],T1[0],12))
 t=4
+N=115
 for t in range(4,20,4):
     A=ufloat(-6.155e-6,0.22e-6)
     B=ufloat(0.02742,0.00033)
@@ -24,5 +25,14 @@ for t in range(4,20,4):
     Y=ufloat(0.02078,0.00037)
 
     D=2*X*t*60+Y
-    print(D)
+    v=(1/N)*(3*4200+750)*D
+ #   print(v)
     t+4
+
+r=ufloat(1.81   ,   0.06)
+t1=ufloat(40.5,0.1)
+t2=ufloat(5,0.1)
+i=t1/(t1-t2)
+print(i) 
+a=(i-r)/i
+print(a*100)
