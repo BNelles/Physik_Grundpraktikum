@@ -80,11 +80,18 @@ Die allgemeine Ableitung eines quadratischen Polynoms entspricht
   f=2a*t+b
 \end{equation*}
 .
+Mit den Formeln \ref{eqn:} und \ref{eqn:Wärmemenge} ergibt sich die Formel
+\begin{equation}
+\nu=\frac{1}{N}(m_1c_{\symup{w}}+m_{\symup{k}}c_{\symup{k}})\frac{\increment T_1}{\increment t}
+\label{eqn:nuu}
+\end{equation}
+, welche analog auch für $T_2$ gilt.
+Für die Berechnung werden die Werte für die Differentialquotienten $\frac{\increment T_1}{\increment t}$ und $\frac{\increment T_2}{\increment t}$ für vier 
+verschiedene Werte von t berechnet und in Tabelle \ref{tab:tabelle2} aufgeführt.
 
-
-\begin{table}
+\begin{table}[H]
   \centering
-  \caption{}
+  \caption{Hier sind die Werte für die Differentialquotienten von vier verschiedenen Werten von t aufgeführt.}
   \label{tab:tabelle2}
   \begin{tblr}{
     colspec={S[table-format=2.0] S[table-format=1.5] S[table-format=1.4] S[table-format=2.4] S[table-format=1.4]},
@@ -93,7 +100,9 @@ Die allgemeine Ableitung eines quadratischen Polynoms entspricht
     vline{5} = {2}{-}{text=\clap{$\pm$}},
   }
   \toprule
-  t \mathbin{/} \unit{\minute} & \SetCell[c=2]{c} \frac{\symup{dT_1}}{\symup{dt}} \mathbin{/} \unit{\kelvin\per\second}& & \SetCell[c=2]{c} \frac{\symup{dT_2}}{\symup{dt}}\mathbin{/} \unit{\kelvin\per\second}&\\
+  t \mathbin{/} \unit{\minute} & \SetCell[c=2]{c} \frac{\symup{dT_1}}{\symup{dt}} \mathbin{/} \unit{\kelvin\per\second}& 
+  & \SetCell[c=2]{c} \frac{\symup{dT_2}}{\symup{dt}}\mathbin{/} \unit{\kelvin\per\second}&\\
+  \midrule
   4     &   0.02447  & 0.00035    &   0.0228    &   0.0004    \\
   8     &   0.0215   & 0.0004    &    0.0247    &   0.0004   \\
   12    &   0.0186   & 0.0005    &    0.0267    &   0.0005  \\
@@ -101,3 +110,37 @@ Die allgemeine Ableitung eines quadratischen Polynoms entspricht
   \bottomrule
   \end{tblr}
 \end{table}
+
+Diese werden nun in Gleichung \ref{eqn:nuu} eingesetzt.
+Mit der Masse des Wassers $m_1=\qty{3}{\kilo\gram}$, seiner spezifischen Wärmekapazität $c_{\symup{w}}=\qty{4200}{\joule\per\kilo\gram}$ 
+und der Wärmekapazität des Behälters und der Kupferschlange $m_{\symup{k}}c_{\symup{k}}=\qty{750}{\joule\per\kilo\gram}$ kann $\nu$ berechnet werden.
+Damit ergeben sich die Werte in Tabelle \ref{tab:tabelle3}.
+Zudem wird die idealisierte Gütezahl mit \ref{eqn:güteideal} bestimmt.
+Die Abweichung zwischen rellem und idealen Wert wird mit 
+\begin{equation}
+  |A_{i,r}|=\frac{\nu_{\symup{ideal}}-\nu_{\symup{real}}}{\nu_{\symup{ideal}}}
+  \label{eqn:Abweichung}
+\end{equation}
+berechnet.
+
+ \begin{table}[H]
+   \centering
+   \caption{Aufgelistet sind der experimentell bestimmte Wert für die Güteziffer, sowie der berechnete Wert für die einer idealen Wärmepumpe.}
+   \label{tab:tabelle3}
+   \begin{tblr}{
+     colspec={S[table-format=2.0] S[table-format=1.2] S[table-format=1.2] S[table-format=1.4] S[table-format=1.4] S[table-format=2.1] S[table-format=1.1]},
+     row{1}={guard,mode=math},
+     vline{3} = {2}{-}{text=\clap{$\pm$}},
+     vline{5} = {2}{-}{text=\clap{$\pm$}},
+     vline{7} = {2}{-}{text=\clap{$\pm$}},
+   }
+   \toprule
+   t \mathbin{/} \unit{\minute} &\SetCell[c=2]{c} \nu_{\symup{real}}  && \SetCell[c=2]{c}  \nu_{\symup{ideal}} && \SetCell[c=2]{c} A \mathbin{/} \unit{\percent}&\\
+   \midrule
+   4     &   2.72   &   0.04    &     2.726   &   0.034    &       0.2    &   1.9     \\      %2.53     &     0.04 &       \\
+   8     &   2.39   &   0.04    &     1.767   &   0.011    &      35.2    &   2.4     \\      %2.75     &     0.05 &       \\
+   12    &   1.98   &   0.05    &     1.299   &   0.005    &      52.0    &   4.0     \\      %2.85     &     0.06 &       \\
+   16    &   1.81   &   0.06    &    1.1408   &   0.0032   &      59.0    &   5.0     \\      %3.33     &     0.07 &       \\
+   \bottomrule 
+   \end{tblr}
+ \end{table}
