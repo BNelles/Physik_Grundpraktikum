@@ -11,16 +11,18 @@ a=d*60
 b=c+273.15
 
 f1,cov1=np.polyfit(x,y,deg=2,cov=True)
-unc=np.sqrt(np.diag(cov1))
+unc1=np.sqrt(np.diag(cov1))
 f2=np.poly1d(f1)
 x_x=np.linspace(0,24*60)
 f=f2(x_x)
 
 g1,cov2=np.polyfit(x,b,deg=2,cov=True)
-unc=np.sqrt(np.diag(cov2))
+unc2=np.sqrt(np.diag(cov2))
 g2=np.poly1d(g1)
 g=g2(x_x)
 
+print(unc1)
+print(unc2)
 
 fig, ax = plt.subplots(1, 1, layout="constrained")
 ax.plot(x, y, "x", label=r"$T_1$")

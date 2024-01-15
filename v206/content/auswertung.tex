@@ -48,7 +48,7 @@ Hier wurde die Temperatur in Kelvin und die Zeit in Sekunden umgerechnet.
 Für beide Verläufe wurde eine Ausgleichsfunktion als quadratisches Polynom gezeichnet.
 Diese werden mit der Gleichung
 \begin{equation*}
-  f=a*t^2+b*t+c+
+  f=a*t^2+b*t+c
 \end{equation*}
 beschrieben.
 Dabei sind die Koeffizienten bei $T_1$
@@ -72,3 +72,31 @@ und bei $T_2$
   \caption{Dargestellt ist die Temperatur beider Wasserbehälter abhängig von der Zeit. Die Zeit wurde in Sekunden umgerechnet und die Temperatur in Kelvin.}
   \label{fig:plot}
 \end{figure}
+
+\subsection{Differentialquotienten}
+Die allgemeine Ableitung eines quadratischen Polynoms entspricht 
+\begin{equation*}
+  f=2a*t+b
+\end{equation*}
+.
+
+
+\begin{table}
+  \centering
+  \caption{}
+  \label{tab:tabelle2}
+  \begin{tblr}{
+    colspec={S[table-format=2.0] S[table-format=1.5] S[table-format=1.4] S[table-format=2.4] S[table-format=1.4]},
+    row{1}={guard,mode=math},
+    vline{3} = {2}{-}{text=\clap{$\pm$}},
+    vline{5} = {2}{-}{text=\clap{$\pm$}},
+  }
+  \toprule
+  t \mathbin{/} \unit{\minute} & \SetCell[c=2]{c} \frac{\symup{dT_1}}{\symup{dt}} \mathbin{/} \unit{\kelvin\per\second}& & \SetCell[c=2]{c} \frac{\symup{dT_2}}{\symup{dt}}\mathbin{/} \unit{\kelvin\per\second}&\\
+  4     &   0.02447  & 0.00035    &   0.0228    &   0.0004    \\
+  8     &   0.0215   & 0.0004    &    0.0247    &   0.0004   \\
+  12    &   0.0186   & 0.0005    &    0.0267    &   0.0005  \\
+  16    &   0.0156   & 0.0005    &    0.0287    &   0.0006  \\
+  \bottomrule
+  \end{tblr}
+\end{table}
