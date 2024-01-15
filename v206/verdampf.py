@@ -17,8 +17,8 @@ ax.plot(
     T,p,"o"
 )
 ax.set(
-    xlabel=r"$ln(\frac{p}{p_0}$"
-    ylabel=r"$\frac{1}{T} \mathbin{/} \unit{\per\milli\per\kelvin}$"
+    ylabel=r"$ln(\frac{p}{p_0}$",
+    xlabel=r"$\frac{1}{T} \mathbin{/} \unit{\per\milli\kelvin}$",
 )
 params, covariance_matrix = np.polyfit(T, p, deg=1, cov=True)
 errors = np.sqrt(np.diag(covariance_matrix))

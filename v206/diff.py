@@ -33,6 +33,12 @@ r=ufloat(1.81   ,   0.06)
 t1=ufloat(40.5,0.1)
 t2=ufloat(5,0.1)
 i=t1/(t1-t2)
-print(i) 
+#print(i) 
 a=(i-r)/i
-print(a*100)
+#print(a*100)
+
+
+#Massendurchsatz
+L=ufloat(243,14)*0.01801528
+m=r*125/L
+print(m)
