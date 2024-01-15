@@ -41,9 +41,11 @@ berechnet wird. Für den realen Wert für $\nu$ gilt dann
 \end{equation}
 Für die aufzuwendende Arbeit, um Wärmeenergie in das kalte Reservoir zu bringen, wird also größer, je größer die Temparaturdifferenz
 zwischen beiden Reservois ist. \\
+
 \noindent Für einen zeitlich gemittelten Prozess lässt sich Gleichung \ref{eqn:güte} auch umschreiben als
 \begin{equation}
     \nu=\frac{\Delta Q_1}{\Delta tN} \text{ ,}
+    \label{eqn:gütemittel}
 \end{equation}
 wobei N die zeitlich gemittelte Leistung ist. Die Wärmemenge $\frac{\Delta Q_i}{\Delta t}$ kann dann auch zu
 \begin{equation}
@@ -52,6 +54,23 @@ wobei N die zeitlich gemittelte Leistung ist. Die Wärmemenge $\frac{\Delta Q_i}
 \end{equation}
 umformuliert werden. Diese Beziehung gilt für beide Behälter, wobei $m_{\mathrm{i}}c_{mathrm{w}}$ die Wärmekapazität des Wassers
 in den Behältern beschreibt und $m_{mathrm{k}}c_{mathrm{k}}$ die Wärmekapazität der Kupferbehälter.\\
+
+\noindent Während des Transportprozesses kann der Massendurchsatz, das Gases, welches die
+Wärme transportiert, bestimmt werden über
+\begin{equation}
+    \frac{\Delta Q_2}{\Delta t}=L\frac{\Delta m}{\Delta t} \text{ .}
+\end{equation}
+Hierbei bezeichnet $L$ die Verdampfungswärme und wird hier vereinfacht über die die Gleichung
+\begin{equation}
+    L=R\frac{\symup{d}p}{\symup{d}T} \text{ ,}
+\end{equation}
+mit $R$ als allgemeiner Gaskonstante, bestimmt. Eingesetzt in \ref{eqn:wärmemenge}, wobei hier $T_2$ verwendet wird, 
+entsteht die Gleichung
+\begin{equation}
+    \frac{\symup{d}m}{\symup{d}t}=\frac{m_2c_{mathrm{w}}+m_{mathrm{k}}c_{mathrm{k}}}{L}\frac{\symup{d}T_2}{\symup{d}t} \text{ .}
+    \label{eqn:masse}
+\end{equation}
+\\
 
 \noindent Beim komprimieren eines Gases lässt sich die verrichtete Arbeit als das Integral
 \begin{equation}
