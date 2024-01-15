@@ -29,13 +29,13 @@ for t in range(4,20,4):
  #   print(v)
     t+4
 
-r=ufloat(1.81   ,   0.06)
-t1=ufloat(40.5,0.1)
-t2=ufloat(5,0.1)
-i=t1/(t1-t2)
-#print(i) 
+r=ufloat(2.72   ,   0.04)
+t1=ufloat(25.9,0.1)
+t2=ufloat(16.4,0.1)
+i=(t1+273.15)/(t1-t2)
+print(i) 
 a=(i-r)/i
-#print(a*100)
+print(a*100)
 
 #Massendurchsatz
 L=ufloat(243,14)*0.01801528
