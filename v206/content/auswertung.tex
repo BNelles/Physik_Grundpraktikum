@@ -41,3 +41,34 @@
     \bottomrule
   \end{tblr}
 \end{table} 
+
+\subsection{Temperaturverläufe}
+In Abbildung \ref{fig:plot} werden die Temperaturverläufe von $T_1$ und $T_2$ dargestellt.
+Hier wurde die Temperatur in Kelvin und die Zeit in Sekunden umgerechnet.
+Für beide Verläufe wurde eine Ausgleichsfunktion als quadratisches Polynom gezeichnet.
+Diese werden mit der Gleichung
+\begin{equation*}
+  f=a*t^2+b*t+c+
+\end{equation*}
+beschrieben.
+Dabei sind die Koeffizienten bei $T_1$
+\begin{gather}
+  a_{\symup{T}1}=\qty{-6.155(0.22)e-6}{\kelvin\per\second\squared}\\
+  b_{\symup{T}1}=\qty{0.02742(0.00033)}{\kelvin\per\second}\\
+  c_{\symup{T}1}=\qty{293(0.1)}{\kelvin}
+  \label{eqn:fkt1}
+\end{gather}
+und bei $T_2$
+\begin{gather}
+  a_{\symup{T}2}=\qty{4.122(0.249)e-6}{\kelvin\per\second\squared}\\
+  b_{\symup{T}2}=\qty{0.02078(0.00037)}{\kelvin\per\second}\\
+  c_{\symup{T}2}=\qty{294.4(0.12)}{\kelvin}
+  \label{eqn:fkt2}
+\end{gather}
+.
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{build/plot.pdf}
+  \caption{Dargestellt ist die Temperatur beider Wasserbehälter abhängig von der Zeit. Die Zeit wurde in Sekunden umgerechnet und die Temperatur in Kelvin.}
+  \label{fig:plot}
+\end{figure}
