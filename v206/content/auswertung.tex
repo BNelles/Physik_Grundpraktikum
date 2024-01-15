@@ -1,31 +1,43 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-
 \begin{table}
   \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \caption{Alle aufgenommenen Größen in Abhängigkeit der Zeit in Ablesereihenfolge.}
+  \label{tab:messwerte}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
-    }
+    colspec={S[table-format=2.2] S[table-format=2.2] S[table-format=2.2] S[table-format=2.2] S[table-format=2.2] 
+    S[table-format=2.2]},
+    row{1}={guard, mode=math},}
     \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+    t\mathbin{/}\unit{\second} & A\mathbin{/}\unit{\watt} & p_{\symup{b}}\mathbin{/}\unit{\bar} & T_1\mathbin{/}°C &
+    T_2\mathbin{/}°C & p_{\symup{a}}\mathbin{/}\unit{\bar} \\
     \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
+    0   &    0    &   3.5   &   20.5  &   20.6  &   3.8   \\       
+    1   &    110  &   5     &   21.4  &   20.5  &   3     \\
+    2   &    115  &   5     &   22.8  &   19.1  &   3.3   \\
+    3   &    120  &   5.5   &   24.2  &   17.8  &   3.4   \\
+    4   &    120  &   6     &   25.9  &   16.4  &   3.5   \\
+    5   &    120  &   6     &   27.6  &   15.0  &   3.4   \\
+    6   &    120  &   6.5   &   28.9  &   14.2  &   3.2   \\
+    7   &    120  &   7     &   30.4  &   13.2  &   3     \\
+    8   &    120  &   7     &   31.6  &   12.2  &   3     \\
+    9   &    125  &   7     &   33.0  &   11.2  &   2.9   \\
+    10  &    125  &   7.5   &   34.2  &   10.3  &   2.7   \\
+    11  &    125  &   8     &   35.4  &   9.2   &   2.7   \\
+    12  &    125  &   8     &   36.5  &   8.4   &   2.6   \\
+    13  &    125  &   8     &   37.6  &   7.6   &   2.4   \\
+    14  &    125  &   8.5   &   38.6  &   6.7   &   2.4   \\
+    15  &    115  &   9     &   39.6  &   5.8   &   2.2   \\
+    16  &    115  &   9     &   40.5  &   5.0   &   2.2   \\
+    17  &    115  &   9     &   41.4  &   4.3   &   2.1   \\
+    18  &    115  &   9.5   &   42.3  &   3.6   &   2     \\
+    19  &    115  &   9.5   &   43.1  &   2.9   &   2     \\
+    20  &    115  &   10    &   43.9  &   2.2   &   1.9   \\
+    21  &    115  &   10    &   44.6  &   1.6   &   1.9   \\ 
+    22  &    115  &   10    &   45.4  &   1.0   &   1.8   \\ 
+    23  &    110  &   10.5  &   46.0  &   0.4   &   1.8   \\
+    24  &    110  &   10.5  &   46.6  &   -0.2  &   1.8   \\ 
     \bottomrule
   \end{tblr}
-\end{table}
-
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+\end{table} 
