@@ -1,18 +1,21 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+x,z=np.genfromtxt("data1.txt",unpack=True)
+y=z+273,15
 
-fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
-ax1.plot(x, y, label="Kurve")
-ax1.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax1.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-ax1.legend(loc="best")
+a,c=np.genfromtxt("data1.txt",unpack=True)
+b=c+273,15
 
-ax2.plot(x, y, label="Kurve")
-ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-ax2.legend(loc="best")
+
+fig, ax = plt.subplots(1, 1, layout="constrained")
+ax.plot(x, y, "o", label="T1")
+ax.plot(x, c, "o", label="T2")
+
+ax.set_xlabel(r"$T \mathbin{/} \unit{\kelvin}$")
+ax.set_ylabel(r"$t \mathbin{/} \unit{\second}$")
+ax.legend(loc="best")
+
+
 
 fig.savefig("build/plot.pdf")
