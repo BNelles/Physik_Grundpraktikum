@@ -3,7 +3,7 @@
 
 Der Transport von Wärmeenergie verläuft in einem geschlossenen System von wärmeren in kältere Regionen, es ist jedoch möglich
 durch das hinzufügen von mechanischer Energie von Außen die Richtung des Transports umzukehren. Dies wird mit einer 
-Wärmepumpe realisiert, die über ein Transportmedium Wärmeenergie $Q_2$ aus dem kalten Reservoir Wärmeenergie $Q_1$ in das 
+Wärmepumpe realisiert, die über ein Transportmedium Wärmeenergie $Q_2$ aus dem kalten Reservoir, Wärmeenergie $Q_1$ in das 
 warme Reservoir. Beim Hinzufügen mechanischer Energie $A$ in einer Wärmepumpe muss mit Energieerhaltung das Verhältinis
 \begin{equation}
     Q_1=Q_2+A
@@ -47,18 +47,34 @@ zwischen beiden Reservois ist. \\
 \end{equation}
 wobei N die zeitlich gemittelte Leistung ist. Die Wärmemenge $\frac{\Delta Q_i}{\Delta t}$ kann dann auch zu
 \begin{equation}
-    \frac{\Delta Q_{mathrm{i}}}{\Delta t}=(m_{\mathrm{i}}c_{mathrm{w}}+m_{mathrm{k}}c_{mathrm{k}})\frac{\Delta T_i}{\Delta t}
+    \frac{\Delta Q_{\mathrm{i}}}{\Delta t}=(m_{\mathrm{i}}c_{\mathrm{w}}+m_{\mathrm{k}}c_{\mathrm{k}})\frac{\Delta T_i}{\Delta t}
     \label{eqn:wärmemenge}
 \end{equation}
-umformuliert werden. Diese Beziehung gilt für beide Behälter, wobei $m_{\mathrm{i}}c_{mathrm{w}}$ die Wärmekapazität des Wassers
-in den Behältern beschreibt und $m_{mathrm{k}}c_{mathrm{k}}$ die Wärmekapazität der Kupferbehälter.\\
+umformuliert werden. Diese Beziehung gilt für beide Behälter, wobei $m_{\mathrm{i}}c_{\mathrm{w}}$ die Wärmekapazität des Wassers
+in den Behältern beschreibt und $m_{\mathrm{k}}c_{\mathrm{k}}$ die Wärmekapazität der Kupferbehälter.\\
 
+\noindent Während des Transportprozesses kann der Massendurchsatz, das Gases, welches die Wärme transportiert, bestimmt werden
+über
+\begin{equation}
+    \frac{\Delta Q_2}{\Delta t}=L\frac{\Delta m}{\Delta t} \text{ .}
+\end{equation}
+Hierbei bezeichnet $L$ die Verdampfungswärme und wird hier vereinfacht über die die Gleichung
+\begin{equation}
+    L=\frac{\symup{d}p}{\symup{d}T}R \text{ ,}
+\end{equation}
+mit $R$ als allgemeiner Gaskonstante, bestimmt. Eingesetzt in Gleichung \ref{eqn:wärmemenge}, wobei hier $T_2$ verwendet wird,
+entsteht die Gleichung
+\begin{equation}
+    \frac{\symup{d}m}{\symup{d}t}=\frac{m_2c_{\symup{w}}+m_{\symup{k}}c_{\symup{k}}}{R}\frac{\symup{d}T_2}{\symup{d}t}\left(\frac{\symup{d}p_{\symup{a}}}{\symup{d}T_2}\right)^{-1} \text{ .}
+\end{equation}
+\\
 \noindent Beim komprimieren eines Gases lässt sich die verrichtete Arbeit als das Integral
 \begin{equation}
-    A=-\int_{V_{\mathrm{a}}}^{V_{mathrm{b}}}p \symup{d}V
+    A=-\int_{V_{\mathrm{a}}}^{V_{\mathrm{b}}}p \symup{d}V
 \end{equation}
 darstellen. Unter der Annahme, dass der Prozess adiabatisch ist, wird der Ausdruck
 \begin{equation}
-    N=\frac{1}{\kappa -1}(p_{mathrm{b}}(\frac{p_{mathrm{a}}}{p_{mathrm{b}}})^{\frac{1}{\kappa}}-p_{mathrm{a}})\frac{1}{\rho}\frac{\Delta m}{\Delta t}
+    N=\frac{1}{\kappa -1}\left(p_{\mathrm{b}}\left(\frac{p_{\mathrm{a}}}{p_{\mathrm{b}}}\right)^{\frac{1}{\kappa}}-p_{\mathrm{a}}\right)\frac{1}{\rho}\frac{\Delta m}{\Delta t}
     \label{eqn:leistung}
 \end{equation}
+damit aufgestellt. 
