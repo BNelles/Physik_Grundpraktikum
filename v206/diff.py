@@ -6,10 +6,10 @@ from uncertainties import ufloat
 #    return (a-b)/(c)
 #
 #t1,f1=np.genfromtxt("data1.txt", unpack=True)
-#t2,f2=np.genfromtxt("data2.txt", unpack=True)
+t2,f2=np.genfromtxt("data2.txt", unpack=True)
 #
 #T1=f1+273.15
-#T2=f2+273.15
+T2=f2+273.15
 #
 #print(diffquotient(T1[4],T1[0],4))
 #print(diffquotient(T1[8],T1[0],8))
@@ -37,8 +37,22 @@ print(i)
 a=(i-r)/i
 print(a*100)
 
-
 #Massendurchsatz
 L=ufloat(243,14)*0.01801528
 m=r*125/L
-#print(m)
+print(m)
+print(L)
+
+#Kompressorleistung
+
+def leistung(m,p1,p2,T):
+    return 1/(1.14-1)*(p2*(p1/p2)**(1/1.14)-p1)*1/(5.51)*T/(273.15*p1)*m
+
+m1=ufloat(78,5)
+m2=ufloat(68,4)
+m3=ufloat(57,4)
+m4=ufloat(51.7,3.4)
+print(leistung(m1,3.5,6,T2[4]))
+print(leistung(m2,3,7,T2[8]))
+print(leistung(m3,2.4,8,T2[12]))
+print(leistung(m4,2.2,9,T2[16]))
