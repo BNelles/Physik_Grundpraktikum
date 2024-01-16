@@ -214,12 +214,14 @@ erhalten. Mit $\kappa=1.14$,$\rho_0=\qty{5.51}{\kilo\gram\per\cubic\meter}$ und 
 \begin{table}
   \centering
   \caption{Effektive mechanische Kompressorleistung.}
+  \label{tab:tabelle5}
   \begin{tblr}{
-    colspec={S[table-format=2.0] S[table-format=1.2]},
+    colspec={S[table-format=2.0] S[table-format=1.2] S[table-format=1.1]},
     row{1}={guard,mode=math},
+    vline{3}={2}{-}{text=\clap{$\pm$}},
   }
   \toprule
-  t \mathbin{/}\unit{\minute} & N \mathbin{/}\unit{\joule\per\minute}\\
+  t \mathbin{/}\unit{\minute} & \SetCell[c=2]{c} N \mathbin{/}\unit{\joule\per\minute}&\\
   \midrule
     4   &   7.3   &   0.5\\
     8   &   10.1  &   0.6\\
