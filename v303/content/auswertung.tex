@@ -1,8 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Phasenabhängigkeit des Lock-In Verstärker}
 
-In Tabelle \ref{tab:tabelle1} ist der experimentell bestimmte Wert $U_out$ abhängig von $\increment \varphi$ aufgelistet.
+In Tabelle \ref{tab:tabelle1} ist der experimentell bestimmte Wert $U_{out}$ abhängig von $\increment \varphi$ aufgelistet.
 Zudem wird ein, mit Gleichung \ref{eqn:cos} berechneter theoretischer Wert, in die Tabelle eingetragen.
 Zudem wird die Abweichung $A_{e,t}$ vom theoretischen Wert mit 
 \begin{equation}
@@ -48,14 +49,14 @@ Die Werte für die Ausgangsspannung werden in \ref{fig:plot} ohne Noise und in \
 \begin{figure}[H]
   \centering
   \includegraphics[height=5cm]{plot.pdf}
-  \caption{Aufgetragen ist die Ausgangsspannung abhängig von der Zeit ohne Noise.}
+  \caption{Aufgetragen ist die Ausgangsspannung abhängig von der Phase ohne Noise.}
   \label{fig:plot}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[height=5cm]{plot1.pdf}
-  \caption{Aufgetragen ist die Ausgangsspannung abhängig von der Zeit mit Noise.}
+  \caption{Aufgetragen ist die Ausgangsspannung abhängig von der Phase mit Noise.}
   \label{fig:plot1}
 \end{figure}
 
@@ -139,6 +140,7 @@ Die dabei entstandenen Verläufe wurden in den Abbildungen \ref{fig:n_phi0} bis 
 \subsection{Photodetektorschaltung}
 In Tabelle \ref{tab:tabelle2} ist die gemessene Spannung in Abhängigkeit zum Abstand r zwischen Leucht- und Photodiode eingetragen.
 Graphisch dargestellt ist dies ebenfalls in Abbildung \ref{fig:plot2}.
+Bei ausgeschalteter Leuchtdiode betrug die Grundspannung $U_{p0}=\qty{3.2}{\volt}$.
 
 \begin{table}
   \centering
@@ -169,6 +171,8 @@ Graphisch dargestellt ist dies ebenfalls in Abbildung \ref{fig:plot2}.
     \bottomrule
   \end{tblr}
 \end{table}
+
+Damit beträgt die maximale Entfernung, bei der noch ein Signal gemessen werden kann, $r_{max}=\qty{127}{\centi\meter}$.
 
 
 \begin{figure}[H]
