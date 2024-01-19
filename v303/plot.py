@@ -10,7 +10,7 @@ def cos_func(times, amplitude, frequency):
 
 params, covariance = optimize.curve_fit(cos_func, x, y)
 
-x_x=np.linspace(0,360)
+x_x=np.linspace(-10,370)
 #y_y=2.96*np.cos((2*np.pi*x_x)/360)
 
 fig, ax1 = plt.subplots(1, 1, layout="constrained")
