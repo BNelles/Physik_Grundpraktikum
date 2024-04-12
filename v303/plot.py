@@ -1,18 +1,27 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy import optimize
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
 
-fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
-ax1.plot(x, y, label="Kurve")
-ax1.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax1.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
+x,y=np.genfromtxt('data1.txt',unpack=True)
+
+def cos_func(times, amplitude, frequency):
+    return amplitude * np.cos(frequency * times)
+
+params, covariance = optimize.curve_fit(cos_func, x, y)
+
+x_x=np.linspace(-10,370)
+#y_y=2.96*np.cos((2*np.pi*x_x)/360)
+
+fig, ax1 = plt.subplots(1, 1, layout="constrained")
+ax1.plot(x, y,"o", label="Messwerte")
+ax1.plot(x_x, cos_func((2*np.pi*x_x)/360, params[0], params[1]),
+        label='Ausgleichsfunktion')
+#ax1.plot(x_x,y_y,label="Ausgleichsfunktion")
+ax1.set_xlabel(r"$\varphi \mathbin{/} °$")
+ax1.set_ylabel(r"$U_{out} \mathbin{/} \unit{\volt}$")
 ax1.legend(loc="best")
 
-ax2.plot(x, y, label="Kurve")
-ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-ax2.legend(loc="best")
+
 
 fig.savefig("build/plot.pdf")

@@ -1,4 +1,89 @@
-\section{Theorie}
+\section{Zielsetzung}
+Ziel dieses Versuches ist, die Effizienz der Wärmepumpe zu bestimmen und mit der idealisierten Wärmepumpe zu vergleichen.
+
+\section{Theorie \cite{V206}}
 \label{sec:Theorie}
 
-\cite{sample}
+Der Transport von Wärmeenergie verläuft in einem geschlossenen System von wärmeren in kältere Regionen, es ist jedoch möglich
+durch das hinzufügen von mechanischer Energie von Außen die Richtung des Transports umzukehren. Dies wird mit einer 
+Wärmepumpe realisiert, die über ein Transportmedium Wärmeenergie $Q_2$ aus dem kalten Reservoir Wärmeenergie $Q_1$ in das 
+warme Reservoir. Beim Hinzufügen mechanischer Energie $A$ in einer Wärmepumpe muss mit Energieerhaltung das Verhältinis
+\begin{equation*}
+    Q_1=Q_2+A
+    \label{eqn:energie}
+\end{equation*}
+gelten. Dass in Wärmepumpen dieses Verhältnis gilt, bringt den Vorteil, dass die aufgewendete Arbeit je nach Aufbau zunächst beliebig
+klein sein darf, solange diese größer als 0 ist.
+Desweiteren lässt sich im Allgemeinen mit dem zweiten Hauptsatz der Thermodynamik feststellen, dass
+\begin{equation*}
+    \frac{Q_1}{T_1}-\frac{Q_2}{T_2}>0
+\end{equation*}
+ist, was sich im Falle eines reversiblen Prozesses vereinfacht zu
+\begin{equation*}
+    \frac{Q_1}{T_1}-\frac{Q_2}{T_2}=0 \text{ .}
+\end{equation*}
+Zusammen mit der Gleichung \ref{eqn:energie} ergibt sich für einen reversiblen Prozess die Formulierung
+\begin{equation*}
+    Q_1=A+\frac{T_2}{T1}Q_1
+    \label{eqn:Q1}
+\end{equation*}
+für $Q_1$.\\
+\noindent Eine weitere Größe für eine Wärmepumpe ist die Gütezahl $\nu$, die über
+\begin{equation}
+    \nu=\frac{Q_1}{A}
+    \label{eqn:güte}
+\end{equation}
+definiert ist. In Gleichung \ref{eqn:Q1} eingesetzt ergibt sich dann eine idealisierte Gütezahl $\nu_{\mathrm{ideal}}$, die mit
+\begin{equation}
+    \nu_{\mathrm{ideal}}=\frac{T_1}{T_1-T_2}
+    \label{eqn:güteideal}
+\end{equation}
+berechnet wird. Für den realen Wert für $\nu$ gilt dann
+\begin{equation*}
+    \nu_{\mathrm{real}}<\frac{T_1}{T_1-T_2} \text{ .}
+\end{equation*}
+Für die aufzuwendende Arbeit, um Wärmeenergie in das kalte Reservoir zu bringen, wird also größer, je größer die Temparaturdifferenz
+zwischen beiden Reservois ist. \\
+
+\noindent Für einen zeitlich gemittelten Prozess lässt sich Gleichung \ref{eqn:güte} auch umschreiben als
+\begin{equation}
+    \nu=\frac{\Delta Q_1}{\Delta tN} \text{ ,}
+    \label{eqn:gütemittel}
+\end{equation}
+wobei N die zeitlich gemittelte Leistung ist. Die Wärmemenge $\frac{\Delta Q_i}{\Delta t}$ kann dann auch zu
+\begin{equation}
+    \frac{\Delta Q_{\mathrm{i}}}{\Delta t}=(m_{\mathrm{i}}c_{\mathrm{w}}+m_{\mathrm{k}}c_{\mathrm{k}})\frac{\Delta T_i}{\Delta t}
+    \label{eqn:wärmemenge}
+\end{equation}
+umformuliert werden. Diese Beziehung gilt für beide Behälter, wobei $m_{\mathrm{i}}c_{\mathrm{w}}$ die Wärmekapazität des Wassers
+in den Behältern beschreibt und $m_{\mathrm{k}}c_{\mathrm{k}}$ die Wärmekapazität der Kupferbehälter.\\
+
+\noindent Während des Transportprozesses kann der Massendurchsatz, das Gases, welches die
+Wärme transportiert, bestimmt werden über
+\begin{equation}
+    \frac{\Delta Q_2}{\Delta t}=L\frac{\Delta m}{\Delta t} \text{ .}
+    \label{eqn:Dampf}
+\end{equation}
+Hierbei bezeichnet $L$ die Verdampfungswärme und wird hier vereinfacht über die die Gleichung
+\begin{equation}
+    \mathrm{ln} \left(\frac{p}{p_0}\right)=-\frac{L}{R}\frac{1}{T}   \text{ ,}
+    \label{eqn:verdampf}
+\end{equation}
+mit $R$ als allgemeiner Gaskonstante, bestimmt. Eingesetzt in \ref{eqn:wärmemenge}, wobei hier $T_2$ verwendet wird, 
+entsteht die Gleichung
+\begin{equation}
+    \frac{\symup{d}m}{\symup{d}t}=\frac{m_2c_{\mathrm{w}}+m_{\mathrm{k}}c_{\mathrm{k}}}{L}\frac{\symup{d}T_2}{\symup{d}t} \text{ .}
+    \label{eqn:masse}
+\end{equation}
+\\
+
+\noindent Beim komprimieren eines Gases lässt sich die verrichtete Arbeit als das Integral
+\begin{equation*}
+    A=-\int_{V_{\mathrm{a}}}^{V_{\mathrm{b}}}p \symup{d}V
+\end{equation*}
+darstellen. Unter der Annahme, dass der Prozess adiabatisch ist, gilt der Ausdruck
+\begin{equation}
+    N=\frac{1}{\kappa -1}\left(p_{\mathrm{b}}\left(\frac{p_{\mathrm{a}}}{p_{\mathrm{b}}}\right)^{\frac{1}{\kappa}}-p_{\mathrm{a}}\right)\frac{1}{\rho}\frac{\Delta m}{\Delta t} \text{ ,}
+    \label{eqn:leistung}
+\end{equation}
+wobei $\rho$ die Dichte des Gases ist, das die Leistung überträgt.

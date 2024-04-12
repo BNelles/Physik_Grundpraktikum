@@ -1,0 +1,15 @@
+\subsection{Berechnung des Massendurchsatzes}
+
+Zur Bestimmung des Massendurchsatzes wird die Gleichung \ref{eqn:masse} verwendet. Die Summe der Wärmekapazitäten lässt sich hier 
+direkt als $m_2 c_{\symup{w}}+m_{\symup{k}}c_{\symup{k}}=\qty{13150}{\joule\per\kelvin}$ bestimmen. Dazu muss noch die Verdampfungswärme
+$L$ bestimmt werden.
+
+\begin{figure}
+    \centering
+    \includegraphics{verdampfplot.pdf}
+    \caption{Der Druck bei dem kalten Reservoir gegen dessen Temparatur.}
+    \label{fig:druckkalt}
+\end{figure}
+
+Mithilfe einer linearen Regression, die aussieht wie $ln(\frac{p}{p_0})=a\frac{1}{T_2}+b$ und der Gleichung \ref{eqn:verdampf},
+lässt sich hier feststellen, dass die Verdampfungswärme $L=-a \cdot R$ einen Wert von $\qty{243(14)}{\joule\per\mole}$ annimmt.

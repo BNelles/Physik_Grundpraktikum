@@ -2,16 +2,18 @@ all: build/v206.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
-	# so that matplotlib can find the tex header when running
-	# LaTeX in the tmp directory
-	# and set the matplotlibrc
+build/verdampfplot.pdf: verdampfplot.pdf ../matplotlibrc ../header-matplotlib.tex | build
+# so that matplotlib can find the tex header when running
+# LaTeX in the tmp directory
+# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python verdampf.py
 
 # hier weitere Abhängigkeiten für build/v206.pdf deklarieren:
-build/v206.pdf: build/plot.pdf
+build/v206.pdf: build/plot.pdf build/verdampfplot.pdf
 
 build/v206.pdf: FORCE | build
-	# to find header and bib files in the main directory
+# to find header and bib files in the main directory
 	TEXINPUTS=..: \
 	BIBINPUTS=..: \
 	max_print_line=1048576 \
