@@ -1,12 +1,53 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\subsection{Brennweitenbestimmung durch Messung von Gegenstands- und Bildweite}
+
+In \ref{tab:brenn} sind die Werte für die Positionen des Gegenstandes $P_L$ und die Position des Schirms $P_S$ eingetragen.
+Durch diese Werte lässt sich mit
+\begin{equation}
+  g=P_L-P_G
+\end{equation}
+die Gegenstandsweite ausrechnen.
+Für die Bildweite gilt
+\begin{equation}
+  b=P_S-P_L
+\end{equation}.
+
+\begin{table}
+  \caption{Aufgeführt sind hier die gemessene Position der Linse, sowie die davon abhängige Position des Schirms um ein scharfes Bild zu erhalten.
+  Zudem wurden aus diesen Werten Ggenstands- und Bildweite berechnet. Die Ungenauigkeit aller Werte beträgt $\pm \qty{0.1}{\centi\meter}}$.
+  \label{tab:brenn}
+  \centering
+  \begin{tblr}{
+    colspec{S[table-format=1.1] S[table-format=1.1]};
+    row{1}={guard, mode=math};
+    }
+    \toprule
+    P_L \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} & g \mathbin{/} \unit{\centi\meter} & b \mathbin{/} \unit{\centi\meter} \\
+    \midrule
+  \end{tblr}
+
+\end{table}
+
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{Abgebildet sind die Werte der Bildweite auf der y-Achse und die der Gegenstandsweite auf der x-Achse.}
+  \label{fig:brenn}
 \end{figure}
+
+\subsection{Brennweitenbestimmung mit der Methode von Bessel}
+
+\begin{table}
+  \caption{}
+  \label{tab:bessel}
+  \centering
+  \begin{tblr}{
+    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] S[table-format=1.1]};
+    row{1}={guard, mode=maths};
+  }
+  \toprule
 
 \begin{table}
   \centering
@@ -29,3 +70,7 @@
 \end{table}
 
 Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+
+
+\subsection{Brennweitenbestimmung mit der Methode von Abbe}
+

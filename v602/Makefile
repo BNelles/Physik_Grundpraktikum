@@ -1,4 +1,4 @@
-all: build/vXXX.pdf
+all: build/v602.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
