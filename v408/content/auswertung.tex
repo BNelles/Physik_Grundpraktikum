@@ -57,16 +57,22 @@ Die Brennweite der Linse wird mit \ref{eqn:brenn2} ausgerechnet und ebenfalls in
 
 \subsection{Brennweitenbestimmung mit der Methode von Bessel}
 
+Mithilfe von Gleichung \ref{eqn:brenn1} kann in diesem Fall die Brennweite über den Abstand der beiden Positionen der Linse $d$ und den Abstand zwischen Gegenstand und Schirm $e$ umformuliert werden als
+\begin{equation}
+  f=\frac{e^2-d^2}{4e} \text{.}
+  \label{eqn:brenn2}
+\end{equation}
+
 \begin{table}
   \caption{Messwerte ohne einen Farbfilter.}
-  \label{tab:bessel}
+  \label{tab:bessel1}
   \centering
   \begin{tblr}{
-    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] S[table-format=1.1]};
+    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] };
     row{1}={guard, mode=maths};
   }
   \toprule
-  P_{L1} \mathbin{/} \unit{\centi\meter}  & P_{L2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
+  P_{L_1} \mathbin{/} \unit{\centi\meter}  & P_{L_2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
   \midrule
   38.5  &  54.6   &  70     \\
   37    &  60.7   &  75     \\
@@ -79,6 +85,33 @@ Die Brennweite der Linse wird mit \ref{eqn:brenn2} ausgerechnet und ebenfalls in
   35.2  &  97.5   &  110    \\
   35.2  &  102.7  &  115    \\  
   \bottomrule
+  \end{tblr}
+\end{table}
+
+Daraus lassen sich $d$ und $e$ berechnen mit
+\begin{align}
+   & d=P_{L_2}-P_{L_1} \\
+   & e=P_S-P_G \text{.}
+\end{align}
+Der errechnete Mittelwert für die Brennweite $f$ beträgt dann nach Gleichung \ref{eqn:brenn2} $\qty{9.80(0.06)}{\centi\meter}$
+
+\begin{table}[H]
+  \centering
+  \label{tab:bessel2}
+  \caption{Messwerte mit einem blauen Filter.}
+  \begin{tblr}{
+    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] };
+    row{1}={guard, mode=maths};
+    }
+    \toprule
+    P_{L_1} \mathbin{/} \unit{\centi\meter}  & P_{L_2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
+    \midrule
+    38.2  &  54.8  &  70  \\
+    37.2  &  60.5  &  75  \\
+    36.5  &  66.5  &  80  \\
+    36.4  &  71.8  &  85  \\
+    36.0  &  76.9  &  90  \\
+    \bottomrule
   \end{tblr}
 \end{table}
 %\begin{table}
