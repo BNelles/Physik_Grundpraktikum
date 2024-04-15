@@ -57,7 +57,7 @@ Die Brennweite der Linse wird mit \ref{eqn:brenn2} ausgerecnet und ebenfalls in 
 \subsection{Brennweitenbestimmung mit der Methode von Bessel}
 
 \begin{table}
-  \caption{}
+  \caption{Messwerte ohne einen Farbfilter.}
   \label{tab:bessel}
   \centering
   \begin{tblr}{
@@ -65,26 +65,40 @@ Die Brennweite der Linse wird mit \ref{eqn:brenn2} ausgerecnet und ebenfalls in 
     row{1}={guard, mode=maths};
   }
   \toprule
-
-\begin{table}
-  \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
-  \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
-    }
-    \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
-    \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
-    \bottomrule
+  P_{L1} \mathbin{/} \unit{\centi\meter}  & P_{L2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
+  \midrule
+  38.5  &  54.6   &  70     \\
+  37    &  60.7   &  75     \\
+  36.6  &  66.4   &  80     \\
+  36.1  &  71.6   &  85     \\
+  35.9  &  76.7   &  90     \\
+  35.8  &  82.1   &  95     \\
+  35.8  &  87.2   &  100    \\
+  35.4  &  92.5   &  105    \\
+  35.2  &  97.5   &  110    \\
+  35.2  &  102.7  &  115    \\  
+  \bottomrule
   \end{tblr}
 \end{table}
+%\begin{table}
+%  \centering
+%  \caption{Eine Beispieltabelle mit Messdaten.}
+%  \label{tab:tabelle}
+%  \sisetup{table-format=1.1, per-mode=reciprocal}
+%  \begin{tblr}{
+%      colspec = {S[table-format=3.0] S[table-format=2.1] S},
+%      row{1} = {guard, mode=math},
+%      vline{4} = {2}{-}{text=\clap{$\pm$}},
+%    }
+%    \toprule
+%    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+%    \midrule
+%    360 & 0.1 & 98.3 & 0.9 \\
+%    400 & 0.2 & 99.8 & 1.0 \\
+%    420 & 0.2 & 99.1 & 0.9 \\
+%    \bottomrule
+%  \end{tblr}
+%\end{table}
 
 Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
 
