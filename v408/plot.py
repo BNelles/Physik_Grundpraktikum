@@ -26,8 +26,8 @@ f=g*b/(g+b)
 F=np.mean(f)
 fo=np.std(f)
 
-ff=ufloat(11,1)
-Af=((ff-10)/10)
+ff=ufloat(9.75,0.06)
+Af=((ff-10)/10)*100
 #for i in range (0,9):
 n=np.zeros(10)
 
@@ -89,8 +89,8 @@ P_L.plot(n7, r7,"k-")
 P_L.plot(n8, r8,"k-")
 P_L.plot(n9, r9,"k-")
 P_L.plot(n10, r10,"k-")
-P_L.set_xlabel(r"$g \mathbin{/} \unit{\centi\meter}$")
-P_L.set_ylabel(r"$b \mathbin{/} \unit{\centi\meter}$")
+#P_L.set_xlabel(r"$g \mathbin{/} \unit{\centi\meter}$")
+#P_L.set_ylabel(r"$b \mathbin{/} \unit{\centi\meter}$")
 P_L.legend(loc="best")
 plt.axis((0, 60, 0, 30))
 P_L.set_xticks(np.arange(0, 60, 2))
