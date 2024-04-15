@@ -27,10 +27,10 @@ x_plot=np.linspace(1,5,2)
 
 ax1.plot(x_plot, params1[0]*x_plot+params1[1], "--")
 
-#ax1.set(
-#    xlabel=r"$g \mathrm{/} \unit{\centi\meter}$",
-#    ylabel=r"$1+\frac{1}{V}$",
-#)
+ax1.set(
+    xlabel=r"$g \mathrm{/} \unit{\centi\meter}$",
+    ylabel=r"$1+\frac{1}{V}$",
+)
 
 
 #print(params1,errors1)
@@ -45,10 +45,10 @@ ax2.plot(
     x_plot1,params2[0]*x_plot1+params2[1],"--"
 )
 
-#ax2.set(
-#    xlabel=r"$b \mathrm{/} \unit{\centi\meter}$",
-#    ylabel=r"$1+V$",
-#)
+ax2.set(
+    xlabel=r"$b \mathrm{/} \unit{\centi\meter}$",
+    ylabel=r"$1+V$",
+)
 
 
 #print(params2,errors2)
