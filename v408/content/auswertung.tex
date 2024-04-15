@@ -82,8 +82,8 @@ Mithilfe von Gleichung \ref{eqn:brenn1} kann in diesem Fall die Brennweite über
   \label{tab:bessel1}
   \centering
   \begin{tblr}{
-    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] };
-    row{1}={guard, mode=maths};
+    colspec={S[table-format=2.1] S[table-format=2.1] S[table-format=3.1] },
+    row{1}={guard, mode=math},
   }
   \toprule
   P_{L_1} \mathbin{/} \unit{\centi\meter}  & P_{L_2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
@@ -107,15 +107,15 @@ Daraus lassen sich $d$ und $e$ berechnen mit
    & d=P_{L_2}-P_{L_1} \\
    & e=P_S-P_G \text{.}
 \end{align}
-Der errechnete Mittelwert für die Brennweite $f$ beträgt dann nach Gleichung \ref{eqn:brenn2} $\qty{9.80(0.06)}{\centi\meter}$
+Der errechnete Mittelwert für die Brennweite $f_B$ beträgt dann nach Gleichung \ref{eqn:brenn2} $\qty{9.80(0.06)}{\centi\meter}$
 
 \begin{table}[H]
   \centering
   \label{tab:bessel2}
   \caption{Messwerte mit einem blauen Filter.}
   \begin{tblr}{
-    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] };
-    row{1}={guard, mode=maths};
+    colspec={S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] },
+    row{1}={guard, mode=math},
     }
     \toprule
     P_{L_1} \mathbin{/} \unit{\centi\meter}  & P_{L_2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
@@ -135,8 +135,8 @@ Der errechnete Mittelwert für die Brennweite $f$ beträgt dann nach Gleichung \
   \label{tab:bessel3}
   \caption{Messwerte mit einem rotem Filter.}
   \begin{tblr}{
-    colspec={S[table-format=1.1] S[table-format=1.1] S[table-format=1.1] };
-    row{1}={guard, mode=maths};
+    colspec={S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] },
+    row{1}={guard, mode=math},
     }
     \toprule
     P_{L_1} \mathbin{/} \unit{\centi\meter}  & P_{L_2} \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} \\
@@ -148,9 +148,9 @@ Der errechnete Mittelwert für die Brennweite $f$ beträgt dann nach Gleichung \
     36.3  &  76.7  &  90.0 \\
     \bottomrule
   \end{tblr}
-\end{table}
+\end{table} 
 
-Nach der gleichen Methode, wie bei der Messung ohne Filter, wird die Brennweite der Linse bestimmt mit den Farbfiltern. Dabei ergeben sich Brennweiten von $f_b=\qty{9.75(0.06)}{\centi\meter}$ und $f_r=\qty{9.82(0.08)}{\centi\meter}$.
+Nach der gleichen Methode, wie bei der Messung ohne Filter, wird die Brennweite der Linse bestimmt mit den Farbfiltern. Dabei ergeben sich Brennweiten von $f_Bb=\qty{9.75(0.06)}{\centi\meter}$ und $f_Br=\qty{9.82(0.08)}{\centi\meter}$.
 
 \subsection{Brennweitenbestimmung mit der Methode von Abbe}
 
@@ -159,8 +159,8 @@ Nach der gleichen Methode, wie bei der Messung ohne Filter, wird die Brennweite 
   \caption{Messdaten zur Bestimmung der Brennweite einer Linse nach der abbeschen Methode.}
   \label{tab:abbe}
   \begin{tblr}{
-    colspec={S[tableformat=1.1] S[tableformat=1.1] S[tableformat=1.1]};
-    rom{1}={guard, mode=maths};
+    colspec={S[table-format=2.1] S[table-format=3.1] S[table-format=1.1]},
+    row{1}={guard, mode=math},
     }
     \toprule
     P_L \mathbin{/} \unit{\centi\meter} & P_S \mathbin{/} \unit{\centi\meter} & B \mathbin{/} \unit{\centi\meter} \\
@@ -180,12 +180,12 @@ Nach der gleichen Methode, wie bei der Messung ohne Filter, wird die Brennweite 
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[H]
     \caption{Der Abstand zwischen dem Referenzpunkt und dem Gegenstand $g$ gegen $1+\frac{1}{V}$. (oben) \\ Der Abstand zwischen dem Schirm und dem Referenzpunkt $b$ gegen $1+V$.(unten)}
     \includegraphics{abbe.pdf}
     \label{fig:abbe}
 \end{figure}
 
-Anhand der Formeln \ref{eqn:abbe} ergibt sich das die gemittelte Brennweite der kombinierten Linsen $f=\qty{20.5(1.0)}{\centi\meter}$ beträgt. Die Hauptebene $H'$ befindet sich $\qty{7.24(1.32)}{\centi\meter}$ vom Referenzpunkt
+Anhand der Formeln \ref{eqn:abbe} ergibt sich das die gemittelte Brennweite der kombinierten Linsen $f_A=\qty{20.5(1.0)}{\centi\meter}$ beträgt. Die Hauptebene $H'$ befindet sich $\qty{7.24(1.32)}{\centi\meter}$ vom Referenzpunkt
 weit weg und die Ebene $H$ ist $\qty{-0.64(5.02)}{\centi\meter}$ weit weg.
 Die Position der Halbebenen relativ zum Referenzpunkt beträgt $P_{H'}=\qty{7.24(1.32)}{\centi\meter}$  und $P_H=\qty{-0.64(5.02)}{\centi\meter}$.
