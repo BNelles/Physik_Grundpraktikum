@@ -94,8 +94,8 @@ P_L.set_ylabel(r"$b \mathbin{/} \unit{\centi\meter}$")
 P_L.legend(loc="best")
 plt.axis((0, 60, 0, 30))
 P_L.set_xticks(np.arange(0, 60, 2))
-P_L.set_yticks(np.arange(0, 30, 1))
-P_L.grid()
+P_L.set_yticks(np.arange(0, 30, 2))
+#P_L.grid()
 #line_1=LineString(np.column_stack(()))
 
 

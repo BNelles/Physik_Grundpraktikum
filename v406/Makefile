@@ -2,13 +2,21 @@ all: build/v406.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
+build/plot1.pdf:plot1.py ../matplotlibrc ../header-matplotlib.tex | build
+build/plot2.pdf:plot2.py ../matplotlibrc ../header-matplotlib.tex | build
 	# so that matplotlib can find the tex header when running
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
+
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
+
+
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot2.py
+
 # hier weitere Abhängigkeiten für build/v406.pdf deklarieren:
-build/v406.pdf: build/plot.pdf
+build/v406.pdf: build/plot.pdf build/plot1.pdf	build/plot2.pdf
 
 build/v406.pdf: FORCE | build
 	# to find header and bib files in the main directory

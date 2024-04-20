@@ -1,6 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+
+
 \subsection{Brennweitenbestimmung durch Messung von Gegenstands- und Bildweite}
 
 In \ref{tab:brenn} sind die Werte für die Positionen des Gegenstandes $P_L$ und die Position des Schirms $P_S$ eingetragen.
@@ -15,14 +17,14 @@ Für die Bildweite gilt
 \end{equation}.
 Auch die Größe des Bildes $B$ wurde gemessen.
 Mit der Formel \ref{eqn:abbildung1} wird $V_1$ und mit \ref{eqn:abbildung2} wird $V_2$ berechnet.
-Auch diese Werte, sowie die Differenz zwischen beiden, werden in Tabelle \ref{tab:brenn} hinzugefügt.
+Auch diese Werte, sowie die Abweichung zwischen beiden, berechnet mit Formel \ref{eqn:Abweichung}, werden in Tabelle \ref{tab:brenn} hinzugefügt.
 Die Brennweite der Linse wird mit \ref{eqn:brenn1} ausgerechnet und ebenfalls in die Tabelle eingetragen.
 
 \begin{table}[H]
   \caption{Aufgeführt sind hier die gemessene Position der Linse, sowie die davon abhängige Position des Schirms um ein scharfes Bild zu erhalten.
   Zudem wurden aus diesen Werten Gegenstands- und Bildweite berechnet. Die Ungenauigkeit dieser Werte beträgt $\pm \qty{0.1}{\centi\meter}$.
   Dazu wurde die Größe des Bildes gemessen und einerseits mit den gemessenen Größen und andererseits mit Bild- und Gegenstandsweite der Abbildungsmaßstab berechnet.
-  $\delta V$ ist die Differenz davon.}
+  $A_V$ ist die Abweichung von $V_2$ zu $V_1$.}
   \label{tab:brenn}
   \centering
   \begin{tblr}{
@@ -187,5 +189,13 @@ Der errechnete Mittelwert für die Brennweite $f_B$ beträgt dann nach Gleichung
 \end{figure}
 
 Anhand der Formeln \ref{eqn:abbe} ergibt sich das die gemittelte Brennweite der kombinierten Linsen $f_A=\qty{20.5(1.0)}{\centi\meter}$ beträgt. Die Hauptebene $H'$ befindet sich $\qty{7.24(1.32)}{\centi\meter}$ vom Referenzpunkt
-weit weg und die Ebene $H$ ist $\qty{-0.64(5.02)}{\centi\meter}$ weit weg.
+weit weg und die Ebene $H$ ist $\qty{-0.64(5.02)}{\centi\meter}$ weit w eg.
 Die Position der Halbebenen relativ zum Referenzpunkt beträgt $P_{H'}=\qty{7.24(1.32)}{\centi\meter}$  und $P_H=\qty{-0.64(5.02)}{\centi\meter}$.
+
+Um dieses Ergebnis mit einem theoretisch bestimmten Wert vergleichen zu können, wird dieser mit den Formeln \ref{eqn:Brechkraft} und \ref{eqn:Brechkraft2} bestimmt.
+Aus Diesen und den Werten $f_1=\qty{-10}{\centi\meter}$ und $f_2=\qty{10}{\centi\meter}$ergibt sich 
+\begin{equation*}
+  D=\frac{1}{f_1}+\frac{1}{f_2}
+\end{equation*} 
+.
+Das eingesetzt in Formel \ref{eqn:Brechkraft} ergibt den Wert $f_A_t=\qty{}{\centi\meter}
