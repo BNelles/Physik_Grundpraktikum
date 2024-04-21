@@ -1,6 +1,101 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+
+
+\begin{table}[http]
+  \centering
+  \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.
+  Dabei ist $I_S1$ die Stromstärke für den ersten Einzelspalt, $I_S2$ die für den zweiten EInzelspalt und $I_DS$ die für den Doppelspalt.}
+  \label{tab:Spalt1}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \begin{minipage}[t]{0.4\linewidth}
+    \begin{tblr}[t]{
+      colspec = {S[table-format=2.1] S[table-format=1.2] S[table-format=2.2] S[table-format=2.1]},
+      row{1} = {guard, mode=math},
+    }
+    \toprule
+    x \mathbin{/} \unit{\volt} & I_S1 \mathbin{/} \unit{\nano\ampere} & I_S2 \mathbin{/} \unit{\nano\ampere} & I_DS \mathbin{/} \unit{\nano\ampere} \\
+    \midrule
+   0.0 &   0.32   &   0.32  & 1.4 \\
+   1.0 &   0.32   &   0.36  & 1.0 \\
+   2.0 &   0.32   &   0.40  & 1.2 \\
+   3.0 &   0.32   &   0.44  & 1.8 \\
+   4.0 &   0.32   &   0.50  & 1.8 \\
+   5.0 &   0.34   &   0.70  & 1.8 \\
+   6.0 &   0.40   &   1.00  & 1.8 \\
+   7.0 &   0.52   &   1.40  & 1.4 \\
+   8.0 &   0.66   &   1.60  & 2.0 \\
+   9.0 &   0.82   &   1.60  & 3.0 \\
+  10.0 &   1.00   &   1.40  & 3.2 \\
+  11.0 &   1.20   &   1.20  & 4.0 \\
+  12.0 &   1.20   &   1.40  & 4.4 \\
+  13.0 &   1.40   &   2.00  & 4.8 \\
+  14.0 &   1.40   &   2.40  & 4.2 \\
+  15.0 &   1.40   &   2.80  & 3.4 \\
+  16.0 &   1.40   &   2.60  & 4.4 \\
+  17.0 &   1.60   &   2.40  & 7.0 \\
+  18.0 &   1.80   &   2.20  & 9.0 \\
+  19.0 &   2.20   &   2.60  & 10.0 \\
+  20.0 &   2.80   &   3.00  & 12.0 \\
+  20.5 &   3.20   &   3.20  & 26.0 \\
+  21.0 &   3.40   &   3.80  & 20.0 \\
+  21.5 &   3.80   &   4.40  & 24.0 \\
+  22.0 &   4.00   &   6.00  & 34.0 \\
+  22.5 &   4.00   &   7.80  & 20.0 \\
+  23.0 &   4.20   &  10.00  & 42.0 \\
+  23.5 &   4.20   &  14.00  & 28.0 \\
+  24.0 &   4.20   &  16.00  & 32.0 \\
+  24.5 &   4.00   &  16.00  & 36.0 \\
+  25.0 &   3.80   &  18.00  & 22.0 \\
+
+    \bottomrule
+  \end{tblr}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}
+    \begin{tblr}[t]{
+      colspec = {S[table-format=2.1] S[table-format=1.2] S[table-format=2.2] S[table-format=2.1]},
+      row{1} = {guard, mode=math},
+    }
+    \toprule
+    x \mathbin{/} \unit{\volt} & I_S1 \mathbin{/} \unit{\nano\ampere} & I_S2 \mathbin{/} \unit{\nano\ampere} & I_DS \mathbin{/} \unit{\nano\ampere} \\
+    \midrule
+    25.5 &   3.60   &  16.00  & 32.0 \\
+    26.0 &   3.20   &  16.00  & 20.0 \\
+    26.5 &   3.00   &  14.00  & 22.0 \\
+    27.0 &   2.80   &  12.00  & 20.0 \\
+    27.5 &   2.40   &   9.40  & 14.0 \\
+    28.0 &   2.00   &   7.80  & 18.0 \\
+    28.5 &   2.00   &   6.80  & 14.0 \\
+    29.0 &   1.80   &   6.00  & 12.0 \\
+    29.5 &   1.60   &   5.80  & 14.0 \\
+    30.0 &   1.40   &   5.20  & 10.0 \\
+    31.0 &   1.20   &   4.20  & 12.0 \\
+    32.0 &   1.20   &   3.00  & 10.0 \\
+    33.0 &   1.40   &   2.40  & 7.0 \\
+    34.0 &   1.40   &   2.20  & 6.2 \\
+    35.0 &   1.60   &   2.00  & 6.4 \\
+    36.0 &   1.60   &   1.80  & 6.2 \\
+    37.0 &   1.60   &   2.00  & 5.6 \\
+    38.0 &   1.40   &   2.20  & 7.2 \\
+    39.0 &   1.40   &   2.00  & 8.8 \\
+    40.0 &   1.20   &   1.60  & 7.0 \\
+    41.0 &   1.00   &   1.20  & 4.4 \\
+    42.0 &   1.00   &   1.20  & 4.8 \\
+    43.0 &   0.74   &   1.20  & 4.4 \\
+    44.0 &   0.68   &   1.00  & 2.6 \\
+    45.0 &   0.66   &   1.00  & 2.0 \\
+    46.0 &   0.70   &   1.00  & 2.2 \\
+    47.0 &   0.76   &   1.00  & 2.4 \\
+    48.0 &   0.82   &   0.84  & 2.2 \\
+    49.0 &   0.86   &   0.70  & 2.0 \\
+    50.0 &   0.86   &   0.72  & 2.4 \\
+    \bottomrule
+  \end{tblr}
+\end{minipage}
+\end{table}
+
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
@@ -8,24 +103,173 @@
   \label{fig:plot}
 \end{figure}
 
-\begin{table}
-  \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
-  \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
-    }
-    \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
-    \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
-    \bottomrule
-  \end{tblr}
-\end{table}
+%\begin{table}
+%  \centering
+%  \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.}
+%  \label{tab:Spalt2}
+%  \sisetup{table-format=1.1, per-mode=reciprocal}
+%  \begin{tblr}{
+%      colspec = {S[table-format=2.1] S[table-format=1.2] S},
+%      row{1} = {guard, mode=math},
+%      vline{4} = {2}{-}{text=\clap{$\pm$}},
+%    }
+%    \toprule
+%    x \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\milli\second} & \SetCell[c=2]{c} N \mathbin{/} \unit{\nano\ampere} & \\
+%    \midrule
+%       0.0  & 0.32 \\  
+%       1.0  & 0.36 \\  
+%       2.0  & 0.40 \\  
+%       3.0  & 0.44 \\  
+%       4.0  & 0.50 \\  
+%       5.0  & 0.70 \\  
+%       6.0  & 1.00 \\  
+%       7.0  & 1.40 \\  
+%       8.0  & 1.60 \\  
+%       9.0  & 1.60 \\  
+%      10.0  & 1.40 \\   
+%      11.0  & 1.20 \\   
+%      12.0  & 1.40 \\   
+%      13.0  & 2.00 \\   
+%      14.0  & 2.40 \\   
+%      15.0  & 2.80 \\   
+%      16.0  & 2.60 \\   
+%      17.0  & 2.40 \\   
+%      18.0  & 2.20 \\   
+%      19.0  & 2.60 \\   
+%      20.0  & 3.00 \\   
+%      20.5  & 3.20 \\   
+%      21.0  & 3.80 \\   
+%      21.5  & 4.40 \\   
+%      22.0  & 6.00 \\   
+%      22.5  & 7.80 \\   
+%      23.0  &10.00 \\   
+%      23.5  &14.00 \\   
+%      24.0  &16.00 \\   
+%      24.5  &16.00 \\   
+%      25.0  &18.00 \\   
+%      25.5  &16.00 \\   
+%      26.0  &16.00 \\   
+%      26.5  &14.00 \\   
+%      27.0  &12.00 \\   
+%      27.5  & 9.40 \\   
+%      28.0  & 7.80 \\   
+%      28.5  & 6.80 \\   
+%      29.0  & 6.00 \\   
+%      29.5  & 5.80 \\   
+%      30.0  & 5.20 \\   
+%      31.0  & 4.20 \\   
+%      32.0  & 3.00 \\   
+%      33.0  & 2.40 \\   
+%      34.0  & 2.20 \\   
+%      35.0  & 2.00 \\   
+%      36.0  & 1.80 \\   
+%      37.0  & 2.00 \\   
+%      38.0  & 2.20 \\   
+%      39.0  & 2.00 \\   
+%      40.0  & 1.60 \\   
+%      41.0  & 1.20 \\   
+%      42.0  & 1.20 \\   
+%      43.0  & 1.20 \\   
+%      44.0  & 1.00 \\   
+%      45.0  & 1.00 \\   
+%      46.0  & 1.00 \\   
+%      47.0  & 1.00 \\   
+%      48.0  & 0.84 \\   
+%      49.0  & 0.70 \\   
+%      50.0  & 0.72 \\   
+%    \bottomrule
+%  \end{tblr}
+%\end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+\begin{figure}
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Plot.}
+  \label{fig:plot}
+\end{figure}
+
+%\begin{table}
+%  \centering
+%  \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.}
+%  \label{tab:Spalt1}
+%  \sisetup{table-format=1.1, per-mode=reciprocal}
+%  \begin{tblr}{
+%      colspec = {S[table-format=2.1] S[table-format=1.2] S},
+%      row{1} = {guard, mode=math},
+%      vline{4} = {2}{-}{text=\clap{$\pm$}},
+%    }
+%    \toprule
+%    x \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\milli\second} & \SetCell[c=2]{c} N \mathbin{/} \unit{\nano\ampere} & \\
+%    \midrule
+%   0.0 &   0.32   \\
+%   1.0 &   0.32   \\
+%   2.0 &   0.32   \\
+%   3.0 &   0.32   \\
+%   4.0 &   0.32   \\
+%   5.0 &   0.34   \\
+%   6.0 &   0.40   \\
+%   7.0 &   0.52   \\
+%   8.0 &   0.66   \\
+%   9.0 &   0.82   \\
+%  10.0 &   1.00   \\
+%  11.0 &   1.20   \\
+%  12.0 &   1.20   \\
+%  13.0 &   1.40   \\
+%  14.0 &   1.40   \\
+%  15.0 &   1.40   \\
+%  16.0 &   1.40   \\
+%  17.0 &   1.60   \\
+%  18.0 &   1.80   \\
+%  19.0 &   2.20   \\
+%  20.0 &   2.80   \\
+%  20.5 &   3.20   \\
+%  21.0 &   3.40   \\
+%  21.5 &   3.80   \\
+%  22.0 &   4.00   \\
+%  22.5 &   4.00   \\
+%  23.0 &   4.20   \\
+%  23.5 &   4.20   \\
+%  24.0 &   4.20   \\
+%  24.5 &   4.00   \\
+%  25.0 &   3.80   \\
+%  25.5 &   3.60   \\
+%  26.0 &   3.20   \\
+%  26.5 &   3.00   \\
+%  27.0 &   2.80   \\
+%  27.5 &   2.40   \\
+%  28.0 &   2.00   \\
+%  28.5 &   2.00   \\
+%  29.0 &   1.80   \\
+%  29.5 &   1.60   \\
+%  30.0 &   1.40   \\
+%  31.0 &   1.20   \\
+%  32.0 &   1.20   \\
+%  33.0 &   1.40   \\
+%  34.0 &   1.40   \\
+%  35.0 &   1.60   \\
+%  36.0 &   1.60   \\
+%  37.0 &   1.60   \\
+%  38.0 &   1.40   \\
+%  39.0 &   1.40   \\
+%  40.0 &   1.20   \\
+%  41.0 &   1.00   \\
+%  42.0 &   1.00   \\
+%  43.0 &   0.74   \\
+%  44.0 &   0.68   \\
+%  45.0 &   0.66   \\
+%  46.0 &   0.70   \\
+%  47.0 &   0.76   \\
+%  48.0 &   0.82   \\
+%  49.0 &   0.86   \\
+%  50.0 &   0.86   \\
+%    \bottomrule
+%  \end{tblr}
+%\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Plot.}
+  \label{fig:plot}
+\end{figure}
+

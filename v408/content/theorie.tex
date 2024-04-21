@@ -1,3 +1,7 @@
+\section{Zielsetzung}
+In diesem Versuch soll die Gültigkeit von Gleichung \ref{eqn:abbildung1}, \ref{eqn:abbildung2} und \ref{eqn:brenn1} überprüft werden, sowie die Funktionalität der Messmethoden von Bessel und von Abbe zur Brennweitenbestimmung.
+
+
 \section{Theorie \cite{V408}}
 \label{sec:Theorie}
     \noindent Bei Linsen wird generell zwischen Sammellinsen und Zerstreuungslinsen unterschieden. Sammel und Streuungslinsen unterscheiden sich dadrin, dass die Brennweite $f$ bei Sammellinsen positiv ist und bei Zerstreuungslinsen negativ.
@@ -14,7 +18,7 @@
     \noindent wobei $b$ der Abstand zwischen dem Bild und der Mittelebene ist und $g$ der Abstand vom Gegenstand zur Mittelebene.
     Des weiteren gilt bei solchen Linsen für die Brennweite die Beziehung
     \begin{equation}
-        f=\frac{b+g}{bg} \text{,}
+        f=\frac{bg}{b+g} \text{,}
         \label{eqn:brenn1}
     \end{equation}
     \noindent wenn das Bild in der Bildebene scharf erscheint.
@@ -22,16 +26,24 @@
     \noindent Für den Fall, dass mit zwei Linsen gearbeitet wird, wobei eine eine Sammellinse und eine eine Streulinse ist, ist es möglich, falls beide dünn genug sind, für beide Linsen zwei gemeinsame Hauptebenen zu definieren.
     Dazu wird im Aufbau ein Referenzpunkt A gewählt, dessen Abstand zum Gegenstand $g'$ und zum Bildschirm $b'$ über die beiden Gleichungen
     \begin{align}
-       & g'=f(1-\frac{1}{V})+h \\
+       & g'=f(1+\frac{1}{V})+h \\
         & b'=f(1+V)+h'
         \label{eqn:abbe}
     \end{align}
     bestimmt sind, wobei $h$ der Abstand von $A$ zur Hauptebene $H$ ist und $h'$ der Abstand von $A$ zur anderen Hauptebene $H'$.
 
-    \noindent Ein Effekt der bei Linsen auftritt, der beachtet werden muss, ist die chromatische Abberration. Diese beschreibt eine Verzerrung des Bildes, dessen Licht durch eine Linse läuft, aufgrund der verschiedenen Wellenlängen, die unterschiedlich gebrochen werden an dieser.
+    \noindent Ein Effekt der bei Linsen auftritt, der beachtet werden muss, ist die chromatische Abberration. Diese beschreibt eine Verzerrung des Bildes, dessen Licht durch eine Linse läuft. Diese tritt auf aufgrund der verschiedenen Wellenlängen, die unterschiedlich gebrochen werden an dieser.
     Als Folge entstehen bei nicht monochromatischem Licht mehrere Bilder auf dem Schirm, die unterschiedlichen Wellenlängen entsprechen und somit die Präzision von Messungen an dem Bild verschlechtert werden.
 
+    Die Brechkraft
+    \begin{equation}
+        \label{eqn.Brechkraft}
+        D=\frac{1}{f}
+    \end{equation}
+    eines Linsensystems kann durch
+    \begin{equation}
+        D=\sum_i^N{D_i}
+        \label{Brechkraft2}
+    \end{equation}
+    berechnet werde.
 
-
-\section{Zielsetzung}
-In diesem Versuch soll die Gültigkeit von Gleichung \ref{eqn:abbildung1}, \ref{eqn:abbildung2} und \ref{eqn:brenn1} überprüft werden, sowie die Funktionalität der Messmethoden von Bessel und von Abbe zur Brennweitenbestimmung.

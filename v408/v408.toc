@@ -1,0 +1,12 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Theorie}{3}{section.1}%
+\contentsline {section}{\numberline {2}Durchführung}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Bestimmung der Brennweite}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Methode von Bessel}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Methode von Abbe}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Auswertung}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Brennweitenbestimmung durch Messung von Gegenstands- und Bildweite}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Brennweitenbestimmung mit der Methode von Bessel}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Brennweitenbestimmung mit der Methode von Abbe}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Diskussion}{7}{section.4}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
