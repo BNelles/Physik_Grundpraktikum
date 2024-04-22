@@ -1,13 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-
+In \ref{tab:Tabelle} sind die Stromstärken, die das Intensitätsmessgerät bei den beiden Einzelspalten und bei dem Doppelspalt gemessen hat, gegen $x$ aufgetragen.
+$x$ ist hier die Skala bei der Verschiebeapparatur des Intensitätsmessgerätes, wobei es bei $x=\qty{25}{\milli\meter}$ mittig zum Laser liegen sollte.
 
 \begin{table}[http]
   \centering
   \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in Abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.
   Dabei ist $I_S1$ die Stromstärke für den ersten Einzelspalt, $I_S2$ die für den zweiten Einzelspalt und $I_DS$ die für den Doppelspalt.}
-  \label{tab:Spalt1}
+  \label{tab:Tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{minipage}[t]{0.4\linewidth}
     \begin{tblr}[t]{
@@ -96,180 +97,34 @@
 \end{minipage}
 \end{table}
 
-\begin{figure}
+In Abbildung \ref{fig:Spalt1} wird $I_1$ gegen $\varphi$ aufgetragen, wobei 
+\begin{equation}
+  \varphi=x/L
+\end{equation}
+ist.
+
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{Hier ist $I_1$ in Abhängigkeit zu $\varphi$ aufgetragen.}
+  \label{fig:Spalt1}
 \end{figure}
 
-%\begin{table}
-%  \centering
-%  \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.}
-%  \label{tab:Spalt2}
-%  \sisetup{table-format=1.1, per-mode=reciprocal}
-%  \begin{tblr}{
-%      colspec = {S[table-format=2.1] S[table-format=1.2] S},
-%      row{1} = {guard, mode=math},
-%      vline{4} = {2}{-}{text=\clap{$\pm$}},
-%    }
-%    \toprule
-%    x \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\milli\second} & \SetCell[c=2]{c} N \mathbin{/} \unit{\nano\ampere} & \\
-%    \midrule
-%       0.0  & 0.32 \\  
-%       1.0  & 0.36 \\  
-%       2.0  & 0.40 \\  
-%       3.0  & 0.44 \\  
-%       4.0  & 0.50 \\  
-%       5.0  & 0.70 \\  
-%       6.0  & 1.00 \\  
-%       7.0  & 1.40 \\  
-%       8.0  & 1.60 \\  
-%       9.0  & 1.60 \\  
-%      10.0  & 1.40 \\   
-%      11.0  & 1.20 \\   
-%      12.0  & 1.40 \\   
-%      13.0  & 2.00 \\   
-%      14.0  & 2.40 \\   
-%      15.0  & 2.80 \\   
-%      16.0  & 2.60 \\   
-%      17.0  & 2.40 \\   
-%      18.0  & 2.20 \\   
-%      19.0  & 2.60 \\   
-%      20.0  & 3.00 \\   
-%      20.5  & 3.20 \\   
-%      21.0  & 3.80 \\   
-%      21.5  & 4.40 \\   
-%      22.0  & 6.00 \\   
-%      22.5  & 7.80 \\   
-%      23.0  &10.00 \\   
-%      23.5  &14.00 \\   
-%      24.0  &16.00 \\   
-%      24.5  &16.00 \\   
-%      25.0  &18.00 \\   
-%      25.5  &16.00 \\   
-%      26.0  &16.00 \\   
-%      26.5  &14.00 \\   
-%      27.0  &12.00 \\   
-%      27.5  & 9.40 \\   
-%      28.0  & 7.80 \\   
-%      28.5  & 6.80 \\   
-%      29.0  & 6.00 \\   
-%      29.5  & 5.80 \\   
-%      30.0  & 5.20 \\   
-%      31.0  & 4.20 \\   
-%      32.0  & 3.00 \\   
-%      33.0  & 2.40 \\   
-%      34.0  & 2.20 \\   
-%      35.0  & 2.00 \\   
-%      36.0  & 1.80 \\   
-%      37.0  & 2.00 \\   
-%      38.0  & 2.20 \\   
-%      39.0  & 2.00 \\   
-%      40.0  & 1.60 \\   
-%      41.0  & 1.20 \\   
-%      42.0  & 1.20 \\   
-%      43.0  & 1.20 \\   
-%      44.0  & 1.00 \\   
-%      45.0  & 1.00 \\   
-%      46.0  & 1.00 \\   
-%      47.0  & 1.00 \\   
-%      48.0  & 0.84 \\   
-%      49.0  & 0.70 \\   
-%      50.0  & 0.72 \\   
-%    \bottomrule
-%  \end{tblr}
-%\end{table}
 
-\begin{figure}
+
+\begin{figure}[H]
   \centering
   \includegraphics{plot1.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{In dieser Abbildung wird $I_2$ abhängig von $\varphi$ aufgezeichnet.}
+  \label{fig:Spalt2}
 \end{figure}
 
-%\begin{table}
-%  \centering
-%  \caption{In dieser Tabelle ist die gemessene Stromstärke, die von dem Intensitätsmessgerät ausgegeben wird, in abhängigkeit zur Verschiebung des Messgerätes in x Richtung eingetragen.}
-%  \label{tab:Spalt1}
-%  \sisetup{table-format=1.1, per-mode=reciprocal}
-%  \begin{tblr}{
-%      colspec = {S[table-format=2.1] S[table-format=1.2] S},
-%      row{1} = {guard, mode=math},
-%      vline{4} = {2}{-}{text=\clap{$\pm$}},
-%    }
-%    \toprule
-%    x \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\milli\second} & \SetCell[c=2]{c} N \mathbin{/} \unit{\nano\ampere} & \\
-%    \midrule
-%   0.0 &   0.32   \\
-%   1.0 &   0.32   \\
-%   2.0 &   0.32   \\
-%   3.0 &   0.32   \\
-%   4.0 &   0.32   \\
-%   5.0 &   0.34   \\
-%   6.0 &   0.40   \\
-%   7.0 &   0.52   \\
-%   8.0 &   0.66   \\
-%   9.0 &   0.82   \\
-%  10.0 &   1.00   \\
-%  11.0 &   1.20   \\
-%  12.0 &   1.20   \\
-%  13.0 &   1.40   \\
-%  14.0 &   1.40   \\
-%  15.0 &   1.40   \\
-%  16.0 &   1.40   \\
-%  17.0 &   1.60   \\
-%  18.0 &   1.80   \\
-%  19.0 &   2.20   \\
-%  20.0 &   2.80   \\
-%  20.5 &   3.20   \\
-%  21.0 &   3.40   \\
-%  21.5 &   3.80   \\
-%  22.0 &   4.00   \\
-%  22.5 &   4.00   \\
-%  23.0 &   4.20   \\
-%  23.5 &   4.20   \\
-%  24.0 &   4.20   \\
-%  24.5 &   4.00   \\
-%  25.0 &   3.80   \\
-%  25.5 &   3.60   \\
-%  26.0 &   3.20   \\
-%  26.5 &   3.00   \\
-%  27.0 &   2.80   \\
-%  27.5 &   2.40   \\
-%  28.0 &   2.00   \\
-%  28.5 &   2.00   \\
-%  29.0 &   1.80   \\
-%  29.5 &   1.60   \\
-%  30.0 &   1.40   \\
-%  31.0 &   1.20   \\
-%  32.0 &   1.20   \\
-%  33.0 &   1.40   \\
-%  34.0 &   1.40   \\
-%  35.0 &   1.60   \\
-%  36.0 &   1.60   \\
-%  37.0 &   1.60   \\
-%  38.0 &   1.40   \\
-%  39.0 &   1.40   \\
-%  40.0 &   1.20   \\
-%  41.0 &   1.00   \\
-%  42.0 &   1.00   \\
-%  43.0 &   0.74   \\
-%  44.0 &   0.68   \\
-%  45.0 &   0.66   \\
-%  46.0 &   0.70   \\
-%  47.0 &   0.76   \\
-%  48.0 &   0.82   \\
-%  49.0 &   0.86   \\
-%  50.0 &   0.86   \\
-%    \bottomrule
-%  \end{tblr}
-%\end{table}
 
-\begin{figure}
+
+\begin{figure}[H]
   \centering
   \includegraphics{plot2.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \caption{Hier sind die Werte von $I_DS$ zu den entsprechenden Werten von $\varphi$ aufgetragen.}
+  \label{fig:Doppelspalt}
 \end{figure}
 
