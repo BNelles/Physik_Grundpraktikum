@@ -6,7 +6,7 @@ def sinc(X,a,b):
     return a*(np.sin((b*X))/(X))**2
 
 I,y = np.genfromtxt("data/data2.txt",unpack=True)
-x=y-25
+x=(y-25)
 
 fig, (ax1) = plt.subplots(1, 1, layout="constrained")
 ax1.plot(x, I,".k" ,label="Spalt 2")
@@ -23,7 +23,7 @@ x_plot=np.linspace(-27,27,100)
 print(params, uncertainties)
 ax1.plot(x_plot,sinc(x_plot,params[0],params[1]),"-")
 l=635*10**(-9)
-B=(params[1]*l*(10**3))/np.pi
+B=(params[1]*l*10**3)/np.pi
 print(B)
 print((1.5*10**(-4)-B)/(1.5*10**(-4)))
 fig.savefig("plot1.pdf")
