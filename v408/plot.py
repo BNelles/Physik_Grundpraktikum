@@ -26,8 +26,8 @@ f=g*b/(g+b)
 F=np.mean(f)
 fo=np.std(f)
 
-ff=ufloat(9.75,0.06)
-Af=((ff-10)/10)*100
+ff=ufloat(20.5,1,0)
+Af=((ff-22.22)/22.22)*100
 #for i in range (0,9):
 n=np.zeros(10)
 
