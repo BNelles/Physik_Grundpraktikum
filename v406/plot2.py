@@ -13,12 +13,12 @@ ax1.plot(x, I,".k" ,label="Doppelspalt")
 #ax1.set_ylabel(r"$Stromstärke des Intensitätsmessgertes \mathbin{/} \unit{\nano\ampere}$")
 ax1.legend(loc="best")
 
-params, covariance_matrix=curve_fit(sinc, x,I, p0=[40,0.1])
+params, covariance_matrix=curve_fit(sinc, x,I,p0=[100000,0.1])
 uncertainties=np.sqrt(np.diag(covariance_matrix))
 
-x_plot=np.linspace(0,55,1)
+x_plot=np.linspace(-27,27,100)
 
 print(params, uncertainties)
-ax1.plot(x_plot,sinc(x_plot,*params,"-"))
+ax1.plot(x_plot,sinc(x_plot,params[0],params[1]),"-")
 
 fig.savefig("plot2.pdf")
