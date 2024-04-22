@@ -22,6 +22,8 @@ x_plot=np.linspace(-27,27,100)
 
 print(params, uncertainties)
 ax1.plot(x_plot,sinc(x_plot,params[0],params[1]),"-")
-
-
+l=635*10**(-9)
+B=(params[1]*l*(10**3))/np.pi
+print(B)
+print((1.5*10**(-4)-B)/(1.5*10**(-4)))
 fig.savefig("plot1.pdf")
