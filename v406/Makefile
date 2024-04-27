@@ -2,10 +2,13 @@ all: build/v406.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 build/plot1.pdf:plot1.py ../matplotlibrc ../header-matplotlib.tex | build
-	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
 build/plot2.pdf:plot2.py ../matplotlibrc ../header-matplotlib.tex | build
+
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
+
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
+
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot2.py
 	# so that matplotlib can find the tex header when running
 	# LaTeX in the tmp directory
