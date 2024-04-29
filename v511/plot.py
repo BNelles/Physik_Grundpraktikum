@@ -7,11 +7,6 @@ I_k,B_k,U_k=np.genfromtxt("data/kupfer.txt",unpack=True)
 I_z,B_z,U_z=np.genfromtxt("data/zink.txt",unpack=True)
 
 
-<<<<<<< HEAD
-fig.savefig("build/plot.pdf")
-||||||| 9713c04
-fig.savefig("build/plot.pdf")
-=======
 params, covariance_matrixs = np.polyfit(B_s, U_s, deg=1, cov=True)
 paramk, covariance_matrixk = np.polyfit(B_k, U_k, deg=1, cov=True)
 paramz, covariance_matrixz = np.polyfit(B_z, U_z, deg=1, cov=True)
@@ -58,4 +53,3 @@ z.plot(
 
 
 fig.savefig("build/plot.pdf")
->>>>>>> 12153f882c8ccb2183d582bf702baea0271e4d1b
