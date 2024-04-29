@@ -27,13 +27,10 @@ errork=np.sqrt(np.diag(covariance_matrixk))
 errorz=np.sqrt(np.diag(covariance_matrixz))
 #print(params[0],errors[0])
 
-s=ufloat(params[0],errors[0])
-k=ufloat(paramk[0],errork[0])
-z=ufloat(paramz[0],errorz[0])
-                                
+                            #spezifischer Widerstand    
 k=ufloat(0.104,0.001)
 s=ufloat(0.263,0.001)
-                                #spezifischer Widerstand
+                                
 A_k=np.pi*(k/2)**2
 A_s=np.pi*(s/2)**2
 
@@ -45,6 +42,12 @@ l_s=1.73
 
 p_k=(A_k*R_k)/l_k*10**(-6)
 p_s=(A_k*R_s)/l_s*10**(-6)
+
+
+s=ufloat(params[0],errors[0])
+k=ufloat(paramk[0],errork[0])
+z=ufloat(paramz[0],errorz[0])
+
 
 #print(const.e**2)
 #print(p_k,p_s)
