@@ -27,10 +27,10 @@ In den Tabellen \ref{tab:Silber}, \ref{tab:Kupfer} und \ref{tab:Zink} ist für S
 Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke durch die Elektromagneten $I_B$ angepasst.
 
 
-\begin{table}
+\begin{table}[H]
   \centering
-  \label{tab:Silber}
   \caption{Hier ist die Hall Spannung bei der Silberplatte in Abhängikeit zu $I_B$ und damit zu $B$ aufgeführt.}
+  \label{tab:Silber}
   \begin{tblr}{
     colspec={S[table-format=1.1] S[table-format=4.1] S[table-format=1.3]},
     row{1}={guard,mode=math},
@@ -49,10 +49,10 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \end{tblr}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
   \centering
-  \label{tab:Kupfer}
   \caption{Eingetragen ist die Hall-Spannung abhängig von der magnetischen Flussdichte, die von der Stromstärke durch die Elektromagneten $I_B$ abhängt.}
+  \label{tab:Kupfer}
   \begin{tblr}{
     colspec={S[table-format=1.2] S[table-format=4.1] S[table-format=2.3]},
     row{1}={guard,mode=math},
@@ -77,10 +77,10 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
 
 
 
-\begin{table}
+\begin{table}[H]
   \centering
+  \caption{Die Hall-Spannung ist, abghängig von der magnetischen Flussdichte, die mit der Stromstärke durch die Spulen $I_B$ eingestellt wird, aufgetragen.}
   \label{tab:Zink}
-  \caption{Die Hallspannung ist, abghängig von der magnetischen Flussdichte, die mit der Stromstärke durch die Spulen $I_B$ eingestellt wird, aufgetragen.}
   \begin{tblr}{
     colspec={S[table-format=1.2] S[table-format=4.1] S[table-format=1.3]},
     row{1}={guard,mode=math},
@@ -99,13 +99,19 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \end{tblr}
 \end{table}
 
+\noindent In \ref{fig:plot} wird für alle drei Metalle die Hall-Spannung gegen die magnetische FLussdichte aufgetragen.
+Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
 
 \begin{figure}
   \centering
   \includegraphics{plot.pdf}
-  \caption{Plot.}
+  \caption{Hier wird für Silber, Kupfer und Zink die gemessene Hall-Spannung gegen die magnetische Flussdichte aufgetragen. Zudem wurde eine Regressionsgerade eingefügt.}
   \label{fig:plot}
 \end{figure}
 
+\noindent Die Steigung der Regressionsgeraden ist dabei das Verhältnis von Hall-Spannunng zur magnetischen Flussdichte.
+Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V_S=\qty{-2.1312e-05}{\volt\per\tesla}$, bei Kupfer
+ $V_K=\qty{-1.5418e-05}{\volt\per\tesla}$ und bei Zink $V_Z=\qty{1.4943e-05}{\volt\per\tesla} $.
 
+ 
 

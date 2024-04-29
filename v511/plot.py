@@ -50,6 +50,6 @@ z.plot(
     linewidth=3,
 )
 
-
+print(params[0],paramk[0],paramz[0])
 
 fig.savefig("build/plot.pdf")
