@@ -2,14 +2,29 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+
 I_s,B_s,U_s=np.genfromtxt("data/silber.txt",unpack=True)
 I_k,B_k,U_k=np.genfromtxt("data/kupfer.txt",unpack=True)
 I_z,B_z,U_z=np.genfromtxt("data/zink.txt",unpack=True)
+
+D_s=0.5*(U_s-0.158)
+U_s=U_s-D_s
+
+D_k=0.5*(U_k-0.335)
+U_k=U_k-D_k
+
+D_z=0.5*(U_z+0.004)
+U_z=U_z-D_z
 
 
 params, covariance_matrixs = np.polyfit(B_s, U_s, deg=1, cov=True)
 paramk, covariance_matrixk = np.polyfit(B_k, U_k, deg=1, cov=True)
 paramz, covariance_matrixz = np.polyfit(B_z, U_z, deg=1, cov=True)
+
+uncertainties = np.sqrt(np.diag(covariance_matrixs))
+uncertaintiek = np.sqrt(np.diag(covariance_matrixk))
+uncertaintiez = np.sqrt(np.diag(covariance_matrixz))
+
 
 
 fig, (s, k, z) = plt.subplots(1, 3, layout="constrained")
@@ -51,5 +66,6 @@ z.plot(
 )
 
 print(params[0],paramk[0],paramz[0])
+print(uncertainties[0],uncertaintiek[0],uncertaintiez[0])
 
 fig.savefig("build/plot.pdf")
