@@ -13,7 +13,7 @@ kann dann die Fläche $A_{DK}=\qty{0.00849(0.00016)}{\milli\meter\squared}$ und 
 \noindent Für die Kupferspule, bei der die Länge des Drahtes $L_K=\qty{1.37}{\meter}$ ist, und für die Silberspule mit $L_S=\qty{1.73}{\meter}$, wird außerdem der ohmsche Widerstand gemessen.
 Dieser beträgt $R_K=\qty{2.7050}{\ohm}$ und $R_S=\qty{0.6086}{\ohm}$.
 
-\noindent Jetzt kann mit der Formel \ref{eqn:} der spezifische Widerstand von Kupfer und Silber bestimmt werden.
+\noindent Jetzt kann mit der Formel \ref{eqn:eqn:spezifischer_widerstand} der spezifische Widerstand von Kupfer und Silber bestimmt werden.
 
 
 \noindent Für Kupfer beträgt dieser $\varrho_K=\qty{0.01677(0.00032)}{\ohm\milli\meter\squared\per\m}$ und für Silber $\varrho_S=\qty{0.00299(0.00006)}{\ohm\milli\meter\squared\per\m}$.
@@ -127,8 +127,8 @@ Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V
 
  \begin{table}[H]
      \centering
-     \caption{Parameter für Silber}
-     \label{tab:params}
+     \caption{Parameter für Silber.}
+     \label{tab:paramsS}
      \begin{tblr}{
          colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.3]  S[table-format=3.0]   },
          row{1}={guard,mode=math},
@@ -141,12 +141,62 @@ Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V
      n          &\unit{\coulomb\per\cubic\meter} &-1.11          &0.04  & 28           \\       
      \bar{\tau} &\unit{\second}                  &2,13           &0.09  & -12          \\     
      \bar{v_d}  &\unit{\meter\per\second}        &5.61           &0.21  & -4           \\     
-     \mu        &\unit{\coulomb\second\per\meter}&0.188          &0.008 &  0          \\
+     \mu        &\unit{\coulomb\second\per\meter}&0.188          &0.008 &  0           \\
      \bar{v}    &\unit{\meter\per\second}        &8.00           &0.10  & 5            \\
      \bar{l}    &\unit{\meter}                   &1.71           &0.05  & -6           \\  
+      Z         &                                &-6.67          &0.28  & 14           \\
      \bottomrule
      \end{tblr}
  \end{table}
+
+ \begin{table}[H]
+  \centering
+  \caption{Parameter für Kupfer.}
+  \label{tab:paramsK}
+  \begin{tblr}{
+      colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.3]  S[table-format=3.0]   },
+      row{1}={guard,mode=math},
+      row{2,3,4,5,6,7}={mode=math},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{e}},
+  }
+  \toprule
+  \midrule
+  n          &\unit{\coulomb\per\cubic\meter} &-1.54          &0.24  & 28           \\       
+  \bar{\tau} &\unit{\second}                  &27             &4     & -12          \\     
+  \bar{v_d}  &\unit{\meter\per\second}        &4.1            &0.6   & -4           \\     
+  \mu        &\unit{\coulomb\second\per\meter}&-0.024         &0.004 &  0           \\
+  \bar{v}    &\unit{\meter\per\second}        &8.9            &0.5   & 5            \\
+  \bar{l}    &\unit{\meter}                   &-24.5          &2.6  & -6           \\  
+   Z         &                                &-0.97          &0.04  & 14           \\
+  \bottomrule
+  \end{tblr}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Parameter für Zink.}
+  \label{tab:paramsZ}
+  \begin{tblr}{
+      colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.4]  S[table-format=3.0]   },
+      row{1}={guard,mode=math},
+      row{2,3,4,5,6,7}={mode=math},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{e}},
+  }
+  \toprule
+  \midrule
+  n          &\unit{\coulomb\per\cubic\meter} &1.59           &0.24  & 28           \\       
+  \bar{\tau} &\unit{\second}                  &740            &110   & -12          \\     
+  \bar{v_d}  &\unit{\meter\per\second}        &3.9            &0.6   & -4           \\     
+  \mu        &\unit{\coulomb\second\per\meter}&0.0066         &0.0010&  0           \\
+  \bar{v}    &\unit{\meter\per\second}        &9.0            &0.4   & 5            \\
+  \bar{l}    &\unit{\meter}                   &0.067          &0.007 & -6           \\  
+   Z         &                                &0.29           &0.04   & 14          \\
+  \bottomrule
+  \end{tblr}
+\end{table}
 
 In Tabelle \ref{tab:quer} ist die Hall-Spannung abhänhig vom Querstrom aufgeführt. 
 Mit dem ersten und dem letzten Wert in der Tabelle wird ein Wert für die Störspannung $U_{stör_q}=\qty{0.001}{\milli\ampere}$ ermittelt.
@@ -217,4 +267,6 @@ Die Hall-Spannung wird in Abbildung \ref{fig.plot} in Abhängikeit vom Querstrom
   \label{fig:plot}
 \end{figure}
 
-
+Hier kann das Verhältnis $\frac{U_H}{I_q}=\qty{1.599(0.010)e-05}{\milli\volt\per\ampere}$ bestimmt werden.
+Durch einsetzen des Inversen Wertes in die Formel \ref{eqn:ladungsdichte} kann damit ein anders erhobemer Wert für die Ladungsdichte von Silber berechnet werden.
+Dieser ist hier $n_{s_2}=\qty{-5.189(0.031)e+26}{\coulomb\per\cubic\meter}$.
