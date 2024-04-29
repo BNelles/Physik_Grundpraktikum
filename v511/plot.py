@@ -7,13 +7,13 @@ I_s,B_s,U_s=np.genfromtxt("data/silber.txt",unpack=True)
 I_k,B_k,U_k=np.genfromtxt("data/kupfer.txt",unpack=True)
 I_z,B_z,U_z=np.genfromtxt("data/zink.txt",unpack=True)
 
-D_s=0.5*(U_s-0.158)
+D_s=0.5*(U_s[0]-0.158)
 U_s=U_s-D_s
 
-D_k=0.5*(U_k-0.335)
+D_k=0.5*(U_k[0]-0.335)
 U_k=U_k-D_k
 
-D_z=0.5*(U_z+0.004)
+D_z=0.5*(U_z[0]+0.004)
 U_z=U_z-D_z
 
 
@@ -65,6 +65,7 @@ z.plot(
     linewidth=3,
 )
 
+print(D_s,D_k,D_z)
 print(params[0],paramk[0],paramz[0])
 print(uncertainties[0],uncertaintiek[0],uncertaintiez[0])
 
