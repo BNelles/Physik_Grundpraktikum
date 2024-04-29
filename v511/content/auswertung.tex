@@ -25,7 +25,7 @@ Dieser beträgt $R_K=\qty{2.7050}{\ohm}$ und $R_S=\qty{0.6086}{\ohm}$.
 
 In den Tabellen \ref{tab:Silber}, \ref{tab:Kupfer} und \ref{tab:Zink} ist für Silber, Kupfer und dann Zink die Hall-Spannung $U_H$ abhängig von der magnetischen Flussdichte $B$ eingetragen.
 Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke durch die Elektromagneten $I_B$ angepasst.
-
+ 
 
 \begin{table}[H]
   \centering
@@ -122,6 +122,31 @@ Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
 Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V_S=\qty{-2.1312(0.0802)e-05}{\volt\per\tesla}$, bei Kupfer
  $V_K=\qty{-1.5418(0.2417)e-05}{\volt\per\tesla}$ und bei Zink $V_Z=\qty{1.4943(0.2223)e-05}{\volt\per\tesla}$.
  \\
+
+ \subsection{Berechnung verschiedener Parameter}
+
+ \begin{table}[H]
+     \centering
+     \caption{Parameter für Silber}
+     \label{tab:params}
+     \begin{tblr}{
+         colspec={S   S   S   S   S   },
+         row{1}={guard,mode=math},
+         vline{4}={2}{-}{text=\clap{$\pm$}},
+         vline{5}={2}{-}{text=\clap{e}},
+     }
+     \toprule
+     \midrule
+     $n         $ &$\unit{\coulomb\per\cubic\meter}$ &-1.11          &0.04  &28           \\       
+     $\bar{\tau}$ &$\unit{\second}$                  &2,13           &0.09  &-12          \\     
+     $\bar{v_d} $ &$\unit{\meter\per\second}$        &5.61           &0.21  &-4           \\     
+     $\mu       $ &$\unit{\coulomb\second\per\meter}$&0.188          &0.008 &0            \\
+     $\bar{v}   $ &$\unit{\meter\per\second}$        &8.00           &0.10  &5            \\
+     $\bar{l}   $ &$\unit{\meter}$                   &1.71           &0.05  &-6           \\  
+     \bottomrule
+     \end{tblr}
+ \end{table}
+
 In Tabelle \ref{tab:quer} ist die Hall-Spannung abhänhig vom Querstrom aufgeführt. 
 Mit dem ersten und dem letzten Wert in der Tabelle wird ein Wert für die Störspannung $U_{stör_q}=\qty{0.001}{\milli\ampere}$ ermittelt.
 Diese wird nun wieder von der Hall-Spannung abgezogen.
