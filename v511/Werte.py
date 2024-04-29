@@ -70,6 +70,12 @@ def weg(x,y):   #total,tau
 def fermi(x):   #n
     return ((const.h)**2)/(2*const.m_e)*pow((3/(8*np.pi)*x)**2,(1/3))
 
+def Z(x,y,z):
+   return x*y/(z*const.N_A)
+
+M_s=107.87
+M_k=63.546
+M_z=65.38
 #Silber
 n_s=n(s)
 tau_s=tau(n_s,p_s)
@@ -78,7 +84,8 @@ mu_s=µ(tau_s)
 E_s=fermi(n_s)
 v_s=total(E_s)
 l_s=weg(tau_s,v_s)
-print("Silber:","n=",n_s,"tau=",tau_s,"v_d=",drift_s,"µ=",mu_s,"v_t=",v_s,"l=",l_s)
+z_s=Z(n_s,M_s,p_s)
+print("Silber:","n=",n_s,"tau=",tau_s,"v_d=",drift_s,"µ=",mu_s,"v_t=",v_s,"l=",l_s,"z=",z_s)
 
 #Kupfer
 n_k=n(k)
@@ -88,7 +95,8 @@ mu_k=µ(tau_k)
 E_k=fermi(n_k)
 v_k=total(E_k)
 l_k=weg(tau_k,v_k)
-print("Kupfer:","n=",n_k,"tau=",tau_k,"v_d=",drift_k,"µ=",mu_k,"v_t=",v_k,"l=",l_k)
+z_k=Z(n_k,M_k,p_k)
+print("Kupfer:","n=",n_k,"tau=",tau_k,"v_d=",drift_k,"µ=",mu_k,"v_t=",v_k,"l=",l_k,"z=",z_k)
 #Zink
 n_z=n(z)
 tau_z=tau(n_z,p_z)
@@ -97,4 +105,6 @@ mu_z=µ(tau_z)
 E_z=fermi(n_z)
 v_z=total(E_z)
 l_z=weg(tau_z,v_z)
-print("Zink:","n=",n_z,"tau=",tau_z,"v_d=",drift_z,"µ=",mu_z,"v_t=",v_z,"l=",l_z)
+z_z=Z(n_z,M_z,p_z)
+print("Zink:","n=",n_z,"tau=",tau_z,"v_d=",drift_z,"µ=",mu_z,"v_t=",v_z,"l=",l_z,"z=",z_z)
+
