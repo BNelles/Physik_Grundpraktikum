@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{Bestimmung des spezifischen Widerstandes}
+\subsection{Bestimmung der spezifischen Widerstände}
 Die Dicke des Kupferdrahtes ist $d_{DK}=\qty{0.104(0.001)}{\milli\meter}$ und die des Silberdrahtes ist $d_{DS}=\qty{0.263(0.001)}{\milli\meter}$.
 Mit 
 \begin{equation}
@@ -21,7 +21,7 @@ Dieser beträgt $R_K=\qty{2.7050}{\ohm}$ und $R_S=\qty{0.6086}{\ohm}$.
 \noindent Bei Zink ist der spezifische Widerstand $\varrho_Z = \qty{0.06}{\ohm\milli\meter\squared\per\m}$ \cite{Zink}.
 
 
-\subsection{Messung des Hall Effektes}
+\subsection{Messung des Hall-Effektes}
 
 In den Tabellen \ref{tab:Silber}, \ref{tab:Kupfer} und \ref{tab:Zink} ist für Silber, Kupfer und dann Zink die Hall-Spannung $U_H$ abhängig von der magnetischen Flussdichte $B$ eingetragen.
 Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke durch die Elektromagneten $I_B$ angepasst.
@@ -32,12 +32,13 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \caption{Hier ist die Hall Spannung bei der Silberplatte in Abhängikeit zu $I_B$ und damit zu $B$ aufgeführt.}
   \label{tab:Silber}
   \begin{tblr}{
-    colspec={S[table-format=1.1] S[table-format=4.1] S[table-format=1.3]},
+    colspec={S[table-format=2.1] S[table-format=4.1] S[table-format=1.3]},
     row{1}={guard,mode=math},
   }
   \toprule
   I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
   \midrule
+  -1.0 &    344.9 &-0.158 \\
   1.0  &    340.0 & 0.161 \\
   1.5  &    513.9 & 0.157 \\
   2.0  &    676.0 & 0.153 \\
@@ -54,12 +55,13 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \caption{Eingetragen ist die Hall-Spannung abhängig von der magnetischen Flussdichte, die von der Stromstärke durch die Elektromagneten $I_B$ abhängt.}
   \label{tab:Kupfer}
   \begin{tblr}{
-    colspec={S[table-format=1.2] S[table-format=4.1] S[table-format=2.3]},
+    colspec={S[table-format=2.2] S[table-format=4.1] S[table-format=2.3]},
     row{1}={guard,mode=math},
   }
   \toprule
   I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
   \midrule
+  -1.00  &  352.2 &  0.004 \\
   1.00   &  350.3 &  0.000 \\
   1.50   &  516.9 & -0.003 \\
   2.00   &  674.9 & -0.005 \\
@@ -82,12 +84,13 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \caption{Die Hall-Spannung ist, abghängig von der magnetischen Flussdichte, die mit der Stromstärke durch die Spulen $I_B$ eingestellt wird, aufgetragen.}
   \label{tab:Zink}
   \begin{tblr}{
-    colspec={S[table-format=1.2] S[table-format=4.1] S[table-format=1.3]},
+    colspec={S[table-format=2.2] S[table-format=4.1] S[table-format=2.3]},
     row{1}={guard,mode=math},
   }
   \toprule
   I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
   \midrule
+  -1.00 &   334.0 & -0.335 \\
   1.00  &   343.0 & 0.341 \\
   1.50  &   514.5 & 0.344 \\
   2.00  &   677.9 & 0.347 \\
@@ -99,7 +102,13 @@ Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke dur
   \end{tblr}
 \end{table}
 
-\noindent In \ref{fig:plot} wird für alle drei Metalle die Hall-Spannung gegen die magnetische FLussdichte aufgetragen.
+\noindent 
+
+Der erste Wert in jeder Tabelle ist hier der, bei dem $I_Q$ umgepolt ist. 
+Durch die Formel \ref{eqn:stör} wird dann der Störstrom $I_{stör}$ berechnet.
+Als Werte ergibt sich dann $I_{stör_S}=\qty{0.0015}{\milli\ampere}$, $I_{stör_K}=\qty{-0.1675}{\milli\ampere}$ und $I_{stör_Z}=\qty{0.1725}{\milli\ampere}$.
+Die Hall-Spannung ist im Folgenden der Wert der Hall-Spannung, von dem die Störspannung abgezogen wird.
+In \ref{fig:plot} wird für alle drei Metalle die Hall-Spannung gegen die magnetische FLussdichte aufgetragen.
 Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
 
 \begin{figure}
@@ -111,6 +120,75 @@ Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
 
 \noindent Die Steigung der Regressionsgeraden ist dabei das Verhältnis von Hall-Spannunng zur magnetischen Flussdichte.
 Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V_S=\qty{-2.1312(0.0802)e-05}{\volt\per\tesla}$, bei Kupfer
- $V_K=\qty{-1.5418(0.2417)e-05}{\volt\per\tesla}$ und bei Zink $V_Z=\qty{1.4943(0.2223)e-05}{\volt\per\tesla} $.
+ $V_K=\qty{-1.5418(0.2417)e-05}{\volt\per\tesla}$ und bei Zink $V_Z=\qty{1.4943(0.2223)e-05}{\volt\per\tesla}$.
+ \\
+In Tabelle \ref{tab:quer} ist die Hall-Spannung abhänhig vom Querstrom aufgeführt. 
+Mit dem ersten und dem letzten Wert in der Tabelle wird ein Wert für die Störspannung $U_{stör_q}=\qty{0.001}{\milli\ampere}$ ermittelt.
+Diese wird nun wieder von der Hall-Spannung abgezogen.
+
+\begin{table}[http]
+  \centering
+  \caption{Hier ist die Hall-Spannung in Abhängikeit zum Querstrom eingetragen.}
+  \label{tab:quer}
+  \begin{minipage}[t]{0.5\linewidth}
+  \raggedleft
+  \begin{tblr}[t]{
+    colspec={S[table-format=3.0] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_q \mathbin{/} \unit{\ampere} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  -10    & -0.158 \\
+   -9    & -0.144 \\
+   -8    & -0.127 \\
+   -7    & -0.100 \\
+   -6    & -0.096 \\
+   -5    & -0.080 \\
+   -4    & -0.064 \\
+   -3    & -0.047 \\
+   -2    & -0.031 \\
+   -1    & -0.015 \\
+
+  \bottomrule
+  \end{tblr}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+  \begin{tblr}[t]{
+    colspec={S[table-format=3.0] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_q \mathbin{/} \unit{\ampere} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  1    &  0.017 \\
+  2    &  0.034 \\
+  3    &  0.050 \\
+  4    &  0.066 \\
+  5    &  0.083 \\
+  6    &  0.099 \\
+  7    &  0.115 \\
+  8    &  0.130 \\
+  9    &  0.146 \\
+ 10    &  0.160 \\
+   \bottomrule
+  \end{tblr}
+\end{minipage}
+
+
+
+
+\end{table}
+
+Die Hall-Spannung wird in Abbildung \ref{fig.plot} in Abhängikeit vom Querstrom geplottet.
+
+
+\begin{figure}
+  \centering
+  \includegraphics{quer.pdf}
+  \caption{Die Hall-Spannung wird in dieser Abbildung abhängig von der Stromstärke des Querstroms aufgrtragen. Eine Ausgleichsfunktion wurde mit linearer Regression erstellt.}
+  \label{fig:plot}
+\end{figure}
 
 

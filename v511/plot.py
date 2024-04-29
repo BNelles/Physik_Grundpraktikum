@@ -3,18 +3,18 @@ import numpy as np
 
 
 
-I_s,B_s,U_s=np.genfromtxt("data/silber.txt",unpack=True)
-I_k,B_k,U_k=np.genfromtxt("data/kupfer.txt",unpack=True)
-I_z,B_z,U_z=np.genfromtxt("data/zink.txt",unpack=True)
+I_s,B_s,s=np.genfromtxt("data/silber.txt",unpack=True)
+I_k,B_k,k=np.genfromtxt("data/kupfer.txt",unpack=True)
+I_z,B_z,z=np.genfromtxt("data/zink.txt",unpack=True)
 
-D_s=0.5*(U_s[0]-0.158)
-U_s=U_s-D_s
+D_s=0.5*(s[0]-0.158)
+U_s=s-D_s
 
-D_k=0.5*(U_k[0]-0.335)
-U_k=U_k-D_k
+D_k=0.5*(k[0]-0.335)
+U_k=k-D_k
 
-D_z=0.5*(U_z[0]+0.004)
-U_z=U_z-D_z
+D_z=0.5*(z[0]+0.004)
+U_z=z-D_z
 
 
 params, covariance_matrixs = np.polyfit(B_s, U_s, deg=1, cov=True)
@@ -38,7 +38,7 @@ s.plot(
     B_s,
     params[0] * B_s + params[1],
     label="Lineare Regression",
-    linewidth=3,
+    linewidth=2,
 )
 
 k.plot(B_k, U_k,".", label="Kurve")
@@ -50,7 +50,7 @@ k.plot(
     B_k,
     paramk[0] * B_k + paramk[1],
     label="Lineare Regression",
-    linewidth=3,
+    linewidth=2,
 )
 
 z.plot(B_z, U_z,".", label="Kurve")
@@ -62,7 +62,7 @@ z.plot(
     B_z,
     paramz[0] * B_z + paramz[1],
     label="Lineare Regression",
-    linewidth=3,
+    linewidth=2,
 )
 
 print(D_s,D_k,D_z)
