@@ -7,8 +7,11 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
+build/quer.pdf: quer.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python quer.py
+
 # hier weitere Abhängigkeiten für build/v511.pdf deklarieren:
-build/v511.pdf: build/plot.pdf
+build/v511.pdf: build/plot.pdf build/quer.pdf
 
 build/v511.pdf: FORCE | build
 	# to find header and bib files in the main directory

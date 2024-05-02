@@ -1,31 +1,279 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+\subsection{Bestimmung der spezifischen Widerstände}
+Die Dicke des Kupferdrahtes ist $d_{DK}=\qty{0.104(0.001)}{\milli\meter}$ und die des Silberdrahtes ist $d_{DS}=\qty{0.263(0.001)}{\milli\meter}$.
+Mit 
+\begin{equation}
+  A=\pi \bigl(\frac{d}{2} \bigr)^2
+\label{eqn:Querschnitt}
+\end{equation}
+\noindent 
+kann dann die Fläche $A_{DK}=\qty{0.00849(0.00016)}{\milli\meter\squared}$ und $A_{DS}=\qty{0.0543(0.0004)}{\milli\meter\squared}$.
+\noindent Für die Kupferspule, bei der die Länge des Drahtes $L_K=\qty{1.37}{\meter}$ ist, und für die Silberspule mit $L_S=\qty{1.73}{\meter}$, wird außerdem der ohmsche Widerstand gemessen.
+Dieser beträgt $R_K=\qty{2.7050}{\ohm}$ und $R_S=\qty{0.6086}{\ohm}$.
 
-\begin{table}
+\noindent Jetzt kann mit der Formel \ref{eqn:spezifischer_widerstand} der spezifische Widerstand von Kupfer und Silber bestimmt werden.
+
+
+\noindent Für Kupfer beträgt dieser $\varrho_K=\qty{0.01677(0.00032)}{\ohm\milli\meter\squared\per\m}$ und für Silber $\varrho_S=\qty{0.00299(0.00006)}{\ohm\milli\meter\squared\per\m}$.
+
+\noindent Bei Zink ist der spezifische Widerstand $\varrho_Z = \qty{0.06}{\ohm\milli\meter\squared\per\m}$ \cite{Zink}.
+
+
+\subsection{Messung des Hall-Effektes}
+
+In den Tabellen \ref{tab:Silber}, \ref{tab:Kupfer} und \ref{tab:Zink} ist für Silber, Kupfer und dann Zink die Hall-Spannung $U_H$ abhängig von der magnetischen Flussdichte $B$ eingetragen.
+Die magnetische Flussdichte wird dabei durch eine Änderung der Stromstärke durch die Elektromagneten $I_B$ angepasst.
+ 
+
+\begin{table}[H]
   \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \caption{Hier ist die Hall Spannung bei der Silberplatte in Abhängikeit zu $I_B$ und damit zu $B$ aufgeführt.}
+  \label{tab:Silber}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
-    }
-    \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
-    \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
-    \bottomrule
+    colspec={S[table-format=2.1] S[table-format=4.1] S[table-format=1.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  -1.0 &    344.9 &-0.158 \\
+  1.0  &    340.0 & 0.161 \\
+  1.5  &    513.9 & 0.157 \\
+  2.0  &    676.0 & 0.153 \\
+  2,5  &    919.6 & 0.149 \\
+  3.0  &   1131.0 & 0.145 \\
+  3.5  &   1229.7 & 0.142 \\
+  4.0  &   1320.0 & 0.139 \\
+  \bottomrule
   \end{tblr}
 \end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+\begin{table}[H]
+  \centering
+  \caption{Eingetragen ist die Hall-Spannung abhängig von der magnetischen Flussdichte, die von der Stromstärke durch die Elektromagneten $I_B$ abhängt.}
+  \label{tab:Kupfer}
+  \begin{tblr}{
+    colspec={S[table-format=2.2] S[table-format=4.1] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  -1.00  &  352.2 &  0.004 \\
+  1.00   &  350.3 &  0.000 \\
+  1.50   &  516.9 & -0.003 \\
+  2.00   &  674.9 & -0.005 \\
+  2.50   &  930.4 & -0.008 \\
+  3.00   & 1134.3 & -0.010 \\
+  3.50   & 1147.4 & -0.015 \\
+  0.75   & 1729.0 & -0.002 \\
+  1.25   & 2708.0 & -0.004 \\
+  \bottomrule
+  \end{tblr}
+\end{table}
+
+
+
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Die Hall-Spannung ist, abghängig von der magnetischen Flussdichte, die mit der Stromstärke durch die Spulen $I_B$ eingestellt wird, aufgetragen.}
+  \label{tab:Zink}
+  \begin{tblr}{
+    colspec={S[table-format=2.2] S[table-format=4.1] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_B \mathbin{/} \unit{\ampere} & B \mathbin{/} \unit{\milli\tesla} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  -1.00 &   334.0 & -0.335 \\
+  1.00  &   343.0 & 0.341 \\
+  1.50  &   514.5 & 0.344 \\
+  2.00  &   677.9 & 0.347 \\
+  2.50  &   918.0 & 0.352 \\
+  3.00  &  1135.7 & 0.352 \\
+  0.50  &  1292.3 & 0.333 \\
+  1.25  &  2734.5 & 0.335 \\
+  \bottomrule
+  \end{tblr}
+\end{table}
+
+\noindent 
+
+Der erste Wert in jeder Tabelle ist hier der, bei dem $I_Q$ umgepolt ist. 
+Durch die Formel \ref{eqn:stör} wird dann der Störstrom $I_{stör}$ berechnet.
+Als Werte ergibt sich dann $I_{stör_S}=\qty{0.0015}{\milli\ampere}$, $I_{stör_K}=\qty{-0.1675}{\milli\ampere}$ und $I_{stör_Z}=\qty{0.1725}{\milli\ampere}$.
+Die Hall-Spannung ist im Folgenden der Wert der Hall-Spannung, von dem die Störspannung abgezogen wird.
+In \ref{fig:plot} wird für alle drei Metalle die Hall-Spannung gegen die magnetische FLussdichte aufgetragen.
+Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
+
+\begin{figure}
+  \label{fig:plot}
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{Hier wird für Silber, Kupfer und Zink die gemessene Hall-Spannung gegen die magnetische Flussdichte aufgetragen. Zudem wurde eine Regressionsgerade eingefügt.}
+\end{figure}
+
+\noindent Die Steigung der Regressionsgeraden ist dabei das Verhältnis von Hall-Spannunng zur magnetischen Flussdichte.
+Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V_S=\qty{-2.1312(0.0802)e-05}{\volt\per\tesla}$, bei Kupfer
+ $V_K=\qty{-1.5418(0.2417)e-05}{\volt\per\tesla}$ und bei Zink $V_Z=\qty{1.4943(0.2223)e-05}{\volt\per\tesla}$.
+ \\
+
+ \subsection{Berechnung verschiedener Parameter}
+
+ Die Werte für $n$ werden hier mit der Gleichung \ref{eqn:ladungsdichte} berechnet, die für $\bar{\tau}$ mit Gleichung \ref{eqn:mittlere_Flugdauer},
+ die mittleren Driftgeschwindigkeiten $v_d$ mit \ref{eqn:drift}, die Beweglichkeit $\mu$ mit \ref{eqn:Beweglichkeit}, die
+ Totalgeschwindigkeit $v$ mit \ref{eqn:total}, $\bar{l}$ mit \ref{eqn:Weglänge} und die Ladungsträger pro Atom $z$ mit 
+ Gleichung \ref{ladung_pro_atom}. Die Werte für die molaren Massen, um $z$ zu bestimmen, sind der Literatur \cite{Massen} entnommen.
+ Die Einträge für Silber stehen dabei in der Tabelle \ref{tab:paramsS}, die für Kupfer in 
+ der Tabelle \ref{eqn:paramsK} und die von Zink in Tabelle \ref{tab:paramsZ}.
+
+ \begin{table}[H]
+     \centering
+     \caption{Parameter für Silber.}
+     \label{tab:paramsS}
+     \begin{tblr}{
+         colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.3]  S[table-format=3.0]   },
+         row{1}={guard,mode=math},
+         row{2,3,4,5,6,7}={mode=math},
+         vline{4}={2}{-}{text=\clap{$\pm$}},
+         vline{5}={2}{-}{text=\clap{e}},
+     }
+     \toprule
+     \midrule
+     n          &\unit{\coulomb\per\cubic\meter} &-1.11          &0.04  & 28           \\       
+     \bar{\tau} &\unit{\second}                  &2,13           &0.09  & -12          \\     
+     \bar{v_d}  &\unit{\meter\per\second}        &5.61           &0.21  & -4           \\     
+     \mu        &\unit{\coulomb\second\per\meter}&0.188          &0.008 &  0           \\
+     \bar{v}    &\unit{\meter\per\second}        &8.00           &0.10  & 5            \\
+     \bar{l}    &\unit{\meter}                   &1.71           &0.05  & -6           \\  
+      Z         &                                &-6.67          &0.28  & 14           \\
+     \bottomrule
+     \end{tblr}
+ \end{table}
+
+ \begin{table}[H]
+  \centering
+  \caption{Parameter für Kupfer.}
+  \label{tab:paramsK}
+  \begin{tblr}{
+      colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.3]  S[table-format=3.0]   },
+      row{1}={guard,mode=math},
+      row{2,3,4,5,6,7}={mode=math},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{e}},
+  }
+  \toprule
+  \midrule
+  n          &\unit{\coulomb\per\cubic\meter} &-1.54          &0.24  & 28           \\       
+  \bar{\tau} &\unit{\second}                  &27             &4     & -12          \\     
+  \bar{v_d}  &\unit{\meter\per\second}        &4.1            &0.6   & -4           \\     
+  \mu        &\unit{\coulomb\second\per\meter}&-0.024         &0.004 &  0           \\
+  \bar{v}    &\unit{\meter\per\second}        &8.9            &0.5   & 5            \\
+  \bar{l}    &\unit{\meter}                   &-24.5          &2.6  & -6           \\  
+   Z         &                                &-0.97          &0.04  & 14           \\
+  \bottomrule
+  \end{tblr}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Parameter für Zink.}
+  \label{tab:paramsZ}
+  \begin{tblr}{
+      colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.4]  S[table-format=3.0]   },
+      row{1}={guard,mode=math},
+      row{2,3,4,5,6,7}={mode=math},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{e}},
+  }
+  \toprule
+  \midrule
+  n          &\unit{\coulomb\per\cubic\meter} &1.59           &0.24  & 28           \\       
+  \bar{\tau} &\unit{\second}                  &740            &110   & -12          \\     
+  \bar{v_d}  &\unit{\meter\per\second}        &3.9            &0.6   & -4           \\     
+  \mu        &\unit{\coulomb\second\per\meter}&0.0066         &0.0010&  0           \\
+  \bar{v}    &\unit{\meter\per\second}        &9.0            &0.4   & 5            \\
+  \bar{l}    &\unit{\meter}                   &0.067          &0.007 & -6           \\  
+   Z         &                                &0.29           &0.04   & 14          \\
+  \bottomrule
+  \end{tblr}
+\end{table}
+
+In Tabelle \ref{tab:quer} ist die Hall-Spannung abhänhig vom Querstrom aufgeführt. 
+Mit dem ersten und dem letzten Wert in der Tabelle wird ein Wert für die Störspannung $U_{stör_q}=\qty{0.001}{\milli\ampere}$ ermittelt.
+Diese wird nun wieder von der Hall-Spannung abgezogen.
+
+\begin{table}[http]
+  \centering
+  \caption{Hier ist die Hall-Spannung in Abhängikeit zum Querstrom eingetragen.}
+  \label{tab:quer}
+  \begin{minipage}[t]{0.5\linewidth}
+  \raggedleft
+  \begin{tblr}[t]{
+    colspec={S[table-format=3.0] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_q \mathbin{/} \unit{\ampere} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  -10    & -0.158 \\
+   -9    & -0.144 \\
+   -8    & -0.127 \\
+   -7    & -0.100 \\
+   -6    & -0.096 \\
+   -5    & -0.080 \\
+   -4    & -0.064 \\
+   -3    & -0.047 \\
+   -2    & -0.031 \\
+   -1    & -0.015 \\
+
+  \bottomrule
+  \end{tblr}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+  \begin{tblr}[t]{
+    colspec={S[table-format=3.0] S[table-format=2.3]},
+    row{1}={guard,mode=math},
+  }
+  \toprule
+  I_q \mathbin{/} \unit{\ampere} & U_H \mathbin{/} \unit{\milli\volt} \\
+  \midrule
+  1    &  0.017 \\
+  2    &  0.034 \\
+  3    &  0.050 \\
+  4    &  0.066 \\
+  5    &  0.083 \\
+  6    &  0.099 \\
+  7    &  0.115 \\
+  8    &  0.130 \\
+  9    &  0.146 \\
+ 10    &  0.160 \\
+   \bottomrule
+  \end{tblr}
+\end{minipage}
+
+
+
+
+\end{table}
+
+\noindent Die Hall-Spannung wird in Abbildung \ref{fig:plot} in Abhängikeit vom Querstrom geplottet.
+
+
+\begin{figure}
+  \centering
+  \includegraphics{quer.pdf}
+  \caption{Die Hall-Spannung wird in dieser Abbildung abhängig von der Stromstärke des Querstroms aufgrtragen. Eine Ausgleichsfunktion wurde mit linearer Regression erstellt.}
+  \label{fig:plot}
+\end{figure}
+
+\noindent Hier kann das Verhältnis $\frac{U_H}{I_q}=\qty{1.599(0.010)e-05}{\milli\volt\per\ampere}$ bestimmt werden.
+Durch einsetzen des Inversen Wertes in die Formel \ref{eqn:ladungsdichte} kann damit ein anders erhobemer Wert für die Ladungsdichte von Silber berechnet werden.
+Dieser ist hier $n_{s_2}=\qty{-5.189(0.031)e+26}{\coulomb\per\cubic\meter}$.
