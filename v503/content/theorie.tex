@@ -39,7 +39,7 @@ Dann ist
 das Kräftegleichgewicht.
 
 \begin{figure}[H]
-    \includegraphics{Bilder/öl.png}
+    \includegraphics[width=\textwidth]{Bilder/öl.png}
     \centering
     \caption{Abgebildet ist ein Schema des Öltröpfchenversuches mit eingezeichneten Kräften \cite{V503}.}
     \label{fig:Kraft}
@@ -63,10 +63,14 @@ gilt, ist der Auftrieb vernachlässigbar und die Formel vereinfacht sich zu
 Die Formel für die Stokes'sche Reibung bringt aber Einschränkungen mit sich.
 Für Öltröpchen, deren Durchmesser kleiner als die mittlere freie Weglänge von Luft sind, muss die Viskosität von Luft durch den Cunningham-Korrekturterm
 \begin{equation}
-    \eta_{eff}=\eta_L \Biggr(  \Biggl)
+    \eta_{eff}=\eta_L \Biggr( \frac{1}{1+ \frac{B}{p r}}  \Biggl)
+    \label{eqn:Korrekturterm}
 \end{equation}
-
-
-
+berechnet werden.
+Dadurch folgt für die korrigierte Ladung 
+\begin{equation}
+    q^{\frac{2}{3}}=q_0^{\frac{2}{3}} \frac{1}{(1+\frac{B}{p r})}.
+    \label{eqn:Ladung}
+\end{equation}
 
 \cite{V503}
