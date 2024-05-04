@@ -2,14 +2,12 @@ all: build/v408.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 build/abbe.pdf: abbe.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python abbe.py
 	# so that matplotlib can find the tex header when running
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
-	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
-
-	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python abbe.py
-
 
 # hier weitere Abhängigkeiten für build/v408.pdf deklarieren:
 build/v408.pdf: build/plot.pdf build/abbe.pdf
