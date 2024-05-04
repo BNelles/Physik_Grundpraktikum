@@ -8,11 +8,14 @@
   \label{fig:plot}
 \end{figure}
 
+dsd
+
 \begin{table}
   \centering
   \caption{Eine Beispieltabelle mit Messdaten.}
   \label{tab:tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
+  \Rotatebox{90}{%
   \begin{tblr}{
       colspec = {S[table-format=3.0] S[table-format=2.1] S},
       row{1} = {guard, mode=math},
@@ -26,6 +29,8 @@
     420 & 0.2 & 99.1 & 0.9 \\
     \bottomrule
   \end{tblr}
+  }
 \end{table}
+
 
 Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!

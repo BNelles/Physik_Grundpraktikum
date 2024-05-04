@@ -1,4 +1,72 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+Es wird für diesen Versuch die Annahme getroffen, dass die Eigenschaft der Ladung quantisiert ist.
+Beim Öltröpfchenversuch werden Öltröpfchen zwischen zwei Kondensatorplatten gebracht und damit ein elektrisches Feld angelegt.
+Die Öltröpfchen erfahren die Kraft
+\begin{equation}
+    \vec{F}_g=m \vec{g}
+    \label{eqn:Schwerefeld}
+\end{equation}
+durch das Schwerefeld der Erde, welche stets nach unten gerichtet ist.
+Durch die Luft, in der sich das Tröpfchen bewegt, wirkt auch eine Reibungskraft.
+Diese wird hier mit der Formel der Stokes'schen Reibung 
+\begin{equation}
+    \vec{F}_R=6 \pi r \eta_L \vec{v}
+    \label{eqn:Stokes}
+\end{equation}
+berechnet.
+Die Richtung der Stokes'schen Reibung ist immmer entgegengesetzt zu der Bewegungsrichtung des Tröpfchens.
+Das elektrische Feld übt auf diese die Kraft
+\begin{equation}
+    \vec{F}_{el}=q \vec{E}
+    \label{eqn:Efeld}
+\end{equation}
+aus.
+Bei dieser Kraft hängt die Richtung von der Ladung der Platte und der Ladung des Tröpfchens ab.
+Hat die Ladung der unteren Platte ein anderes Vorzeichen als die Ladung des Öltröpchens, so wirkt $\vec{F}_{el}$, wie in \ref{fig:Kraft} abgebildet, nach unten.
+Damit bewegt sich das Tröpfchen nach unten und die Reibungskraft wirkt nach oben.
+Die Reibung steigt so lange mit der Geschwinidgketi an, bis sich ein Kräftegleichgewicht einstellt.
+Das Kräftegleichgewicht ist hier 
+\begin{equation*}
+    F_g+F_{el}=F_R \. .
+\end{equation*}
+Wenn die Vorzeichen der Ladungen von der unteren Platte und von dem Tröpfchen gleich sind, und $F_{el}>F_g$ gilt, so bewegt es sich nach oben, womit sich auch die Richtung der Stokes'schen Reibung umkehrt.
+Dann ist 
+\begin{equation*}
+    F_g+F_R=F_{el}
+\end{equation*}
+das Kräftegleichgewicht.
+
+\begin{figure}[H]
+    \includegraphics{Bilder/öl.png}
+    \centering
+    \caption{Abgebildet ist ein Schema des Öltröpfchenversuches mit eingezeichneten Kräften \cite{V503}.}
+    \label{fig:Kraft}
+\end{figure}
+
+\noindent Aus den beiden Kräftegleichgewichten kann die Formel
+\begin{equation*}
+    r=\sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g(\rho_{Oel}-\rho_L)}}
+\end{equation*}
+hergeleitet werden.
+Durch das $\rho_L$ wird hier der Auftrieb mit einberechnet.
+Da aber
+\begin{equation*}
+    \rho_{Oel}>>\rho_L
+\end{equation*}
+gilt, ist der Auftrieb vernachlässigbar und die Formel vereinfacht sich zu 
+\begin{equation*}
+    r=\sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g(\rho_{Oel})}} \. .
+\end{equation*}
+
+Die Formel für die Stokes'sche Reibung bringt aber Einschränkungen mit sich.
+Für Öltröpchen, deren Durchmesser kleiner als die mittlere freie Weglänge von Luft sind, muss die Viskosität von Luft durch den Cunningham-Korrekturterm
+\begin{equation}
+    \eta_{eff}=\eta_L \Biggr(  \Biggl)
+\end{equation}
+
+
+
+
+\cite{V503}
