@@ -3,8 +3,9 @@ import numpy as np
 from uncertainties import ufloat
 
 t_f,t_s=np.genfromtxt("data.txt", unpack=True)
-
-
+U=249
+d=5*10**(-4)
+T=22+274.15
 #Teilchen1
 t_f1=t_f[0:7]
 t_s1=t_s[0:7]
@@ -36,8 +37,9 @@ t_s9=t_s[42:47]
 t_f0=t_f[47:52]
 t_s0=t_s[47:52]
 
-
-
+v_f1=np.average(d/t_f1)
+print(v_f1)
+print(np.mean(d/t_f1))
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.plot(t_f,t_s,".k")
