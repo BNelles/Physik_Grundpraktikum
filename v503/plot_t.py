@@ -8,7 +8,7 @@ t_f,t_s=np.genfromtxt("data.txt", unpack=True)
 U=249
 d=5*10**(-4)
 p=1017*10**2
-B=6.17*10**(-3)*(101325/760)*10**2
+B=6.17*10**(-3)*(101325/760)*10**(-2)
 print(B)
 
 rho=886
@@ -91,7 +91,7 @@ r8=rad(v_s8,v_f8)
 r9=rad(v_s9,v_f9)
 r0=rad(v_s0,v_f0)
 
-print(r1,r3,r4,r5,r6,r7,r8,r9,r0)
+#print(r1,r3,r4,r5,r6,r7,r8,r9,r0)
 
 
 #Bestimmung q0
@@ -118,12 +118,17 @@ e9=korrektur(Q9,r9)
 e0=korrektur(Q0,r0)
 
 e=[e3,e4,e5,e6,e7,e8,e9,e0]
-x=np.linspace(0,10,2)
+
 y=[3,4,5,6,7,8,9,10]
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
+
+yTickPos,_ = plt.yticks()
+yTickPos = yTickPos[:-1] 
+ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(10**(-15)), color=['g','w'])
+
 fig.savefig("Daten.pdf")
 
 print(e)
