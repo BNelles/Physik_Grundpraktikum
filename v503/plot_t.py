@@ -8,13 +8,13 @@ t_f,t_s=np.genfromtxt("data.txt", unpack=True)
 U=249
 d=5*10**(-4)
 p=1017*10**2
-B=6.17*10**(-3)*(101325/760)*10**2
-print(B)
+B=6.17*10**(-3)*(101325/760)*10**(-2)
+#print(B)
 
 rho=886
 g=9.81
 l=ufloat(7.6250,0.0051)*10**(-3)
-E=U*l
+E=U/l
 n=1.834*10**(-5)
 
 #Funktionen
@@ -91,7 +91,7 @@ r8=rad(v_s8,v_f8)
 r9=rad(v_s9,v_f9)
 r0=rad(v_s0,v_f0)
 
-print(r1,r3,r4,r5,r6,r7,r8,r9,r0)
+#print(r1,r3,r4,r5,r6,r7,r8,r9,r0)
 
 
 #Bestimmung q0
@@ -118,12 +118,18 @@ e9=korrektur(Q9,r9)
 e0=korrektur(Q0,r0)
 
 e=[e3,e4,e5,e6,e7,e8,e9,e0]
-x=np.linspace(0,10,2)
+
 y=[3,4,5,6,7,8,9,10]
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
-fig.savefig("Daten.pdf")
+ax.set_yticks(np.arange(1*10**(-19),10*10**(-19),1*10**(-19)))
+yTickPos,_ = plt.yticks()
+yTickPos = yTickPos[:-1] 
+ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(2*10**(-19)), color=['w','b'])
+#print(yTickPos)
+fig.savefig("build/Daten.pdf")
 
-print(e)
+#print(e)
+print((1.6-1.54)/1.6)
