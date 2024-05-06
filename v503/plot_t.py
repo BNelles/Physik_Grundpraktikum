@@ -8,10 +8,12 @@ t_f,t_s=np.genfromtxt("data.txt", unpack=True)
 U=249
 d=5*10**(-4)
 p=1017*10**2
-B=6.17*10**(-3)*(101325/760)*10**(-2)
+B=6.17*10**(-3)*(101325/760)*10**2
+print(B)
+
 rho=886
 g=9.81
-l=7.6250*10**(-3)
+l=ufloat(7.6250,0.0051)*10**(-3)
 E=U*l
 n=1.834*10**(-5)
 
@@ -22,7 +24,7 @@ def rad(vs,vf):
 def ladung(vf,vs,r):
     return 3*np.pi*n*r*(vf+vs)/E
 def korrektur(q,r):
-    return q*umath.pow(1+B/(p*r),(-3)/2)
+    return q*umath.pow(1+B/(p*r),(-3/2))
 #Teilchen1
 t_f1=t_f[0:7]
 t_s1=t_s[0:7]
@@ -115,9 +117,9 @@ e8=korrektur(Q8,r8)
 e9=korrektur(Q9,r9)
 e0=korrektur(Q0,r0)
 
-e=[e1,e3,e4,e5,e6,e7,e8,e9,e0]
+e=[e3,e4,e5,e6,e7,e8,e9,e0]
 x=np.linspace(0,10,2)
-y=[1,3,4,5,6,7,8,9,10]
+y=[3,4,5,6,7,8,9,10]
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 
