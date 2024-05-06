@@ -1,20 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-
-
-
+In \ref{tab:Tabelle1}. \ref{tab:Tabelle2} und \ref{tab:Tabelle3} sind die Werte für die gemessnen Sink- und Steigzeiten der 10 Öltröpfchen enthalten.
 
 \begin{table}[http]
   \centering
   \caption{In dieser Tabelle ist die gemessene Sink- und Steigzeit von den ersten vier Öltröpchen eingetragen.}
-  \label{tab:Tabelle}
+  \label{tab:Tabelle1}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{minipage}[t]{0.2\linewidth}
     \begin{tblr}[t]{
@@ -92,7 +84,7 @@
 \begin{table}[http]
   \centering
   \caption{Hier ist die Sink- und Steigzeit von den Öltröpchen 5 bis 7 eingetragen.}
-  \label{tab:Tabelle}
+  \label{tab:Tabelle2}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{minipage}[t]{0.3\linewidth}
     \begin{tblr}[t]{
@@ -152,7 +144,7 @@
 \begin{table}[http]
   \centering
   \caption{In der Tabelle ist die gemessene Sink- und Steigzeit von den letzten drei Öltröpchen aufgeführt.}
-  \label{tab:Tabelle}
+  \label{tab:Tabelle3}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{minipage}[t]{0.3\linewidth}
     \begin{tblr}[t]{
@@ -208,13 +200,78 @@
 \end{minipage}
 \end{table}
 
-
-
-
 Mit der Formel 
-\begin{equation}
+\begin{equation*}
   \bar{t}=\frac{1}{n} \sum_{i=1}^n t_i
-\end{equation}
-wird der Mittelwert ausgerechnet.
+\end{equation*}
+wird der Mittelwert der Sink- und Steigzeiten ausgerechnet und in \ref{tab:Mittelwerte} eingetragen.
+Dazu werden auch die Standardabweichungen, berechnet mit 
+\begin{equation*}  
+  s=\sqrt{\frac{1}{N-1} \sum_{i=1}^N (t_i-\bar{t})^2}
+\end{equation*}
+berechnet.
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+\begin{table}[H]
+  \centering
+  \caption{Aufgeführt sind die Mittelwerte der Sinkzeiten, sowie die entsprechenden Mittelwerte der Steigzeiten mit deren Fehlern.}
+  \label{tab:Mittelwerte}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+    \begin{tblr}[t]{
+      colspec = {S[table-format=2.0] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] },
+      row{1} = {guard, mode=math},
+      vline{2}={2}{-}{text=\clap{$\pm$}},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+    }
+    \toprule
+    N& t_{sink} \mathbin{/} \unit{\second} & & t_{steig} \mathbin{/} \unit{\second} &  \\
+    \midrule
+    1& 1.441 & 0.243 &   1.454  & 0.074 \\
+    2& 2.402 & 0.152 &   2.394  & 0.212\\
+    3& 2.620 & 0.189 &   2.806  & 0.117\\
+    4& 2.616 & 0.342 &   2.970  & 0.148\\
+    5& 3.712 & 0.103 &   4.754  & 0.156\\
+    6& 2.368 & 0.064 &   3.166  & 0.251\\
+    7& 4.682 & 0.186 &   5.526  & 0.665\\
+    8& 5.550 & 0.612 &   7.880  & 0.718\\
+    9& 3.670 & 0.266 &   4.476  & 0.119\\
+   10& 6.876 & 0.575 &   9.932  & 0.788\\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+Da $d=\qty{7.6250(0.0051)}{\milli\meter}$ bekannt ist, kann die Geschwindigkeit $v$ der einzelnen Öltröpfchen mit 
+\begin{equation}
+  v=\frac{s}{t}
+\end{equation}
+berechnet werden. 
+Diese wurden in die Tabelle \ref{tab:Geschwindigkeiten} eingetragen.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Hier sind die Geschwindigkeiten der Öltropfchen eingetragen.}
+  \label{tab:Geschwindigkeiten}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+    \begin{tblr}[t]{
+      colspec = {S[table-format=2.0] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] },
+      row{1} = {guard, mode=math},
+      vline{2}={2}{-}{text=\clap{$\pm$}},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+    }
+    \toprule
+    N &v_{sink} \mathbin{/} \unit{\meter\per\milli\second} & & v_{steig} \mathbin{/}  \unit{\meter\per\milli\second}&  \\
+    \midrule
+    1  & 0.360 & 0.060 & 0.345 & 0.017 \\
+    2  & 0.209 & 0.013 & 0.211 & 0.019 \\ 
+    3  & 0.192 & 0.013 & 0.179 & 0.007 \\ 
+    4  & 0.194 & 0.024 & 0.169 & 0.009 \\ 
+    5  & 0.135 & 0.004 & 0.105 & 0.003 \\
+    6  & 0.211 & 0.006 & 0.159 & 0.013 \\ 
+    7  & 0.107 & 0.004 & 0.092 & 0.010 \\
+    8  & 0.091 & 0.012 & 0.064 & 0.006 \\ 
+    9  & 0.137 & 0.011 & 0.112 & 0.003 \\ 
+   10  & 0.073 & 0.006 & 0.051 & 0.004 \\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
