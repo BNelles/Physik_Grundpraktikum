@@ -219,8 +219,8 @@ berechnet.
     \begin{tblr}[t]{
       colspec = {S[table-format=2.0] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] },
       row{1} = {guard, mode=math},
-      vline{2}={2}{-}{text=\clap{$\pm$}},
-      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{3}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{$\pm$}},
     }
     \toprule
     N& t_{sink} \mathbin{/} \unit{\second} & & t_{steig} \mathbin{/} \unit{\second} &  \\
@@ -255,8 +255,8 @@ Diese wurden in die Tabelle \ref{tab:Geschwindigkeiten} eingetragen.
     \begin{tblr}[t]{
       colspec = {S[table-format=2.0] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] S[table-format=1.3] },
       row{1} = {guard, mode=math},
-      vline{2}={2}{-}{text=\clap{$\pm$}},
-      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{3}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{$\pm$}},
     }
     \toprule
     N &v_{sink} \mathbin{/} \unit{\meter\per\milli\second} & & v_{steig} \mathbin{/}  \unit{\meter\per\milli\second}&  \\
@@ -271,6 +271,35 @@ Diese wurden in die Tabelle \ref{tab:Geschwindigkeiten} eingetragen.
     8  & 0.091 & 0.012 & 0.064 & 0.006 \\ 
     9  & 0.137 & 0.011 & 0.112 & 0.003 \\ 
    10  & 0.073 & 0.006 & 0.051 & 0.004 \\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+Mit der Formel \ref{eqn:Radius} wurden dann die Radien $r$ der einzelnen Öltröpfchen berechnet und in die Tabelle \ref{tab:Radien} eingetragen.
+
+
+\begin{table}[H]
+  \centering
+  \caption{In dieser Tabelle sind die berechneten Radien $r$ der Tröpfchen aufgeführt.}
+  \label{tab:Radien}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+    \begin{tblr}[t]{
+      colspec = {S[table-format=2.0] S[table-format=1.3] S[table-format=1.3] },
+      row{1} = {guard, mode=math},
+      vline{3}={2}{-}{text=\clap{$\pm$}},
+    }
+    \toprule
+    N &r \mathbin{/} \unit{\mikro\meter} &  \\
+    \midrule
+    1&0.200 & 0.600 \\
+    3&0.250 & 0.140 \\
+    4&0.350 & 0.180 \\ 
+    5&0.374 & 0.032 \\ 
+    6&0.500 & 0.070 \\ 
+    7&0.270 & 0.100 \\ 
+    8&0.360 & 0.090 \\ 
+    9&0.350 & 0.080 \\ 
+   10&0.330 & 0.050 \\
     \bottomrule
   \end{tblr}
 \end{table}
