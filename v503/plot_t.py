@@ -124,12 +124,18 @@ y=[3,4,5,6,7,8,9,10]
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
-ax.set_yticks(np.arange(1*10**(-19),10*10**(-19),1*10**(-19)))
+ax.set_yticks(np.arange(1.5*10**(-19),9.5*10**(-19),1*10**(-19)))
 yTickPos,_ = plt.yticks()
 yTickPos = yTickPos[:-1] 
-ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(2*10**(-19)), color=['w','b'])
+ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(10**(-19)), color=['b','w'])
 #print(yTickPos)
-fig.savefig("build/Daten.pdf")
+#fig.savefig("build/Daten.pdf")
 
-#print(e)
-print((1.6-1.54)/1.6)
+#print(e[7])
+print((1.6*10**(-19)-e[7])/(1.6*10**(-19)))
+
+F=96485.309
+N=F/e[7]
+#print(N)
+Nt=6.02*10**23
+print((Nt-N)/Nt)
