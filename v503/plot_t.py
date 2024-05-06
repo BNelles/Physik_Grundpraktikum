@@ -123,6 +123,9 @@ y=[3,4,5,6,7,8,9,10]
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 
+ax.set_xlabel(r"Tröpfchennummer")
+ax.set_ylabel(r"$q \mathbin{/} \unit{\coulomb}$")
+
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
 ax.set_yticks(np.arange(1.5*10**(-19),9.5*10**(-19),1*10**(-19)))
 yTickPos,_ = plt.yticks()
