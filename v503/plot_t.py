@@ -9,12 +9,12 @@ U=249
 d=5*10**(-4)
 p=1017*10**2
 B=6.17*10**(-3)*(101325/760)*10**(-2)
-print(B)
+#print(B)
 
 rho=886
 g=9.81
 l=ufloat(7.6250,0.0051)*10**(-3)
-E=U*l
+E=U/l
 n=1.834*10**(-5)
 
 #Funktionen
@@ -124,11 +124,12 @@ y=[3,4,5,6,7,8,9,10]
 fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
-
+ax.set_yticks(np.arange(1*10**(-19),10*10**(-19),1*10**(-19)))
 yTickPos,_ = plt.yticks()
 yTickPos = yTickPos[:-1] 
-ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(10**(-15)), color=['g','w'])
+ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(2*10**(-19)), color=['w','b'])
+#print(yTickPos)
+fig.savefig("build/Daten.pdf")
 
-fig.savefig("Daten.pdf")
-
-print(e)
+#print(e)
+print((1.6-1.54)/1.6)
