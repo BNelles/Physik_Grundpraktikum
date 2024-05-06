@@ -115,9 +115,10 @@ e9=korrektur(Q9,r9)
 e0=korrektur(Q0,r0)
 
 e=[e1,e3,e4,e5,e6,e7,e8,e9,e0]
-x=np.linspace()
+x=np.linspace(0,10,2)
+y=[1,3,4,5,6,7,8,9,10]
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 
-ax.plot(x,e,".k")
+ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
 fig.savefig("Daten.pdf")
