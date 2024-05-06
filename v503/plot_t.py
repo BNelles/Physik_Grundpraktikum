@@ -11,7 +11,8 @@ p=1017*10**2
 B=6.17*10**(-3)*(101325/760)*10**(-2)
 rho=886
 g=9.81
-E=U*d
+l=7.6250*10**(-3)
+E=U*l
 n=1.834*10**(-5)
 
 #Funktionen
@@ -19,19 +20,19 @@ n=1.834*10**(-5)
 def rad(vs,vf):
     return umath.sqrt(9/4*n/g*(vf-vs)/rho)
 def ladung(vf,vs,r):
-    return 3*np.pi*r*(vf+vs)/E
+    return 3*np.pi*n*r*(vf+vs)/E
 def korrektur(q,r):
-    return q*umath.pow(1+B/(p*r),3/2)
+    return q*umath.pow(1+B/(p*r),(-3)/2)
 #Teilchen1
 t_f1=t_f[0:7]
 t_s1=t_s[0:7]
 v_f1=ufloat(np.mean(d/t_f1),np.std(d/t_f1))
 v_s1=ufloat(np.mean(d/t_s1),np.std(d/t_s1))
 #Teilchen2
-t_f2=t_f[7:12]
-t_s2=t_s[7:12]
-v_f2=ufloat(np.mean(d/t_f2),np.std(d/t_f2))
-v_s2=ufloat(np.mean(d/t_s2),np.std(d/t_s2))
+#t_f2=t_f[7:12]
+#t_s2=t_s[7:12]
+#v_f2=ufloat(np.mean(d/t_f2),np.std(d/t_f2))
+#v_s2=ufloat(np.mean(d/t_s2),np.std(d/t_s2))
 #Teilchen3
 t_f3=t_f[12:17]
 t_s3=t_s[12:17]
@@ -122,3 +123,5 @@ fig, ax=plt.subplots(1,1,layout="constrained")
 
 ax.errorbar(y, unp.nominal_values(e), yerr=unp.std_devs(e), fmt="rx")
 fig.savefig("Daten.pdf")
+
+print(e)
