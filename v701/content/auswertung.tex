@@ -1,29 +1,61 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
 
 \begin{table}
   \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
+  \caption{Messreihe bei einem Abstand von $\qty{6}{\centi\meter}$.}
   \label{tab:tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
+      colspec = {S S S},
       row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
+      
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+    p \mathbin{/} \unit{\milli\bar} & channel &  Pulse & \\
     \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
+    0     &  871  &   19898 \\
+    50    &  791  &   20435 \\
+    100   &  808  &   17321 \\
+    150   &  787  &   17543 \\
+    200   &  760  &   17198 \\
+    250   &  702  &   16791 \\
+    300   &  718  &   15904 \\
+    350   &  624  &   15343 \\
+    400   &  732  &   1604  \\
+    450   &  724  &   21    \\
+    500   &  726  &   1     \\
+    550   &  ---  &   0     \\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+\begin{table}
+  \centering
+  \caption{Messreihe bei einem Abstand von $\qty{5}{\centi\meter}$.}
+  \label{tab:tabelle}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \begin{tblr}{
+      colspec = {S S S},
+      row{1} = {guard, mode=math},
+      
+    }
+    \toprule
+    p \mathbin{/} \unit{\milli\bar} & channel &  Pulse & \\
+    \midrule
+    0     &  1023   &  23373  \\
+    50    &  919    &  22738  \\
+    100   &  875    &  22456  \\
+    150   &  877    &  22065  \\
+    200   &  847    &  21181  \\
+    250   &  847    &  20389  \\
+    300   &    &    \\
+    350   &    &    \\
+    400   &    &    \\
+    450   &    &    \\
+    500   &    &    \\
+    550   &    &    \\
     \bottomrule
   \end{tblr}
 \end{table}
