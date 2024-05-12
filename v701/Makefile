@@ -6,9 +6,10 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
-
+build/plot1.pdf: plot1.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
 # hier weitere Abhängigkeiten für build/v701.pdf deklarieren:
-build/v701.pdf: build/plot.pdf
+build/v701.pdf: build/plot.pdf build/plot1.pdf
 
 build/v701.pdf: FORCE | build
 	# to find header and bib files in the main directory
