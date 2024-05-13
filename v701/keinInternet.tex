@@ -1,6 +1,13 @@
+
+\subsection{Statistik des Zerfalls}
+
+In der Tabelle \ref{tab:Statistik} ist die Anzahl der Alpha-Teilchen, welche innerhalb von 10 Sekunden auf den Detektor auftreffen, für 100 Durchführungen eingetragen 
+
+
+
 \begin{table}
     \centering
-    \caption{In dieser Tabelle sind die Messwerte für die Statistik des Zerfalls aufgeführt. $n$ ist hier die Nummer der Durchführung und $z$ die Zählrate.} 
+    \caption{In dieser Tabelle sind die Messwerte für die Statistik des Zerfalls aufgeführt. $n$ ist hier die Nummer der Durchführung und $z$ die gemessene Zahl der Alphateilchen.} 
     \label{tab:Statistik}
     \sisetup{table-format=1.1, per-mode=reciprocal}
     \begin{tblr}{
@@ -8,7 +15,7 @@
         row{1} = {guard, mode=math},
       }
       \toprule
-      n \mathbin{/} # & z \mathbin{/} # \\
+      n  & z  \\
       \midrule
         1   &   1768  \\     
         2   &   1777  \\    
@@ -114,4 +121,15 @@
     \end{tblr}
   \end{table}
 
-  Der Mittelwert der Zählrate ist $\bar{z}=1827.08(72.22)$.
+  Der Mittelwert der Teilchenzahl ist $\bar{z}=1827.08(72.22)$.
+  Mit diesem Wert und seiner Standardabweichung kann nun eine Poisson-Verteilung und eine Gauß Verteilung simuliert werden.
+  Diese sind in Abbildung \ref{fig:Statistik} aufgezeichnet.
+  
+  \begin{figure}
+    \includegraphics[width=\textwidth]{build/Statistik.pdf}
+    \caption{Hier ist die Verteilung der Messwerte in blau, die Poisson-Verteilung in gelb und die Gauß-Verteilung in rot eingezeichnet.
+    Dabei ist $z$ die Teilchenzahl und $N$ die Häufigkeit, mit der diese vorkommen.}
+    \label{fig:Statistik}
+  \end{figure}
+
+
