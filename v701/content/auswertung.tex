@@ -4,15 +4,15 @@
 \subsection{Energieverlust und Reichweite von Alpha-Strahlung}
 \begin{table}[H]
   \centering
-  \caption{Messreihe bei einem Abstand von $\qty{6}{\centi\meter}$.}
+  \caption{Messreihe bei einem Abstand von $d_1=\qty{6}{\centi\meter}$.}
   \label{tab:tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-      colspec = {S S S},
+      colspec = {S[table-format=3.0] S[table-format=4.0] S[table-format=5.0]},
       row{1} = {guard, mode=math},
     }
     \toprule
-    p \mathbin{/} \unit{\milli\bar} & channel &  Pulse & \\
+    p \mathbin{/} \unit{\milli\bar} & \text{channel} &  \text{Pulse}  \\
     \midrule
     0     &  871  &   19898 \\
     50    &  791  &   20435 \\
@@ -25,22 +25,46 @@
     400   &  732  &   1604  \\
     450   &  724  &   21    \\
     500   &  726  &   1     \\
-    550   &       &   0     \\
+    550   &  \text{---}     &   0     \\
     \bottomrule
   \end{tblr}
 \end{table}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{build/plot.pdf}
+  \caption{Die gemessene maximale Energie gegen die effektive Weglänge bei einem Abstand von $d_1=\qty{6}{\centi\meter}$.}
+  \label{fig:energie1}
+\end{figure}
+
+Über die channel Zahl kann auf die Energie des Teilchens zurückgeschlossen werden, wobei die Teilchen des 
+am meisten auftretenden channels, welcher auch immer eingetragen wurde, bei $p=\qty{0}{\bar}$ eine Energie 
+von ungefähr $E=\qty{4}{\mega\electronvolt}$ besitzen. \\
+\noindent Der in Abbildung \ref{fig:energie1} eingezeichnete Plot ist hierbei eine Regression der Werte, die 
+sich bei dem Starken Abfall der Energie befinden. Somit ist die Steigung des Graphen ein Maß für den Energieverlust
+der Alphateilchen. Dieser beträgt hier $\frac{\symup{d}E}{\symup{d}x}=\qty{27.45(7.51)}{\mega\electronvolt\per\meter}$.
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{build/plotzähl.pdf}
+  \caption{Anzahl Detektierter Teilchen in 2-Minuten Intervallen gegen die effektive Weglänge bei einem Abstand von $d_1=\qty{6}{\centi\meter}$.}
+  \label{fig:zaehl1}
+\end{figure}
+
+\noindent Die mittlere Reichweite der Alphateilchen entspricht dann dem Wert der Ausgleichsgeraden, der bei der 
+Hälfte der maximalen Zählrate erreicht ist, wobei für den Verlauf des Abfallens der Zählrate für dieses kurze 
+Intervall angenommen wird, dass dieses dort linear verläuft. Somit ergibt sich für die mittlere Reichweite 
+$\bar{x}_1=\qty{0.022}{\meter}$.
+
 \begin{table}[H]
   \centering
-  \caption{Messreihe bei einem Abstand von $\qty{5}{\centi\meter}$.}
+  \caption{Messreihe bei einem Abstand von $d_2=\qty{5}{\centi\meter}$.}
   \label{tab:tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-    colspec = {S S S},
+    colspec = {S[table-format=3.0] S[table-format=4.0] S[table-format=5.0]},
     row{1} = {guard, mode=math},
     }
     \toprule
-    p \mathbin{/} \unit{\milli\bar} & channel &  Pulse & \\
+    p \mathbin{/} \unit{\milli\bar} & \text{channel} &  \text{Pulse} & \\
     \midrule
     0     &  1023   &  23373  \\
     50    &  919    &  22738  \\
@@ -48,17 +72,37 @@
     150   &  877    &  22065  \\
     200   &  847    &  21181  \\
     250   &  847    &  20389  \\
-    300   &    &    \\
-    350   &    &    \\
-    400   &    &    \\
-    450   &    &    \\
-    500   &    &    \\
-    550   &    &    \\
+    300   &  787    &  18596  \\
+    350   &  727    &  14934  \\
+    400   &  727    &  10416  \\
+    450   &  726    &  3609   \\
+    500   &  725    &  645    \\
+    550   &  725    &  87     \\
+    600   &  726    &  56     \\
+    650   &  725    &  49     \\
+    700   &  727    &  25     \\
+    750   &  726    &  36     \\
+    800   &  724    &  30     \\
     \bottomrule
   \end{tblr}
 \end{table}
 
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{build/plot1.pdf}
+  \caption{Die gemessene maximale Energie gegen die effektive Weglänge bei einem Abstand von $d_2=\qty{5}{\centi\meter}$.}
+  \label{fig:energie2}
+\end{figure}
 
+Analog zu der Methode der ersten Messreihe ergibt sich hier mithilfe der Abbildung \ref{fig:energie2} 
+ein mittlerer Energieverlust von $\frac{\symup{d}E}{\symup{d}}=\qty{44.16(4.83)}{\mega\electronvolt\per\meter}$.
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{build/plot1zähl.pdf}
+  \caption{Anzahl Detektierter Teilchen in 2-Minuten Intervallen gegen die effektive Weglänge bei einem Abstand von $d_1=\qty{6}{\centi\meter}$.}
+  \label{fig:zaehl2}
+\end{figure}
+
+Desweiteren folgt mit \ref{fig:zaehl2}, dass die mittlere Reichweite $\bar{x}_2=\qty{0.018(0.003)}{\meter}$ ist.
 
 \subsection{Statistik des Zerfalls}
 
