@@ -8,8 +8,10 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 build/plot1.pdf: plot1.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot1.py
+build/Statistik.pdf: Statistik.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python Statistik.py
 # hier weitere Abhängigkeiten für build/v701.pdf deklarieren:
-build/v701.pdf: build/plot.pdf build/plot1.pdf
+build/v701.pdf: build/plot.pdf build/plot1.pdf build/Statistik.pdf
 
 build/v701.pdf: FORCE | build
 	# to find header and bib files in the main directory
