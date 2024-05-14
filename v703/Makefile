@@ -7,8 +7,12 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
+build/Totzeit.pdf: Totzeit.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python Totzeit.py
+
+
 # hier weitere Abhängigkeiten für build/v703.pdf deklarieren:
-build/v703.pdf: build/plot.pdf
+build/v703.pdf: build/plot.pdf		build/Totzeit.pdf
 
 build/v703.pdf: FORCE | build
 	# to find header and bib files in the main directory
