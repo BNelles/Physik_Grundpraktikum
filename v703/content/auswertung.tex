@@ -1,28 +1,82 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Messung der Kennlinie des Geiger-Müller Zählrohrs}
+In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemessenen Impulse abhängig von der Spannung aufgeführt. 
 
-\begin{figure}
+\begin{table}[http]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-
-\begin{table}
-  \centering
-  \caption{}
-  \label{tab:tabelle}
+  \caption{Aufgeführt ist die Anzahl der gemessenen Impulse $N$ abhängig von der eingestellten Spannung $U$.}
+  \label{tab:Kennlinie}
   \sisetup{table-format=1.1, per-mode=reciprocal}
-  \begin{tblr}{
+  \begin{minipage}[t]{0.4\textwidth}
+  \begin{adjustwidth}{3cm}{}
+    \begin{tblr}[t]{
       colspec = {S[table-format=3.0] S[table-format=5.0]},
       row{1} = {guard, mode=math},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & N \mathbin{/} \unit{\micro\ampere} \\
+    U \mathbin{/} \unit{\volt} & N  \\
     \midrule
+    300  &       0 \\
+    320  &       0 \\
+    340  &   15764 \\
+    360  &   16310 \\
+    380  &   16283 \\
+    400  &   16605 \\
+    420  &   16335 \\
+    440  &   16456 \\
+    460  &   16496 \\
+    480  &   16630 \\
+    500  &   16813 \\
+    520  &   17344 \\
 
     \bottomrule
+    \end{tblr}
+  \end{adjustwidth}{}{} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+  \begin{adjustwidth}{-1.5cm}{}
+  \begin{tblr}[t]{
+      colspec = {S[table-format=3.0] S[table-format=5.0]},
+      row{1} = {guard, mode=math},
+    }
+    \toprule
+    U \mathbin{/} \unit{\volt} & N  \\
+    \midrule
+    540  &   16841 \\
+    560  &   17499 \\
+    580  &   16949 \\
+    600  &   16819 \\
+    620  &   16935 \\
+    640  &   16965 \\
+    660  &   17058 \\
+    680  &   17225 \\
+    700  &   17472 \\
+    720  &   17941 \\
+    740  &   18995 \\
+    760  &   20291 \\
+    \bottomrule
   \end{tblr}
+  \end{adjustwidth}
+\end{minipage}
 \end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+Damit kann die Kennlinie bestimmt werden.
+Von $N$ wird der Logaritmus gebildet und gegen $U$ aufgetragen.
+Daraus ergibt sich der in Abbildung \ref{fig:plot} gezeigte Verlauf.
+Es wird eine lineare Regression durchgeführt, bei der die letzten drei Werte aus der Tabelle vernachlässigt werden.
+Grund dafür ist, dass sich diesem Abschnitt die Abstände zwischen den Werten stark vergrößern, und diese Werte damit zum Bereich der Dauerentladung gehören.
+
+\begin{figure}
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{Abgebildet ist der Logaritmus der gemessenen Impulse in Abhängigkeit zur Spannung.}
+  \label{fig:plot}
+\end{figure}
+
+Die Steigung dieser Ausgleichsgeraden ist die relative Zählrate mit $\frac{\delta N}{N}=\qty{1.9904(0.3183)e-04}{\per\volt}$.
+Damit ist nach Gleichung \ref{eqn:Steigung} die Steigung $s=\qty{1.9904(0.3183)e-04}{\percent}$.
+
+\subsection{Bestimmung der Totzeit}
+
