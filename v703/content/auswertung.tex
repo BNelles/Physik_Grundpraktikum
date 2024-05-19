@@ -1,11 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Messung der Kennlinie des Geiger-Müller Zählrohrs}
-In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemessenen Impulse abhängig von der Spannung aufgeführt. 
+In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemessenen Impulse innerhalb von einer Minute abhängig von der Spannung aufgeführt. 
 
 \begin{table}[http]
   \centering
-  \caption{Aufgeführt ist die Anzahl der gemessenen Impulse $N$ abhängig von der eingestellten Spannung $U$.}
+  \caption{Aufgeführt ist die Anzahl der gemessenen Impulse $n$ abhängig von der eingestellten Spannung $U$.}
   \label{tab:Kennlinie}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{minipage}[t]{0.4\textwidth}
@@ -15,7 +15,7 @@ In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemesse
       row{1} = {guard, mode=math},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & N  \\
+    U \mathbin{/} \unit{\volt} & n  \\
     \midrule
     300  &       0 \\
     320  &       0 \\
@@ -42,7 +42,7 @@ In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemesse
       row{1} = {guard, mode=math},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & N  \\
+    U \mathbin{/} \unit{\volt} & n  \\
     \midrule
     540  &   16841 \\
     560  &   17499 \\
@@ -61,22 +61,26 @@ In Tabelle \ref{tab:Kennlinie} ist die Anzahl, der in dem Geiger-Müller gemesse
   \end{adjustwidth}
 \end{minipage}
 \end{table}
-
 Damit kann die Kennlinie bestimmt werden.
-Von $N$ wird der Logaritmus gebildet und gegen $U$ aufgetragen.
+Von $n$ wird der Logaritmus gebildet und gegen $U$ aufgetragen.
 Daraus ergibt sich der in Abbildung \ref{fig:plot} gezeigte Verlauf.
 Es wird eine lineare Regression durchgeführt, bei der die letzten drei Werte aus der Tabelle vernachlässigt werden.
 Grund dafür ist, dass sich diesem Abschnitt die Abstände zwischen den Werten stark vergrößern, und diese Werte damit zum Bereich der Dauerentladung gehören.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
   \caption{Abgebildet ist der Logaritmus der gemessenen Impulse in Abhängigkeit zur Spannung.}
   \label{fig:plot}
 \end{figure}
-
-Die Steigung dieser Ausgleichsgeraden ist die relative Zählrate mit $\frac{\delta N}{N}=\qty{1.9904(0.3183)e-04}{\per\volt}$.
-Damit ist nach Gleichung \ref{eqn:Steigung} die Steigung $s=\qty{1.9904(0.3183)e-04}{\percent}$.
+\noindent Die Steigung dieser Ausgleichsgeraden ist die relative Zählrate mit $\frac{\increment N}{N}=\qty{1.9904(0.3183)e-04}{_}$.
+Damit ist nach Gleichung \ref{eqn:Steigung} die Steigung $s=\qty{1.9904(0.3183)e-04}{\percent\per\volt}$.
 
 \subsection{Bestimmung der Totzeit}
-
+Aus der Bestimmung der Totzeit mit dem Oszilloskop ergibt sich ein Wert von $t_{tot_{1}}=\qty{250(25)}{\micro\second}$.
+Für die Bestimmung mithilfe der zwei-Quellen Methode wurde die Anzahl der Zerfälle in zwei Minuten bei zwei Beta-minus Strahlern gemessen.
+Für den Ersten ergibt sich $n_1=158675$.
+Bei dem zweiten Strahler wird sich $n_2=142577$ gemessen und für beide zusammen $n_{12}=264863$ Zerfälle in zwei Minuten.
+Daraus folgen die Zählraten $N_1=\qty{1322.2917}{\per\second}$, $N_2=\qty{1188.1417}{\per\second}$ und $N_{12}=\qty{2207.1917}{\per\second}$.
+Durch Einsetzen in Formel \ref{eqn:Totzeit} wird die Totzeit berechnet.
+Der resultierende Wert entspricht $t_{tot_2}=\qty{96.508}{\micro\second}$.
