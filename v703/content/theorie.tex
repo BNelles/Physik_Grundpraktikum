@@ -13,6 +13,12 @@ wirken soll. In dem Zylinder befindet sich zusätzlich ein Gas, welches durch di
 werden kann. Die bei der Ionisierung entstanden Elektronen und Ionen, werden dann zu der entsprechenden Elektrode
 beschleunigt. Beim Auftreffen kommt es dann zu einem großen Spannungsabfall, welcher dann gemessen wird.
 
+\begin{figure}
+    \includegraphics{Bilder/zaelrohr.png}
+    \caption{Schematischer Aufbau des inneren eines Geiger-Müller Zählrohrs.}
+    \label{fig:geiger}
+\end{figure}
+
 \subsection{Effekte auf die Elektronen im Gas}
 
 \noindent Während die Elektronen beschleunigt werden, kollidieren diese mit dem Gas, welches in dem  Zylinder ist.
@@ -41,7 +47,14 @@ Die dadurch entstehende Steigung ist über die relative Zählrate
 \end{equation}
 bestimmt. Dieser Bereich wird Geiger-Müller Bereich genannt, da das Zählrohr für gewöhnlich in diesem Bereich betrieben wird.\\
 \noindent Irgenwann ist die Spannung jedoch groß genung, dass diese selbst das Gas ionisiert und es somit wieder zu einem 
-stetigen Anstieg kommt.\\
+stetigen Anstieg kommt.
+
+\begin{figure}[H]
+    \includegraphics{Bilder/intensitaetsverlauf.png}
+    \caption{Der gesamte oben beschriebene Verlauf der Intensität der detektierten Teilchen in Abhängigkeit zu der Spannung
+    in dem Zählrohr}
+    \label{fig:intens}
+\end{figure}
 
 \noindent Desweiteren entsteht im Zählrohr in dem Geiger-Müller Bereich eine sogenannte Totzeit $\tau$, in der keine
 Strahlung detektiert werden kann. Dies liegt daran, dass die Ionenrümpfe um die Anode herum weitere Lawinen verhindern
@@ -52,3 +65,5 @@ und somit erst dispersieren, damit das Zählrohr wieder Impulse messen kann. Die
 \end{equation}
 bestimmt werden, wobei $N_1$ und $N_2$ die Anzahl der detektierten Pulse über einen bstimmten Zeitraum ist
 und $N_{12}$ die gleiche Messung nur mit beiden Quellen zusammen.
+
+\cite{V703}
