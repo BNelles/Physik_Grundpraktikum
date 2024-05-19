@@ -85,7 +85,7 @@ E_s=fermi(n_s)
 v_s=total(E_s)
 l_s=weg(tau_s,v_s)
 z_s=Z(n_s,M_s,p_s)
-print("Silber:","n=",n_s,"tau=",tau_s,"v_d=",drift_s,"µ=",mu_s,"v_t=",v_s,"l=",l_s,"z=",z_s)
+#print("Silber:","n=",n_s,"tau=",tau_s,"v_d=",drift_s,"µ=",mu_s,"v_t=",v_s,"l=",l_s,"z=",z_s)
 
 #Kupfer
 n_k=n(k)
@@ -96,7 +96,7 @@ E_k=fermi(n_k)
 v_k=total(E_k)
 l_k=weg(tau_k,v_k)
 z_k=Z(n_k,M_k,p_k)
-print("Kupfer:","n=",n_k,"tau=",tau_k,"v_d=",drift_k,"µ=",mu_k,"v_t=",v_k,"l=",l_k,"z=",z_k)
+#print("Kupfer:","n=",n_k,"tau=",tau_k,"v_d=",drift_k,"µ=",mu_k,"v_t=",v_k,"l=",l_k,"z=",z_k)
 #Zink
 n_z=n(z)
 tau_z=tau(n_z,p_z)
@@ -106,5 +106,17 @@ E_z=fermi(n_z)
 v_z=total(E_z)
 l_z=weg(tau_z,v_z)
 z_z=Z(n_z,M_z,p_z)
-print("Zink:","n=",n_z,"tau=",tau_z,"v_d=",drift_z,"µ=",mu_z,"v_t=",v_z,"l=",l_z,"z=",z_z)
+#print("Zink:","n=",n_z,"tau=",tau_z,"v_d=",drift_z,"µ=",mu_z,"v_t=",v_z,"l=",l_z,"z=",z_z)
 
+#Silber_quer
+
+n_q=ufloat(-5.189,0.031)*10**26
+tau_q=tau(n_q,p_s)
+drift_q=drift(n_q)
+mu_q=µ(tau_q)
+E_q=fermi(n_q)
+v_q=total(E_q)
+l_q=weg(tau_q,v_q)
+z_q=Z(n_q,M_s,p_s)
+
+#print("Silber:","n=",n_q,"tau=",tau_q,"v_d=",drift_q,"µ=",mu_q,"v_t=",v_q,"l=",l_q,"z=",z_q)

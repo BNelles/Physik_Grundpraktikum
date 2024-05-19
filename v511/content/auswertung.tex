@@ -115,7 +115,7 @@ Dabei ist die Reihenfolge von links nach rechts: Silber, Kupfer und dann Zink.
   \label{fig:plot}
   \centering
   \includegraphics{plot.pdf}
-  \caption{Hier wird für Silber, Kupfer und Zink die gemessene Hall-Spannung gegen die magnetische Flussdichte aufgetragen. Zudem wurde eine Regressionsgerade eingefügt.}
+  \caption{Hier wird für Silber, Kupfer und Zink von links nach rechts die gemessene Hall-Spannung gegen die magnetische Flussdichte aufgetragen. Zudem wurde eine Regressionsgerade eingefügt.}
 \end{figure}
 
 \noindent Die Steigung der Regressionsgeraden ist dabei das Verhältnis von Hall-Spannunng zur magnetischen Flussdichte.
@@ -195,9 +195,9 @@ Damit beträgt dieses Verhältnis $V=\Bigl(\frac{U_H}{B}\Bigr)$ bei Silber \\ $V
   \toprule
   \midrule
   n          &\unit{\coulomb\per\cubic\meter} &1.59           &0.24  & 28           \\       
-  \bar{\tau} &\unit{\second}                  &740            &110   & -12          \\     
+  \bar{\tau} &\unit{\second}                  &7.40            &1.10   & -10          \\     
   \bar{v_d}  &\unit{\meter\per\second}        &3.9            &0.6   & -4           \\     
-  \mu        &\unit{\coulomb\second\per\meter}&0.0066         &0.0010&  0           \\
+  \mu        &\unit{\coulomb\second\per\meter}&6.6         &1.0&  -3           \\
   \bar{v}    &\unit{\meter\per\second}        &9.0            &0.4   & 5            \\
   \bar{l}    &\unit{\meter}                   &0.067          &0.007 & -6           \\  
    Z         &                                &0.29           &0.04   & 14          \\
@@ -267,7 +267,7 @@ Diese wird nun wieder von der Hall-Spannung abgezogen.
 \noindent Die Hall-Spannung wird in Abbildung \ref{fig:plot} in Abhängikeit vom Querstrom geplottet.
 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{quer.pdf}
   \caption{Die Hall-Spannung wird in dieser Abbildung abhängig von der Stromstärke des Querstroms aufgrtragen. Eine Ausgleichsfunktion wurde mit linearer Regression erstellt.}
@@ -275,5 +275,29 @@ Diese wird nun wieder von der Hall-Spannung abgezogen.
 \end{figure}
 
 \noindent Hier kann das Verhältnis $\frac{U_H}{I_q}=\qty{1.599(0.010)e-05}{\milli\volt\per\ampere}$ bestimmt werden.
-Durch einsetzen des Inversen Wertes in die Formel \ref{eqn:ladungsdichte} kann damit ein anders erhobemer Wert für die Ladungsdichte von Silber berechnet werden.
+Durch einsetzen des Inversen Wertes in die Formel \ref{eqn:ladungsdichte} kann damit ein anders bestimmter Wert für die Ladungsdichte von Silber berechnet werden.
 Dieser ist hier $n_{s_2}=\qty{-5.189(0.031)e+26}{\coulomb\per\cubic\meter}$.
+
+\begin{table}[H]
+  \centering
+  \caption{Parameter für Silber bei dem Variieren des Querstroms.}
+  \label{tab:paramsS}
+  \begin{tblr}{
+      colspec={S[table-format=2.0]   S   S[table-format=2.3]    S[table-format=1.3]  S[table-format=3.0]   },
+      row{1}={guard,mode=math},
+      row{2,3,4,5,6,7}={mode=math},
+      vline{4}={2}{-}{text=\clap{$\pm$}},
+      vline{5}={2}{-}{text=\clap{e}},
+  }
+  \toprule
+  \midrule
+  n          &\unit{\coulomb\per\cubic\meter} &-5.189          &0.031  & 28           \\       
+  \bar{\tau} &\unit{\second}                  &45.8           &0.9  & -12          \\     
+  \bar{v_d}  &\unit{\meter\per\second}        &12.03           &0.07  & -4           \\     
+  \mu        &\unit{\coulomb\second\per\meter}&-4.02          &0.08 &  0           \\
+  \bar{v}    &\unit{\meter\per\second}        &2.878           &0.006  & 5            \\
+  \bar{l}    &\unit{\meter}                   &13.17           &0.06  & -6           \\  
+   Z         &                                &-0.311          &0.006  & 14           \\
+  \bottomrule
+  \end{tblr}
+\end{table}
