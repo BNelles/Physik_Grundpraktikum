@@ -1,9 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-d,t,N=np.genfromtxt("data/data2",unpack=True)
+d,t,N=np.genfromtxt("data/data2.txt",unpack=True)
 
-n=N/t
+h=971/900
+n=N/t-h
 
 fig, ax=plt.subplots(1,1,layout="constrained")
 

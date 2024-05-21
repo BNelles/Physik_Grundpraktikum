@@ -1,6 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-d,t,N=np.genfromtext("data/data1.txt", unpack=True)
+d,t,N=np.genfromtxt("data/data1.txt", unpack=True)
 
-print((971/900)*60)
+h=971/900
+n=N/t-h
+
+fig, ax=plt.subplots(1,1,layout="constrained")
+
+ax.plot(d,n,".k")
+fig.savefig("eisen.pdf")
