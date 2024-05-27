@@ -1,31 +1,118 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+\subsection{Der Gammastrahler}
 
-\begin{table}
+\begin{table}[H]
   \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
+  \caption{Die gemessenen Zählraten $N$ nach der Absorption durch Eisen der Dicke $d$ nach der Zeit $t$.}
   \label{tab:tabelle}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
+      colspec = {S[table-format=2.1] S S[table-format=4.0]},
       row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
     }
     \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
+    d \text{/}\unit{\milli\meter} & t \text{/} \unit{\second} & N \\
     \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
+    0.0   &     60  &    7246\\
+    0.5   &     60  &    6624\\
+    1.0   &     60  &    6745\\
+    1.5   &     60  &    6926\\
+    2.0   &     60  &    6833\\
+    2.5   &     60  &    6602\\
+    3.0   &     60  &    6084\\
+    3.5   &     60  &    5772\\
+    4.0   &     60  &    5656\\
+    4.5   &     60  &    5873\\
+    5.0   &     60  &    6130\\
+    5.5   &     60  &    5790\\
+    6.0   &     60  &    6081\\
+    10    &     60  &    4365\\
+    20    &     60  &    2816\\
     \bottomrule
   \end{tblr}
 \end{table}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+\begin{figure}[H]
+  \includegraphics{build/eisen.pdf}
+  \caption{Der logarithmus der Zählrate in $\unit{\per\second}$ gegen die Dicke des Eisens.}
+  \label{fig:eisen}
+\end{figure}
+
+Aus der Regression von \ref{fig:eisen} lässt sich der Absorptionskoeffizient von Eisen bestimmen als $\mu=\qty{47(2.8)}{\per\meter}$. 
+Der theoretische Wert für den Absorptionskoeffizienten ist hier $\mu_t=\qty{34.1}{\per\meter}$.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Die gemessenen Zählraten $N$ nach der Absorption durch Aluminium der Dicke $d$ nach der Zeit $t$.}
+  \label{tab:tabelle}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \begin{tblr}{
+      colspec = {S[table-format=2.1] S S[table-format=4.0]},
+      row{1} = {guard, mode=math},
+    }
+    \toprule
+    d \text{/}\unit{\milli\meter} & t \text{/} \unit{\second} & N \\
+    \midrule
+    2   &     60  &    6490\\
+    4   &     60  &    5753\\
+    6   &     60  &    5397\\
+    8   &     60  &    5160\\
+    10  &     60  &    4816\\
+    12  &     60  &    4165\\
+    14  &     60  &    4006\\
+    16  &     60  &    3592\\
+    18  &     60  &    3315\\
+    20  &     60  &    2982\\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+\begin{figure}[H]
+  \includegraphics{build/aluminium.pdf}
+  \caption{Der logarithmus der Zählrate in $\unit{\per\second}$ gegen die Dicke des Aluminiums.}
+  \label{fig:alu}
+\end{figure}
+
+Aus der Regression von \ref{fig:alu} lässt sich der Absorptionskoeffizient von Eisen bestimmen als $\mu=\qty{42.4(1.4)}{\per\meter}$.
+Der theoretische Wert beträgt hier $\mu_t=\qty{12.1}{\per\meter}$.
+
+\subsection{Der Betastrahler}
+
+\begin{table}[H]
+  \centering
+  \caption{Die gemessenen Zählraten $N$ nach der Absorption durch die Absorberplatten der Dicke $d$ nach der Messzeit $t$.}
+  \label{tab:tabelle}
+  \sisetup{table-format=1.1, per-mode=reciprocal}
+  \begin{tblr}{
+      colspec = {S[table-format=2.1] S S[table-format=4.0]},
+      row{1} = {guard, mode=math},
+    }
+    \toprule
+    d \text{/}\unit{\milli\meter} & t \text{/} \unit{\second} & N \\
+    \midrule
+    0    &   60   &   32130\\
+    100  &   60   &   2130\\
+    125  &   100  &   969\\
+    153  &   120  &   1134\\
+    160  &   140  &   773\\
+    200  &   160  &   376\\
+    253  &   180  &   171\\
+    302  &   200  &   172\\
+    338  &   250  &   188\\
+    400  &   250  &   154\\
+    444  &   250  &   163\\
+    482  &   300  &   166\\
+    \bottomrule
+  \end{tblr}
+\end{table}
+
+\begin{figure}[H]
+  \includegraphics{build/beta.pdf}
+  \caption{Der logarithmus der Zählrate in $\unit{\per\second}$ gegen die Dicke der Absorberplatten.}
+  \label{fig:beta}
+\end{figure}
+
+Aus der Regression von \ref{fig:beta} lässt sich der Absorptionskoeffizient von Eisen bestimmen als $\mu=\qty{2.57(0.14)e4}{\per\meter}$.
