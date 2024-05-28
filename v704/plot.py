@@ -1,18 +1,39 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.constants as const
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
 
-fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
-ax1.plot(x, y, label="Kurve")
-ax1.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax1.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-ax1.legend(loc="best")
+def sigma(e):
+        re=2.82*10**(-15)
+        return 2*np.pi*re*2*((1+e)/(2*e)*(2*(1+e)/(1+2*e)-1/e*np.log(1+2*e))+1/(2*e)*np.log(1+2*e)-(1+3*e)/((1+2*e)**2))
 
-ax2.plot(x, y, label="Kurve")
-ax2.set_xlabel(r"$\alpha \mathbin{/} \unit{\ohm}$")
-ax2.set_ylabel(r"$y \mathbin{/} \unit{\micro\joule}$")
-ax2.legend(loc="best")
+def mu(z,V,s):
+        return (const.N_A*z*s)/V
+#print(const.N_A)
+#e1=1.295
+e2=2.45
+#Eisen
+ze=26
+Ve=7.09*10**(-6)
+#se1=sigma(e1)
+se2=sigma(e2)
+#print(se1)
+#me1=mu(ze,Ve,se1)
+me2=mu(ze,Ve,se2)
+#print(me2)
 
-fig.savefig("build/plot.pdf")
+
+#Aluminium
+za=13
+Va=10**(-5)
+sa2=sigma(e2)
+me2=mu(za,Va,sa2)
+#print(me2)
+
+
+
+
+
+
+
+

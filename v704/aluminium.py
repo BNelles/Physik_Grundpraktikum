@@ -17,12 +17,12 @@ errors=np.sqrt(np.diag(covariancematrix))
 x=np.linspace(1,21,1000)
 
 ax.plot(x,params[0]*x+params[1],"--",label="lineare Regression")
-#ax.set_xlabel(r"$d\text{/}\unit{\milli\meter}$")
-#ax.set_ylabel(r"$ln(N)$")
+ax.set_xlabel(r"$d\text{/}\unit{\milli\meter}$")
+ax.set_ylabel(r"$ln(N)$")
 ax.plot(d,lN,".k",label="Messdaten")
 ax.legend(loc="best")
 fig.savefig("build/aluminium.pdf")
 
 m=ufloat(params[0],errors[0])*10**(3)
 
-print(m)
+#print(m)
