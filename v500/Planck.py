@@ -9,8 +9,8 @@ u0=np.array([0.98,1.13,0.45,0.25])
 
 u=(0.966,1.138,0.453,0.280)
 f=(0.029,0.031,0.017,0.014)
-UG_v=ufloat(0.966,0.029)
-UG_b=ufloat(1.138,0.031)
+UG_b=ufloat(0.966,0.029)
+UG_v=ufloat(1.138,0.031)
 UG_g=ufloat(0.453,0.017)
 UG_o=ufloat(0.280,0.014)
 
@@ -32,11 +32,25 @@ B,K=curve_fit(Gerade,w,u0)
 BF=np.sqrt(np.diag(K))
 
 e=1.6*10**(-19)
-print(A[0]*e,F[0]*e)
-print(B[0]*e,BF[0]*e)
+#print(A[0]*e,F[0]*e)
+#print(B[0]*e,BF[0]*e)
 
 a=A[0]*w+A[1]
 b=B[0]*w+B[1]
+
+h=ufloat(A[0]*e,F[0]*e)
+v=w[3]
+W=h*v-e*UG_o
+#print(W)
+
+p1=ufloat(2.76,0.27)*10**(-19)
+p2=ufloat(2.71,0.25)*10**(-19)
+p3=ufloat(2.67,0.20)*10**(-19)
+p4=ufloat(2.75,0.19)*10**(-19)
+
+UGES=(p1+p2+p3+p4)/4
+#print(UGES)
+
 
 fig, (ax2,ax1) = plt.subplots(2, 1, layout="constrained")
 ax2.plot(w, u0, ".",label="U_G")

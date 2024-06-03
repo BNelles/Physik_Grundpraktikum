@@ -219,7 +219,7 @@ Damit ergeben sich die Grenzspannungen
 
 \subsection{Bestimmung der Planck-Konstante}
 Für die Bestimmung der Planck-Konstante werden einmal in \ref{fig:Planck} die gemessenen, und einmal die berechneten Grenzspannungen gegen die Frequenz aufgetragen.
-Dabei sind die verwendeten Werte für die Frequenzen der Kehrwert der aus Abbildunbg \ref{fig:Wellenlängen} entnommenen Wellenlängen für Quecksilber.
+Dabei sind die verwendeten Werte für die Frequenzen die, die mit Formel \ref{eqn:Frequenz} und den aus aus Abbildung \ref{fig:Wellenlängen} entnommenen Wellenlängen für Quecksilber berechnet werden.
 
 \begin{figure}[H]
   \centering
@@ -233,7 +233,7 @@ Dabei sind die verwendeten Werte für die Frequenzen der Kehrwert der aus Abbild
   \centering
   \includegraphics[width=6cm]{Bilder/Well.jpg}
   \caption{Angeführt ist eine Tabelle mit Wellenlängen der Linien verschiedener Lampen.}
-  \label{fig:Planck}
+  \label{fig:Wellenlängen}
 \end{figure}
 
 Die Steigungen der Ausgleichsgeraden entsprechen der Planck-Konstante mit
@@ -248,5 +248,18 @@ Durch Division mit der Elementarladung wird dann
 \end{gather*}
 berechnet.
 
-
-
+\subsection{Berechnung der Austrittsarbeit}
+Die Austrittsarbeit wird berechnet, indem die Werte für die einzelnen Linien, sowie die nun berechnete Plank-Konstante, in Formel \ref{eqn:hquer} nach $\phi$ umgestellt wird.
+Damit ergibt sich 
+\begin{gather*}
+  \phi_v=\qty{2.76(0.27)e-19}{\electronvolt}\\
+  \phi_b=\qty{2.71(0.25)e-19}{\electronvolt}\\
+  \phi_g=\qty{2.67(0.20)e-19}{\electronvolt}\\
+  \phi_o=\qty{2.75(0.19)e-19}{\electronvolt}
+\end{gather*}
+mit einem Mittelwert, berechnet mit
+\begin{equation}
+     \bar{x}=\frac{\sum_{i=1}^{\symup{n}} x_i}{\symup{n}}
+     \label{eqn:MW}
+\end{equation}
+von $\bar{\phi}=\qty{2.72(0.11)e-19}{\electronvolt}$.
