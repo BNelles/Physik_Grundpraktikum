@@ -1,4 +1,4 @@
-#U[V]   #I[nA]  #isteigentlichblau
+#U[V]   #I[nA]
 1.13    0.000
 1.08    0.002
 1.03    0.006
