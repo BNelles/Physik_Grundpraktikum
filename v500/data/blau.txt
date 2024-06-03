@@ -1,4 +1,4 @@
-#U[mV]   #I[nA]
+#U[mV]   #I[nA]  #eigentlichviolett
 980      0.000
 930      0.002
 880      0.012
