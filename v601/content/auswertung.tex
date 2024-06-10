@@ -2,30 +2,19 @@
 \label{sec:Auswertung}
 
 \begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+    \includegraphics{Bilder/1.jpg}
+    \caption{Gemessene Stromstärke gegen die Abbremsspannung bei unterschiedlichen Temparaturen und konstanter Beschleunigungsspannung
+    $U_B=\qty{11}{\volt}$.}
+    \label{fig:1}
 \end{figure}
 
-\begin{table}
-  \centering
-  \caption{Eine Beispieltabelle mit Messdaten.}
-  \label{tab:tabelle}
-  \sisetup{table-format=1.1, per-mode=reciprocal}
-  \begin{tblr}{
-      colspec = {S[table-format=3.0] S[table-format=2.1] S},
-      row{1} = {guard, mode=math},
-      vline{4} = {2}{-}{text=\clap{$\pm$}},
-    }
-    \toprule
-    U \mathbin{/} \unit{\volt} & I \mathbin{/} \unit{\micro\ampere} & \SetCell[c=2]{c} N \mathbin{/} \unit{\per\second} & \\
-    \midrule
-    360 & 0.1 & 98.3 & 0.9 \\
-    400 & 0.2 & 99.8 & 1.0 \\
-    420 & 0.2 & 99.1 & 0.9 \\
-    \bottomrule
-  \end{tblr}
-\end{table}
+\begin{figure}
+    \includegraphics{Bilder/2.jpg}
+    \caption{Gemessene Stromstärke gegen die Beschleunigungsspannung bei unterschiedlichen Temparaturen und konstanter Bremsspannung
+    $U_A=\qty{1}{\volt}$.}
+    \label{fig:2}
+\end{figure}
 
-Siehe \autoref{fig:plot} und \autoref{tab:tabelle}!
+Anhand der Abbildung \ref{fig:2} ist feststellbar, dass der Abstand zwischen den Maxima $d=\qty{2.1}{\centi\meter}$, 
+wobei $\qty{1}{\volt}$ etwa $\qty{0.41}{\centi\meter}$ entspricht. Somit beträgt die Spannungsdifferenz $\delta U=\qty{0.861}{\volt}$.
+
