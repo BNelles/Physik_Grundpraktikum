@@ -14,7 +14,7 @@ a=np.mean(d)
 dx=ufloat(2.1,0.1)
 x=a/10 #normierung der Achse
 #print(x)
-dU=dx*x #Berechnung der Spannung
+dU=dx/x #Berechnung der Spannungsdifferenz
 print(dU)
 #Berechnung der Wellenlänge
 l=(const.h*const.c)/(dU*const.e)
