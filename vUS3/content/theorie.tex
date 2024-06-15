@@ -1,4 +1,46 @@
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+\subsection{Dopplereffekt}
+
+    Schallwellen bewegen sich durch Materialien als Druckwelle, wobei die Ausbreitungsgeschwindigkeit hier eine
+    Materialspezifische konstante c ist. Wenn diese Wellen von ein Medium in ein anderes übergehen wird ein Teil von
+    ihnen reflektiert. Der Dopplereffekt tritt nun auf, wenn sich das Objekt bewegt, an dem der Schall reflektiert wird.
+    Dabei wird die Frequenz $\nu_0$ größer, wenn sich das Objekt entgegen der Ausbreitungsrichtung der Wellen bewegt 
+    (positives $v$) und kleiner, wenn es sich in diese Richtung bewegt (negatives $v$). Die neue Frequenz $\nu_1$ kann 
+    entsprechend der Gleichung
+    \begin{equation}
+        \nu_1=\frac{\nu_0}{1-\frac{v}{c}}
+        \label{eqn:doppler}
+    \end{equation}
+    \noindent berechnet werden. Alternativ wird die Frequenzverschiebung $\increment \nu$ über
+    \begin{equation}
+        \increment \nu=\nu_0\frac{v}{c}(\symup{cos}(\alpha)+\symup{cos}(\beta))
+        \label{eqn:verschiebung}
+    \end{equation}
+    bestimmt. Hierbei ist $\alpha$ der Winkel zwischen dem Wellenvektor der einlaufenden Welle und der Geschwindigkeit
+    des sich bewegenden Objektes und $\beta$ der Winkel zwischen dem Wellenvektor der auslaufenden Welle und dem Objekt.\\
+    \noindent Falls $\alpha=\beta$ ist vereinfacht sich die Gleichung \ref{eqn:verschiebung} zu
+    \begin{equation}
+        \increment \nu=2\nu_0\frac{v}{c}\symup{cos}(\alpha)
+        \label{eqn:verschiebung2}
+    \end{equation}
+    \noindent Bei einem Materialwechsel, also einer Änderung in der Schallgeschwindigkeit von $\symup{c}_1$ zu $\symup{c}_2$
+    ist der neue Einfallwinkel relativ zum Einfallswinkel $\theta$
+    \begin{equation}
+        \alpha=\frac{\pi}{2}-\symup{arcsin}\left(\symup{sin}(\theta)\frac{c_1}{c_2}\right) \text{ .}
+        \label{eqn:winkel}
+    \end{equation}
+    
+\subsection{Ultraschall}
+
+    Ultraschallwellen sind Schallwellen, welche sich in einem Frequenzbereich von $\qty{20}{\kilo\hertz} 
+    \text{ bis }\qty{1}{\giga\hertz}$ befinden. Das heißt, dass diese für den Menschen nicht mehr wahrnehmbar sind.
+    Diese Wellen können jedoch gut zwischen verschiedenen Medien wechseln und finden somit Anwendungen zum Beispiel
+    in der Medizin für Ultraschallbilder, wo die Schwingungen durch die Haut durchdringen können.\\
+    \noindent Generiert werden solche Ultraschallwellen mithilfe des Piezoelektrischen Effektes. Dabei wird ein
+    Kristall in einem elektrischen Feld zum Schwingen angeregt und erzeugt somit Druckwellen. Umgekehrt kann ein solcher
+    Kristall auch Schallwellen empfangen, wobei dieser dann durch eintreffende Wellen zu Schwingen angeregt wird.
+
+
+\cite{VUS3}
