@@ -1,8 +1,18 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+v,f= np.genfromtxt("data/data1.txt",unpack=True)
+
+print(np.cos(90/360*2*np.pi))
+print(v[0:5])
+
+f_15=f[0:5]/np.cos(15)
+
+a=15
+c=1800
+v
+
+dv_cos=2*v0*v/c
 
 fig, (ax1, ax2) = plt.subplots(1, 2, layout="constrained")
 ax1.plot(x, y, label="Kurve")
