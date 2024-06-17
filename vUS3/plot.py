@@ -29,19 +29,19 @@ c=1800
 
 
 fig, (ax1) = plt.subplots(1, 1, layout="constrained")
-ax1.plot(v1, f1_15,".", label="7mm & 15°")
+ax1.plot(v1, f1_15,".", label="7mm und 15°")
 #ax1.plot(v1,v1*params15[0]+params15[1],label="Fit")
 #ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 #ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
 ax1.legend(loc="best")
 
-ax1.plot(v1, f1_30,".", label="7mm & 30°")
+ax1.plot(v1, f1_30,".", label="7mm und 30°")
 #ax1.plot(v1,v1*params30[0]+params30[1],label="Fit")
 #ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 #ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
 ax1.legend(loc="best")
 
-ax1.plot(v1, f1_60,".", label="7mm & 60°")
+ax1.plot(v1, f1_60,".", label="7mm und 60°")
 #ax1.plot(v1,v1*params45[0]+params45[1],label="Fit")
 #ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 #ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
@@ -89,20 +89,20 @@ STD=np.sqrt(np.diag(errr))
 print(params3[0],STD[0])
 
 x=np.linspace(0,3,15)
-ax1.plot(v2, f2_15,".", label="16mm & 15°")
+ax1.plot(v2, f2_15,".", label="16mm und 15°")
 ax1.plot(x,x*params3[0]+params3[1],label="Fit")
 
 ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
 ax1.legend(loc="best")
 
-ax1.plot(v2, f2_30,".", label="16mm & 30°")
+ax1.plot(v2, f2_30,".", label="16mm und 30°")
 
 ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
 ax1.legend(loc="best")
 
-ax1.plot(v2, f2_45,".", label="16mm & 60°")
+ax1.plot(v2, f2_45,".", label="16mm und 60°")
 
 ax1.set_xlabel(r"$v \mathbin{/} \unit{\meter\per\second}$")
 ax1.set_ylabel(r"$\frac{\increment \nu}{\cos{\alpha}} \mathbin{/} \unit{\hertz}$")
@@ -111,5 +111,5 @@ ax1.legend(loc="best")
 
 #print(p2arams15[0],p2arams30[0],p2arams45[0])
 
-plt.show()
+
 fig.savefig("build/plot.pdf")

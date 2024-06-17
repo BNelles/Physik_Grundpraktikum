@@ -91,17 +91,17 @@ Dabei ergibt sich $k_t=\qty{1481.48}{\hertz}$.
 
 \subsection{Bestimmung des Strömungsprofils}
 
-Um das Strömungsprofil zu bestimmen, wird die Frequenzverschiebung abhängig von der Messtiefe aufgenommen.
+Um das Strömungsprofil zu bestimmen, wird die Frequenzverschiebung abhängig von der Messzeit aufgenommen.
 Die Werte sind in den Tabellen \ref{tab:Profil1} und \ref{tab:Profil2} aufgelistet.
 Dabei befinden sich in Tabelle \ref{tab:Profil1} die Messwerte für einen Rohrdurchmesser von $d=\qty{10}{\milli\meter}$ und in \ref{tab:Profil2} 
 die für $d=\qty{7}{\milli\meter}$, jeweils für Pumpleistungen von $3$ und $\qty{6}{\liter\per\minute}$.
 
-\begin{table}{http}
+\begin{table}[http]
   \centering
-  \caption{}
+  \caption{Aufgelistet sind die Frequenzverschiebungen bei einem Rohrdurchmesser von $10mm$ abhängig von der Messzeit.}
   \label{tab:Profil1}
   \begin{minipage}[t]{0.4\textwidth}
-    \begin{adjustwidth}{3cm}{}
+    \begin{adjustwidth}{1.cm}{}
     \begin{tblr}[t]{
       colspec = {S[table-format=1.0] S[table-format=4.0] },
       row{1} = {guard, mode=math},
@@ -125,7 +125,7 @@ die für $d=\qty{7}{\milli\meter}$, jeweils für Pumpleistungen von $3$ und $\qt
     \end{adjustwidth}
   \end{minipage}
   \begin{minipage}[t]{0.4\textwidth}
-    \begin{adjustwidth}{3cm}{}
+    \begin{adjustwidth}{-0.5cm}{}
     \begin{tblr}[t]{
       colspec = {S[table-format=1.0] S[table-format=4.0] },
       row{1} = {guard, mode=math},
@@ -154,12 +154,12 @@ die für $d=\qty{7}{\milli\meter}$, jeweils für Pumpleistungen von $3$ und $\qt
   \end{minipage}
 \end{table}
 
-\begin{table}{http}
+\begin{table}[http]
   \centering
-  \caption{}
-  \label{tab:}
+  \caption{Aufgeführt sind ist hier die Frequenzverschiebungen für $d=7cm$ abhängig von $t$.}
+  \label{tab:Profil2}
   \begin{minipage}{0.4\textwidth}
-    \begin{adjustwidth}{3cm}{}
+    \begin{adjustwidth}{1cm}{}
     \begin{tblr}{
       colspec = {S[table-format=1.0] S[table-format=4.0] },
       row{1} = {guard, mode=math},
@@ -186,7 +186,7 @@ die für $d=\qty{7}{\milli\meter}$, jeweils für Pumpleistungen von $3$ und $\qt
     \end{adjustwidth}
   \end{minipage}
   \begin{minipage}{0.4\textwidth}
-    \begin{adjustwidth}{3cm}{}
+    \begin{adjustwidth}{-0.5cm}{}
     \begin{tblr}{
       colspec = {S[table-format=1.0] S[table-format=4.0] },
       row{1} = {guard, mode=math},
@@ -219,3 +219,11 @@ Da die Messtiefe in Acryl $\qty{4}{\micro\second}=\qty{10}{\milli\meter}$ entspr
 Diese entspricht $\qty{4}{\micro\second}=\qty{7}{\milli\meter}$.
 Die $\qty{12.28}{\micro\second}$ werden dann von der gemessenen Zeit abgezogen, da sich erst nach dieser Zeit die Schallwellen an der Flüssigkeit befinden.
 Die Geschwindigkeit wird mit Formel \ref{eqn:geschwindigkeit} berechnet.
+Nun wird die Geschwindigkeit in \ref{fig:Profil} gegen die Messtiefe aufgetragen.
+Dabei ergeben sich die Profile in \ref{fig:Profile}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{profil.pdf}
+  \caption{Hier ist die Geschwindigkeit der Flüssigkeit im Rohr zur Messtiefe aufgetragen.}
+  \label{fig:Profile}
+\end{figure}
