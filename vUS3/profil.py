@@ -8,10 +8,12 @@ d=t*7/4
 
 a1=90-np.rad2deg(np.arcsin(np.sin(np.deg2rad(15))*18/27))
 
-v0=2*(10**0)
-c=3*(10**2)
+v0=2*(10**6)
+c=2700
+K=(2*v0)/(c)
+print(K)
 
-v=f/((np.cos(np.deg2rad(a1)))/((2*v0)/(c)))
+v=f/((np.cos(np.deg2rad(a1)))/K)
 
 #a1=90-np.arcsin(np.sin(15/360*2*np.pi)*18/27)*180/np.pi
 
