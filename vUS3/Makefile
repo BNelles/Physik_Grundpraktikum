@@ -7,8 +7,11 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
+build/profil.pdf: profil.py ../matplotlibrc ../header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python profil.py
+
 # hier weitere Abhängigkeiten für build/vUS3.pdf deklarieren:
-build/vUS3.pdf: build/plot.pdf
+build/vUS3.pdf: build/plot.pdf build/profil.pdf
 
 build/vUS3.pdf: FORCE | build
 	# to find header and bib files in the main directory
