@@ -43,8 +43,8 @@ build/absorb.pdf: rechnung.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python rechnung.py
 
 # hier weitere Abhängigkeiten für build/v602.pdf deklarieren:
-build/v602.pdf: build/plot.pdf build/brom.pdf build/gallium.pdf build/emiss.pdf build/strontium.pdf build/zink.pdf build/zirkonium.pdf
-				build/absorb.pdf
+build/v602.pdf: build/plot.pdf build/brom.pdf build/gallium.pdf build/emiss.pdf build/strontium.pdf build/zink.pdf build/zirkonium.pdf build/absorb.pdf
+				
 
 build/v602.pdf: FORCE | build
 	# to find header and bib files in the main directory
