@@ -9,7 +9,7 @@ Oberseite des Acrylblocks und der Oberseite der Löcher $x_{\symup{A}}$ mithilfe
     \caption{Zeit-Strecken Diagramm für die Schallwellen im Acrylblock.}
     \label{fig:schall}
 \end{figure}
-Dabei folgt der Graph der Gleichung
+\noindent Dabei folgt der Graph der Gleichung
 \begin{equation}
     x_{\symup{A}}=\symup{c}_{\symup{A}} \frac{\increment t_1}{2}-x_{\symup{M}}
     \label{eqn:gerade}
@@ -26,19 +26,18 @@ Die Durchmesser sind dann mit der Höhe des Blocks $\symup{h}$ über
 \end{equation}
 bestimmt.
 \begin{table}
+  \captionsetup[table]{position=bottom} 
     \centering
-    \caption{Die berechneten Durchmesser der Löcher $d$ mit ihren entsprechenden theoretischen Werten $d_{\symup{t}}$ 
-    und der Abweichung $\increment d$ zwischen ihnen}
     \label{tab:durchmesser}
     \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
-    colspec = {S[table-format=2.1] S[table-format=2.1] S[table-format=1.1] S[table-format=3.2] S[table-format=3.2]},
+    colspec = {S[table-format=2.1] S[table-format=1.1] S[table-format=1.1] S[table-format=3.2] S[table-format=3.2]},
       row{1} = {guard, mode=math},
       vline{2}={1}{-}{text=\clap{$\pm$}},
       vline{5}={4}{-}{text=\clap{$\pm$}},
   }
   \toprule
-  d \text{/} \unit{\milli\meter} &   &d_{\symup{t}} \text{/} \unit{\milli\meter} &\increment d \text{/} \unit{\percent} & \\
+  d \text{/} \unit{\milli\meter} &   &d_{\symup{t}} \text{/} \unit{\milli\meter} &A \text{/} \unit{\percent} & \\
   \midrule
   14.9  & 3.5  &    7.7 &    93.20  &    45.36\\
    1.0  & 3.8  &    1.0 &     0.97  &   380.66\\
@@ -53,4 +52,7 @@ bestimmt.
    5.5  & 3.7  &    0.9 &   509.86  &   411.38\\
    \bottomrule
   \end{tblr}
+  \caption{Die berechneten Durchmesser der Löcher $d$ mit ihren entsprechenden theoretischen Werten $d_{\symup{t}}$ 
+und der Abweichung $A$ zwischen ihnen}
 \end{table}
+

@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+\input{content/tausw.tex}
 
 \subsection{Biometrische Untersuchung eines Augenmodells}
 
@@ -14,10 +14,10 @@ In Abbildung \ref{fig:Auge} ist der A-Scan des Augenmodells aufgeführt.
 
 Die Zeiten, bei denen die Peaks auftreten, sind
 \begin{gather*}
-  t_{Iris}=   \qty{7.57}{\micro\second}
-  t_{Linse_1}=\qty{11.56}{\micro\second}
-  t_{Linse_2}=\qty{17.51}{\micro\second}
-  t_{Retina}= \qty{70.17}{\micro\second} \qquad .
+  t_{Iris}=   \qty{7.57}{\micro\second}\\
+  t_{Linse_1}=\qty{11.56}{\micro\second}\\
+  t_{Linse_2}=\qty{17.51}{\micro\second}\\
+  t_{Retina}= \qty{70.17}{\micro\second} \, .
 \end{gather*}
 
 \noindent Zur Berechnung der Strecken wird von jedem dieser Werte $\frac{x_M}{c_A}$ abgezogen.
@@ -27,10 +27,10 @@ Danach muss für die Strecke in der Linse die Schallgeschwindigkeit $c_L=\qty{25
 Bei dem Stück von dem Ende der Linse bis zur Retina wird wieder die Schallgeschwindigkeit der Glaskörperflüssigkeit verwendet.
 Damit erbgeben sich die Werte
 \begin{gather*}
-  s_{Iris}=     \qty{8.1(0.6)}{\micro\second}
-  s_{Linse_1}= \qty{13.7(0.6)}{\micro\second}
-  s_{Linse_2}= \qty{28.6(0.6)}{\micro\second}
-  s_{Retina}= \qty{102.9(0.6)}{\micro\second} \qquad .
+  s_{Iris}=     \qty{8.1(0.6)}{\micro\second}\\
+  s_{Linse_1}= \qty{13.7(0.6)}{\micro\second}\\
+  s_{Linse_2}= \qty{28.6(0.6)}{\micro\second}\\
+  s_{Retina}= \qty{102.9(0.6)}{\micro\second} \, .
 \end{gather*}
 
 
@@ -47,19 +47,27 @@ Bei Tumor 1 ist zu vermuten, dass es sich bei diesem um einen mit Flüssigkeit g
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Bilder/Brust6.jpg}
-  \caption{hHier ist Untersuchung des Brustmodells mithilfe des B-Scan Verfahrens aufgezeigt.}
+  \caption{Hier ist Untersuchung des Brustmodells mithilfe des B-Scan Verfahrens aufgezeigt.}
   \label{fig:Brust}
 \end{figure}
 
 \subsection{Untersuchung eines Herzmodells mit einem TM-Scan}
 
 Für die Untersuchung des Herzmodells wurden die Werte in Tabelle \ref{tab:Herz} aufgenommen.
+Diese entsprechen einer grafischen Auswertung von Abbildung \ref{fig:Herz}.
 $d$ ist dabei die gemessene Tiefe der Maxima unter dem Nullpunkt. 
 Die Höhe der Peaks kann dann mit $h=\qty{75}{\milli\meter}-d-h_0$ bestimmt werden, wobei $h_0=44.21$ der gemessenen Baseline entspricht.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Bilder/Herz.jpg}
+  \caption{Abgebildet ist ein TM-Scan eines Herz-Modells.}
+  \label{fig:Herz}
+\end{figure}
+
+
 \begin{table}[H]
   \centering
-  \caption{Höhe und Breite der Peaks beim TM-Scan des Herzmodells.}
   \label{tab:Herz}
   \sisetup{table-format=1.1, per-mode=reciprocal}
   \begin{tblr}{
@@ -67,7 +75,7 @@ Die Höhe der Peaks kann dann mit $h=\qty{75}{\milli\meter}-d-h_0$ bestimmt werd
       row{1} = {guard, mode=math},
     }
     \toprule
-    d \mathbin{/} \unit{\milli\meter} & \increment t \mathbin{/} \unit{\second}  \\
+    d \mathbin{/} \unit{\milli\meter} & T \mathbin{/} \unit{\second}  \\
     \midrule
     17.85 &  1.33\\
     21.03 &  1.12\\
@@ -81,7 +89,27 @@ Die Höhe der Peaks kann dann mit $h=\qty{75}{\milli\meter}-d-h_0$ bestimmt werd
     25.75 &  0.86\\
     \bottomrule
   \end{tblr}
+  \caption{Höhe und Breite der Peaks beim TM-Scan des Herzmodells.}
 \end{table}
 
-
-
+Das endsystolische Herzvolumen (ESV) kann hier als Kegelvolumen berechnet werden, wobei die Höhe des Peaks der Höhe des Kegels entspricht und die Grundfläche der Fläche des Herzmodells.
+Dabei wird die Höhe über alle gemessenen Höhen gemittelt.
+Das Volumen des Kegels kann mit 
+\begin{equation}
+  V=\frac{1}{3}\cdot \pi r^2 \cdot h 
+  \label{eqn:Volumen}
+\end{equation}
+berechnet werden.
+Der Durchmesser des Herzmodelles ist $\qty{43.7}{\milli\meter}$.
+Es ergibt sich eine Höhe von $\bar{h}=\qty{7.0(2.6)}{\milli\meter}$ und damit das Volumen $\symup{ESV}=\qty{3.5(1.3)e3}{\milli\meter\cubed}$.
+Die Herzfrequenz ergibt sich aus dem Inversen der gemittelten Periodendauer $T$.
+Diese ist damit $\nu_{Herz}=\qty{0.91(0.26)}{\hertz}$.
+Mit der Formel
+\begin{equation}
+  \symup{HZV}=(\symup{ESV}-\symup{EDV}) \cdot \nu_{Herz}
+  \label{eqn:Herz}
+\end{equation}
+wird dann das Herzzeitvolumen bestimmt.
+Das endiastolische Volumen (EDV) ist bei dem Modell 0.
+Damit ergibt sich $\symup{HZV}=\qty{3.2(1.5)e3}{\milli\meter\cubed\per\second}$.
+Umgerechnet ist das $\symup{HZV}=\qty{0.19(0.09)}{liter\per\minute}$.
