@@ -34,4 +34,4 @@ B=(v*l)/np.pi
 C=(w*l)/np.pi
 print(B,(10**(-4)-B)/(10**(-4)))
 print(C,(4*10**(-4)-C)/(4*10**(-4)))
-fig.savefig("plot2.pdf")
+fig.savefig("build/plot2.pdf")
