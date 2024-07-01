@@ -63,7 +63,7 @@ ax2.legend(loc="best")
 ax1.plot(w, u, ".",label="U_G")
 plt.errorbar(w,u,f,fmt="none")
 ax1.plot(w,a,"k-",label="Ausgleichsgerade")
-ax1.set_xlabel(r"$\omega \mathbin{/} \unit{\per\meter}$")
+ax1.set_xlabel(r"$\omega \mathbin{/} \unit{\per\second}$")
 ax1.set_ylabel(r"$U \mathbin{/} \unit{\volt}$")
 ax1.legend(loc="best")
 

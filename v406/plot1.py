@@ -33,4 +33,4 @@ v=ufloat(params[1],uncertainties[1])
 B=(v*l*10**3)/np.pi
 print(B)
 print((1.5*10**(-4)-B)/(1.5*10**(-4)))
-fig.savefig("plot1.pdf")
+fig.savefig("build/plot1.pdf")

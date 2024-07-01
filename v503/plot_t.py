@@ -132,7 +132,7 @@ yTickPos,_ = plt.yticks()
 yTickPos = yTickPos[:-1] 
 ax.barh(yTickPos, [max(plt.xticks()[0])] * len(yTickPos), height=(10**(-19)), color=['b','w'])
 #print(yTickPos)
-#fig.savefig("build/Daten.pdf")
+fig.savefig("build/Daten.pdf")
 
 #print(e[7])
 print((1.6*10**(-19)-e[7])/(1.6*10**(-19)))
