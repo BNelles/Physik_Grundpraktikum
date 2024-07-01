@@ -29,9 +29,9 @@ fig.savefig("build/quer.pdf")
 
 m=ufloat(params[0],uncertainties[0])
 n=-(349.5*10**(-3))/(0.263*10**(-3)*m*const.e)
-
+print(n)
 n_0=ufloat(-1.11e28,0.04e28)
 
 A=(n_0-n)/n
-print(A)
+#print(A)
 

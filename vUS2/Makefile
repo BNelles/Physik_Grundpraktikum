@@ -6,9 +6,14 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# LaTeX in the tmp directory
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
+build/plot.pdf: schallgeschw.py ../matplotlibrc ../header-matplotlib.tex | build
+	# so that matplotlib can find the tex header when running
+	# LaTeX in the tmp directory
+	# and set the matplotlibrc
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python schallgeschw.py
 
 # hier weitere Abhängigkeiten für build/vUS2.pdf deklarieren:
-build/vUS2.pdf: build/plot.pdf
+build/vUS2.pdf: build/plot.pdf	build/schall.pdf
 
 build/vUS2.pdf: FORCE | build
 	# to find header and bib files in the main directory
